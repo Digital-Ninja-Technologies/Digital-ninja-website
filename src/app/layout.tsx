@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       "From Ideas to Startups - We build digital products that drive results",
     images: [
       {
-        url: "/logo.svg",
+        url: "/Digital-Ninja-Logo.png",
         height: 630,
         alt: "Digital Ninja - From Ideas to Startups",
       },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Digital Ninja",
     description:
       "From Ideas to Startups - We build digital products that drive results",
-    images: ["/logo.svg"],
+    images: ["/Digital-Ninja-Logo.png"],
   },
 };
 
