@@ -16,6 +16,29 @@ export const metadata: Metadata = {
   title: "Digital Ninja",
   description:
     "From Ideas to Startups - We build digital products that drive results",
+  openGraph: {
+    title: "Digital Ninja",
+    description:
+      "From Ideas to Startups - We build digital products that drive results",
+    images: [
+      {
+        url: "/logo.svg",
+        height: 630,
+        alt: "Digital Ninja - From Ideas to Startups",
+      },
+    ],
+    url: "https://www.thedigitalninjatech.com",
+    siteName: "Digital Ninja",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Ninja",
+    description:
+      "From Ideas to Startups - We build digital products that drive results",
+    images: ["/logo.svg"],
+  },
 };
 
 export default function RootLayout({
