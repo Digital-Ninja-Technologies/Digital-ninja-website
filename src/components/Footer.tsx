@@ -72,22 +72,31 @@ export default function Footer() {
                 LinkedIn
               </a>
               <span className="bg-[#FF7E29] rounded-full h-[5px] w-[5px] " />
-              <a href="#" className="hover:text-[#ff7e29] transition-colors">
+              <a
+                href="https://x.com/theninjatechies?s=21"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#ff7e29] transition-colors">
                 X (Twitter)
               </a>
               <span className="bg-[#FF7E29] rounded-full h-[5px] w-[5px] " />
 
-              <a href="#" className="hover:text-[#ff7e29] transition-colors">
+              <a
+                href="https://www.instagram.com/theninjatechies?igsh=dnF3Zm5hbXloZGlw&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#ff7e29] transition-colors">
                 Instagram
               </a>
               <span className="bg-[#FF7E29] rounded-full h-[5px] w-[5px] " />
 
-              <a href="#" className="hover:text-[#ff7e29] transition-colors">
-                Facebook
-              </a>
               <span className="bg-[#FF7E29] rounded-full h-[5px] w-[5px] " />
 
-              <a href="#" className="hover:text-[#ff7e29] transition-colors">
+              <a
+                href="https://youtube.com/@designninjaacademy?si=jCFTROBjs1cCEQ9l"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#ff7e29] transition-colors">
                 Youtube
               </a>
             </div>
