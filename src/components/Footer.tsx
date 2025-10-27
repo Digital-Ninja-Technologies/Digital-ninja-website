@@ -90,8 +90,6 @@ export default function Footer() {
               </a>
               <span className="bg-[#FF7E29] rounded-full h-[5px] w-[5px] " />
 
-
-
               <a
                 href="https://youtube.com/@designninjaacademy?si=jCFTROBjs1cCEQ9l"
                 target="_blank"
