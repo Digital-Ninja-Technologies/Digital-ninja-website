@@ -13,7 +13,7 @@ export default function Footer() {
         <img
           src="/shape.svg"
           alt="Decorative orange shape"
-          className="absolute top-0 left-0 w-full h-[20rem] md:h-[55rem]"
+          className="absolute top-0 left-0 w-full h-[20rem] md:h-[55rem] pointer-events-none"
         />
 
         <div className="relative container mx-auto px-2 py-[6rem] md:py-80 flex flex-col md:flex-row items-center space-x-10 max-w-6xl">
@@ -39,7 +39,7 @@ export default function Footer() {
         <img
           src="/shape2.svg"
           alt="Decorative background blob"
-          className="absolute h-auto w-full bottom-0 right-0 opacity-10"
+          className="absolute h-auto w-full bottom-0 right-0 opacity-10 pointer-events-none"
         />
 
         <div className=" text-center space-y-8">
@@ -90,7 +90,7 @@ export default function Footer() {
               </a>
               <span className="bg-[#FF7E29] rounded-full h-[5px] w-[5px] " />
 
-              <span className="bg-[#FF7E29] rounded-full h-[5px] w-[5px] " />
+
 
               <a
                 href="https://youtube.com/@designninjaacademy?si=jCFTROBjs1cCEQ9l"
