@@ -49,14 +49,14 @@ export default function Footer() {
 
           <div className="space-y-6">
             <div className="text-2xl md:text-[28px] font-[600] text-[#FF6602]">
-              +234 803 000 4000
+              +2348145865720
             </div>
 
             <div className="text-xl font-[600] md:text-[28px]">
               <a
-                href="mailto:info@digitalninjatech.com"
+                href="mailto:Info@thedigitalninjatech.com"
                 className="text-[#FF6602] underline hover:text-[#FF6602] transition-colors">
-                info@digitalninjatech.com
+                Info@thedigitalninjatech.com
               </a>
             </div>
           </div>
@@ -64,7 +64,11 @@ export default function Footer() {
           {/* Social Media Links */}
           <div className="pt-8 md:pt-12">
             <div className="flex flex-wrap justify-center items-center space-x-4  font-[500] text-[#6b6a6a] text-[16px]">
-              <a href="#" className="hover:text-[#ff7e29] transition-colors">
+              <a
+                href="https://www.linkedin.com/company/digitalninja-technology/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#ff7e29] transition-colors">
                 LinkedIn
               </a>
               <span className="bg-[#FF7E29] rounded-full h-[5px] w-[5px] " />
