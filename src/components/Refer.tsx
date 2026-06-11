@@ -1,9 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useInView, type Variants } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
-import MultiStepModal from "./Multi-step-modal";
+
+const WHATSAPP_URL =
+  "https://wa.me/2348145865720?text=Hello%20digitalNinja%2C%20I%20will%20love%20to%20refer%20a%20client%20to%20you.";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -119,7 +121,6 @@ function Section({
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function ReferPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <main className="bg-white text-[#2E2D2D] overflow-x-hidden">
@@ -168,7 +169,7 @@ export default function ReferPage() {
           {/* CTA */}
           <motion.div variants={fadeUp} className="pt-2">
             <motion.button
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => window.open(WHATSAPP_URL, "_blank")}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF6602] to-[#FF7E29] hover:from-[#FF8A3D] hover:to-[#FFAA66] text-white font-medium text-lg py-4 px-10 rounded-full relative overflow-hidden group transition-all duration-300"
               whileHover={{ scale: 1.04, boxShadow: "0 10px 32px rgba(255,102,2,0.28)" }}
               whileTap={{ scale: 0.97 }}
@@ -433,7 +434,7 @@ export default function ReferPage() {
                 with zero upfront cost or commitment.
               </p>
               <motion.button
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => window.open(WHATSAPP_URL, "_blank")}
                 className="inline-flex items-center gap-2 bg-white text-[#FD3600] font-semibold text-lg py-4 px-10 rounded-full hover:bg-[#FFF0E5] transition-colors duration-200 group"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
@@ -446,7 +447,6 @@ export default function ReferPage() {
         </div>
       </section>
 
-      <MultiStepModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </main>
   );
 }
