@@ -13,31 +13,32 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Digital Ninja",
+  title: "Digital Ninja Technologies",
   description:
-    "From Ideas to Startups - We build digital products that drive results",
+    "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
   openGraph: {
-    title: "Digital Ninja",
+    title: "Digital Ninja Technologies",
     description:
-      "From Ideas to Startups - We build digital products that drive results",
+      "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
     images: [
       {
-        url: "/Digital-Ninja-Logo.png",
+        url: "/og-image.jpg",
+        width: 1200,
         height: 630,
-        alt: "Digital Ninja - From Ideas to Startups",
+        alt: "Digital Ninja Technologies",
       },
     ],
     url: "https://www.thedigitalninjatech.com",
-    siteName: "Digital Ninja",
+    siteName: "Digital Ninja Technologies",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Ninja",
+    title: "Digital Ninja Technologies",
     description:
-      "From Ideas to Startups - We build digital products that drive results",
-    images: ["/Digital-Ninja-Logo.png"],
+      "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+    images: ["/og-image.jpg"],
   },
 };
 
