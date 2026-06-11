@@ -11,10 +11,9 @@ const projects = [
     image: "/show1.svg",
     showcaseType: "featured",
     overview: {
-      title:
-        "Digital-Ninja empowers businesses with cutting-edge digital solutions.",
+      title: "A seamless ride-hailing experience built for flexibility and speed.",
       description:
-        "Digital-Ninja is a comprehensive digital agency platform that specializes in creating modern brand identities and web experiences. Our focus is on delivering innovative solutions that help businesses establish a strong digital presence.",
+        "Flex2Ride is a modern mobility platform designed to connect riders and drivers with minimal friction. We handled end-to-end product design — from user research and information architecture through to a complete design system covering the rider app, driver app, and marketing website.",
       features: {
         mockupImage1: "/brand-1.svg",
         mockupImage2: "/brand-2.svg",
@@ -28,10 +27,9 @@ const projects = [
     image: "/Cover-Designv3.svg",
     showcaseType: "standard",
     overview: {
-      title:
-        "Digital-Ninja empowers businesses with cutting-edge digital solutions.",
+      title: "A bold brand identity built to reflect craft, precision, and innovation.",
       description:
-        "Digital-Ninja is a comprehensive digital agency platform that specializes in creating modern brand identities and web experiences. Our focus is on delivering innovative solutions that help businesses establish a strong digital presence.",
+        "Digital Ninja Technologies needed a visual identity that matched the quality of its output. We developed a full brand system — logo, colour palette, typography, iconography, and voice — then carried it through to the company website and a scalable design system used across all digital touchpoints.",
       features: {
         mockupImage1: "/brand-1.svg",
         mockupImage2: "/brand-2.svg",
@@ -45,10 +43,9 @@ const projects = [
     image: "/Cover-Design4.svg",
     showcaseType: "standard",
     overview: {
-      title:
-        "Digital-Ninja empowers businesses with cutting-edge digital solutions.",
+      title: "Bringing live audio broadcasting to a wider, more connected audience.",
       description:
-        "Digital-Ninja is a comprehensive digital agency platform that specializes in creating modern brand identities and web experiences. Our focus is on delivering innovative solutions that help businesses establish a strong digital presence.",
+        "Mixlr is a live audio platform that lets creators broadcast to their audiences in real time. Our work focused on redesigning the listener and broadcaster experiences — simplifying the core broadcast flow, improving discoverability, and creating a design system that scales across web and mobile.",
       features: {
         mockupImage1: "/brand-1.svg",
         mockupImage2: "/brand-2.svg",
@@ -62,10 +59,9 @@ const projects = [
     image: "/Cover-Designv4.svg",
     showcaseType: "standard",
     overview: {
-      title:
-        "Digital-Ninja empowers businesses with cutting-edge digital solutions.",
+      title: "Making personal finance clear, actionable, and stress-free.",
       description:
-        "Digital-Ninja is a comprehensive digital agency platform that specializes in creating modern brand identities and web experiences. Our focus is on delivering innovative solutions that help businesses establish a strong digital presence.",
+        "Coinly is a fintech app that helps users track spending, set savings goals, and understand their financial health at a glance. We designed the full product experience — onboarding, dashboard, transaction history, and goal-setting flows — with a focus on clarity and reducing cognitive load.",
       features: {
         mockupImage1: "/brand-1.svg",
         mockupImage2: "/brand-2.svg",

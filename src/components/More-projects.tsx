@@ -23,19 +23,21 @@ const MoreProjects = ({ currentProjectId, allProjects }: MoreProjectsProps) => {
           <h2 className="text-4xl md:text-4xl font-[600] text-[#2E2D2D]">
             More projects
           </h2>
-          <Button
-            variant="outline"
-            className="text-[#FF7E29] py-4 px-12 border-[1.5px] border-[#FFD0B1] rounded-[2rem] hover:text-[#FF7E29] hover:bg-transparent hover:border-[#FF7E29]">
-            See all works
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Link href="/works">
+            <Button
+              variant="outline"
+              className="text-[#FF7E29] py-4 px-12 border-[1.5px] border-[#FFD0B1] rounded-[2rem] hover:text-[#FF7E29] hover:bg-transparent hover:border-[#FF7E29]">
+              See all works
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
 
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
           {projects.map((project) => (
             <div key={project.id} className="group  relative">
               {/* Image Container */}
-              <div className="h-[487px] w-[520px] border-[2px] border-[#F7F6F6] rounded-[40px] flex items-center justify-center">
+              <div className="h-[487px] w-full max-w-[520px] border-[2px] border-[#F7F6F6] rounded-[40px] flex items-center justify-center">
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={`${project.title} project mockup`}

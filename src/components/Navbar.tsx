@@ -15,7 +15,7 @@ export default function Navbar() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <main className="fixed top-0 w-full bg-white z-100">
+    <main className="fixed top-0 w-full bg-white z-[100]">
       <header className="container mx-auto px-4 py-6 flex items-center justify-between relative">
         <Link href="/" className="flex items-center">
           <div className="relative h-14 w-48">

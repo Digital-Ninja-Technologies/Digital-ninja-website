@@ -74,7 +74,7 @@ export default function Testimonials() {
   }, [testimonials.length, itemsPerPage]);
 
   const trackWidth = (testimonials.length / itemsPerPage) * 100;
-  const translateValue = (currentIndex * 100) / testimonials.length;
+  const translateValue = (currentIndex / testimonials.length) * 100;
 
   return (
     <section className="bg-[#FFF9F5] py-8 md:py-16 px-6">
@@ -143,7 +143,7 @@ export default function Testimonials() {
 
         {/* Carousel Indicators */}
         <div className="flex justify-center gap-2 mt-12">
-          {testimonials.map((_, index) => (
+          {Array.from({ length: testimonials.length - itemsPerPage + 1 }).map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}

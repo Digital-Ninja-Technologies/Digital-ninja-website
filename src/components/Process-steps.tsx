@@ -35,7 +35,7 @@ export default function ProcessSteps() {
           </div>
 
           {/* 02 Design with Purpose */}
-          <div className="bg-[#FF7E29] p-6 md:p-12 pb-18 lg:p-16 lg:pb-28 rounded-t-[40px] relative -top-6 md:-top-7 z-4">
+          <div className="bg-[#FF7E29] p-6 md:p-12 pb-18 lg:p-16 lg:pb-28 rounded-t-[40px] relative -top-6 md:-top-7 z-[4]">
             <div className="flex flex-col md:flex-row md:items-center">
               <div className="md:w-1/2 mb-6 md:mb-0">
                 <div className="flex items-center">
@@ -65,7 +65,7 @@ export default function ProcessSteps() {
           </div>
 
           {/* 03 Agile Development */}
-          <div className="bg-[#FD3600] p-6 md:p-12 lg:p-16 pb-18 lg:pb-28 rounded-t-[40px] relative -top-[3.3rem] z-4">
+          <div className="bg-[#FD3600] p-6 md:p-12 lg:p-16 pb-18 lg:pb-28 rounded-t-[40px] relative -top-[3.3rem] z-[4]">
             <div className="flex flex-col md:flex-row md:items-center">
               <div className="md:w-1/2 mb-6 md:mb-0">
                 <div className="flex items-center">
@@ -96,7 +96,7 @@ export default function ProcessSteps() {
           </div>
 
           {/* 04 Launch & Optimize */}
-          <div className="bg-[#FD5527] p-6 md:p-12 lg:p-16 pb-18 lg:pb-28 rounded-t-[40px] relative -top-[4.9rem] z-4">
+          <div className="bg-[#FD5527] p-6 md:p-12 lg:p-16 pb-18 lg:pb-28 rounded-t-[40px] relative -top-[4.9rem] z-[4]">
             <div className="flex flex-col md:flex-row md:items-center">
               <div className="md:w-1/2 mb-6 md:mb-0">
                 <div className="flex items-center">
@@ -126,7 +126,7 @@ export default function ProcessSteps() {
           </div>
 
           {/* 05 Partnership Mindset */}
-          <div className="bg-[#FFA501] p-6 md:p-12 lg:p-16 lg:pb-24 pb-18 rounded-t-[40px] relative -top-[6.5rem] z-4">
+          <div className="bg-[#FFA501] p-6 md:p-12 lg:p-16 lg:pb-24 pb-18 rounded-t-[40px] relative -top-[6.5rem] z-[4]">
             <div className="flex flex-col md:flex-row md:items-center">
               <div className="md:w-1/2 mb-6 md:mb-0">
                 <div className="flex items-center">

@@ -2,8 +2,7 @@ import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   return (
-    <div className="relatives h-[40vh]">
-     
+    <div className="relative min-h-screen">
       <ContactForm />
     </div>
   );

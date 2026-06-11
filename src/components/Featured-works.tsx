@@ -30,7 +30,7 @@ export default function FeaturedWorks({
   buttonClassName,
   headerTextClassName,
 }: FeaturedWorksProps) {
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
   const projects = [
     {
       id: "flex2ride",
@@ -102,7 +102,7 @@ export default function FeaturedWorks({
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={
-                  imageLoaded
+                  loadedImages.has(project.id)
                     ? { scale: 1, opacity: 1 }
                     : { scale: 0.8, opacity: 0 }
                 }
@@ -115,7 +115,7 @@ export default function FeaturedWorks({
                   className="object-contain transition-transform duration-300 shadow-md rounded-[40px] ease-in-out hover:scale-110"
                   priority
                   quality={90}
-                  onLoad={() => setImageLoaded(true)}
+                  onLoad={() => setLoadedImages(prev => new Set(prev).add(project.id))}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 />
               </motion.div>

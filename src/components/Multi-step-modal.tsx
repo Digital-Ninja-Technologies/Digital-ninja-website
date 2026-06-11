@@ -161,7 +161,13 @@ export default function MultiStepModal({
     setSubmissionError(null);
 
     try {
-      const formspreeEndpoint = `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`;
+      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+      if (!formspreeId) {
+        setSubmissionError("Contact form is not configured. Please email us directly.");
+        setIsSubmitting(false);
+        return;
+      }
+      const formspreeEndpoint = `https://formspree.io/f/${formspreeId}`;
       const response = await fetch(formspreeEndpoint, {
         method: "POST",
         headers: {

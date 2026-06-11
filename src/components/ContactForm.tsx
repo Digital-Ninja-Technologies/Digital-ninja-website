@@ -40,7 +40,13 @@ export default function ContactForm() {
     setErrorMessage(null);
 
     try {
-      const formspreeEndpoint = `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`;
+      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+      if (!formspreeId) {
+        setSubmissionStatus("error");
+        setErrorMessage("Contact form is not configured. Please email us directly.");
+        return;
+      }
+      const formspreeEndpoint = `https://formspree.io/f/${formspreeId}`;
 
       const response = await fetch(formspreeEndpoint, {
         method: "POST",
@@ -73,8 +79,8 @@ export default function ContactForm() {
         Contact Us
       </h1>
       <section className="">
-        <main className="absolute top-[17rem] z-10 w-full mx-auto ">
-          <div className="flex    items-center justify-center p-4">
+        <main className="w-full mx-auto">
+          <div className="flex items-center justify-center p-4">
             <div className="w-full max-w-[708px] bg-white rounded-3xl p-8 md:p-12 shadow-[1px_2px_35px_0px_rgba(57,57,57,0.1)]">
               <h1 className="font-medium text-[18px] leading-[120%] tracking-[-0.03em] mb-8">
                 Please send your message below

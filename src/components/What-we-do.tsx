@@ -1,4 +1,4 @@
-export function WhatWeDo() {
+export default function WhatWeDo() {
   return (
     <>
       <main className="min-h-screen   bg-[#fff] text-[#000]">
@@ -96,4 +96,3 @@ function ServiceCard({ number, title, description }: ServiceCardProps) {
   );
 }
 
-export default WhatWeDo;
