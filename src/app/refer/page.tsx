@@ -2,13 +2,14 @@ import ReferPage from "@/components/Refer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Refer & Earn | Digital Ninja Technologies",
+  title: "Refer & Earn 10% Commission",
   description:
-    "Refer businesses to Digital Ninja Technologies and earn 10% commission on every successful project sign. Your network, our expertise, shared success.",
+    "Refer startups, businesses, or founders to Digital Ninja Technologies and earn 10% commission on every signed project. ₦500k project = ₦50k commission.",
+  alternates: { canonical: "https://www.thedigitalninjatech.com/refer" },
   openGraph: {
     title: "Refer & Earn | Digital Ninja Technologies",
     description:
-      "Refer businesses to Digital Ninja Technologies and earn 10% commission on every successful project sign. Your network, our expertise, shared success.",
+      "Refer businesses to us and earn 10% commission on every successful project. ₦500k project = ₦50k for you.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies" }],
     url: "https://www.thedigitalninjatech.com/refer",
     siteName: "Digital Ninja Technologies",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Refer & Earn | Digital Ninja Technologies",
     description:
-      "Refer businesses to Digital Ninja Technologies and earn 10% commission on every successful project sign. Your network, our expertise, shared success.",
+      "Refer businesses to us and earn 10% commission on every successful project. ₦500k project = ₦50k for you.",
     images: ["/og-image.jpg"],
   },
 };

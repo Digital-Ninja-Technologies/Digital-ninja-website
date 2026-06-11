@@ -4,13 +4,14 @@ import React from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | Digital Ninja Technologies",
+  title: "About Us",
   description:
-    "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+    "Learn about Digital Ninja Technologies — a Nigerian digital agency helping startups and brands build impactful software, apps, and digital products through strategic design and development.",
+  alternates: { canonical: "https://www.thedigitalninjatech.com/about" },
   openGraph: {
-    title: "About | Digital Ninja Technologies",
+    title: "About Digital Ninja Technologies",
     description:
-      "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+      "A full-service digital agency in Nigeria helping startups and brands build impactful software, apps, and digital products.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies" }],
     url: "https://www.thedigitalninjatech.com/about",
     siteName: "Digital Ninja Technologies",
@@ -19,9 +20,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About | Digital Ninja Technologies",
+    title: "About Digital Ninja Technologies",
     description:
-      "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+      "A full-service digital agency in Nigeria helping startups and brands build impactful software, apps, and digital products.",
     images: ["/og-image.jpg"],
   },
 };

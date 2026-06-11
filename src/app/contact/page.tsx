@@ -2,13 +2,14 @@ import ContactForm from "@/components/ContactForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | Digital Ninja Technologies",
+  title: "Contact Us",
   description:
-    "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+    "Get in touch with Digital Ninja Technologies. We build custom software, mobile apps, websites, and AI solutions for startups and businesses in Nigeria and globally.",
+  alternates: { canonical: "https://www.thedigitalninjatech.com/contact" },
   openGraph: {
-    title: "Contact | Digital Ninja Technologies",
+    title: "Contact Digital Ninja Technologies",
     description:
-      "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+      "Get in touch — we build custom software, mobile apps, websites, and AI solutions for startups and businesses.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies" }],
     url: "https://www.thedigitalninjatech.com/contact",
     siteName: "Digital Ninja Technologies",
@@ -17,9 +18,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact | Digital Ninja Technologies",
+    title: "Contact Digital Ninja Technologies",
     description:
-      "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+      "Get in touch — we build custom software, mobile apps, websites, and AI solutions for startups and businesses.",
     images: ["/og-image.jpg"],
   },
 };

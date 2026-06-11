@@ -1,0 +1,21 @@
+{
+  "name": "Digital Ninja Technologies",
+  "short_name": "Digital Ninja",
+  "description": "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FF6602",
+  "icons": [
+    {
+      "src": "/Digital-Ninja-Logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/Digital-Ninja-Logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

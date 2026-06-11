@@ -166,27 +166,27 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const project = projects.find((p) => p.id === id);
-  const title = project
-    ? `${project.title} | Digital Ninja Technologies`
-    : "Works | Digital Ninja Technologies";
+  const title = project ? project.title : "Project";
   const description = project?.overview.description ??
-    "Empowering brands and start-ups with impactful digital solutions through strategic design and development.";
+    "Explore this project by Digital Ninja Technologies — a full-service digital agency in Nigeria.";
+  const url = `https://www.thedigitalninjatech.com/works/${id}`;
 
   return {
     title,
     description,
+    alternates: { canonical: url },
     openGraph: {
-      title,
+      title: `${title} | Digital Ninja Technologies`,
       description,
-      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies" }],
-      url: `https://www.thedigitalninjatech.com/works/${id}`,
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: title }],
+      url,
       siteName: "Digital Ninja Technologies",
       locale: "en_US",
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: `${title} | Digital Ninja Technologies`,
       description,
       images: ["/og-image.jpg"],
     },

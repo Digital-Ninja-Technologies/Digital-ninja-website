@@ -3,13 +3,14 @@ import Testimonials from "@/components/Testimonials";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Works | Digital Ninja Technologies",
+  title: "Our Work & Portfolio",
   description:
-    "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+    "Explore Digital Ninja Technologies' portfolio of digital products — mobile apps, websites, and software built for startups and brands across Africa and beyond.",
+  alternates: { canonical: "https://www.thedigitalninjatech.com/works" },
   openGraph: {
-    title: "Works | Digital Ninja Technologies",
+    title: "Portfolio | Digital Ninja Technologies",
     description:
-      "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+      "Explore our portfolio of digital products — mobile apps, websites, and software built for startups and brands.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies" }],
     url: "https://www.thedigitalninjatech.com/works",
     siteName: "Digital Ninja Technologies",
@@ -18,9 +19,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Works | Digital Ninja Technologies",
+    title: "Portfolio | Digital Ninja Technologies",
     description:
-      "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+      "Explore our portfolio of digital products — mobile apps, websites, and software built for startups and brands.",
     images: ["/og-image.jpg"],
   },
 };
