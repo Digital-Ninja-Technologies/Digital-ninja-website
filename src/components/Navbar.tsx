@@ -59,6 +59,15 @@ export default function Navbar() {
               }`}>
               Contact
             </Link>
+            <Link
+              href="/refer"
+              className={`font-medium transition-colors px-4 py-1.5 rounded-full ${
+                isActive("/refer")
+                  ? "bg-[#FD3600] text-white"
+                  : "text-[#FF6602] border border-[#FF7E29] hover:bg-[#FF6602] hover:text-white hover:border-[#FF6602]"
+              }`}>
+              Refer & Earn
+            </Link>
           </nav>
 
           <button
@@ -120,6 +129,16 @@ export default function Navbar() {
                 }`}
                 onClick={() => setMobileMenuOpen(false)}>
                 Contact
+              </Link>
+              <Link
+                href="/refer"
+                className={`py-3 px-4 font-medium transition-colors ${
+                  isActive("/refer")
+                    ? "text-[#FF7E29] bg-orange-50 border-l-4 border-[#FF7E29]"
+                    : "text-[#FF6602] hover:bg-orange-50"
+                }`}
+                onClick={() => setMobileMenuOpen(false)}>
+                Refer & Earn 💸
               </Link>
               <button
                 className="mt-3 mx-4 flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-[#ff6602] text-[#ff6602] hover:bg-[#ff6602] hover:text-white transition-colors"
