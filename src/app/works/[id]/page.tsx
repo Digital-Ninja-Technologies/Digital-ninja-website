@@ -1,6 +1,7 @@
 import MoreProjects from "@/components/More-projects";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
 // Project data
 const projects = [
@@ -155,6 +156,41 @@ function ProjectShowcase({ project }: { project: (typeof projects)[0] }) {
       </div>
     </div>
   );
+}
+
+// Generate per-project OG metadata
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const project = projects.find((p) => p.id === id);
+  const title = project
+    ? `${project.title} | Digital Ninja Technologies`
+    : "Works | Digital Ninja Technologies";
+  const description = project?.overview.description ??
+    "Empowering brands and start-ups with impactful digital solutions through strategic design and development.";
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies" }],
+      url: `https://www.thedigitalninjatech.com/works/${id}`,
+      siteName: "Digital Ninja Technologies",
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og-image.jpg"],
+    },
+  };
 }
 
 // 🔥 THE KEY FIX: Make the component async and await params
