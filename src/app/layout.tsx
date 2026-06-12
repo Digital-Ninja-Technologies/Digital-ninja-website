@@ -13,27 +13,32 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-const BASE_URL = "https://www.thedigitalninjatech.com";
+export const BASE_URL = "https://www.thedigitalninjatech.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Digital Ninja Technologies | Design & Software Development Agency",
+    default: "Digital Ninja Technologies | Design & Software Development Agency in Nigeria",
     template: "%s | Digital Ninja Technologies",
   },
   description:
-    "Digital Ninja Technologies is a full-service digital agency in Nigeria specialising in UI/UX design, custom software, mobile apps, AI automation, and MVP development for startups and brands.",
+    "Digital Ninja Technologies is a full-service digital agency in Nigeria specialising in UI/UX design, custom software development, mobile app development, AI automation, and MVP development for startups, SMEs, and enterprises.",
   keywords: [
     "digital agency Nigeria",
-    "software development Nigeria",
+    "software development company Nigeria",
     "UI UX design agency Lagos",
     "mobile app development Nigeria",
-    "web design Nigeria",
-    "startup MVP development",
-    "AI automation Nigeria",
-    "product design agency Africa",
-    "digital solutions Nigeria",
+    "web design and development Nigeria",
+    "startup MVP development Africa",
+    "AI automation solutions Nigeria",
+    "product design agency Lagos",
+    "custom software Nigeria",
+    "tech agency Nigeria",
+    "app development Lagos",
+    "website development Nigeria",
     "Digital Ninja Technologies",
+    "digital solutions for startups",
+    "branding and design Nigeria",
   ],
   authors: [{ name: "Digital Ninja Technologies", url: BASE_URL }],
   creator: "Digital Ninja Technologies",
@@ -54,15 +59,15 @@ export const metadata: Metadata = {
     canonical: BASE_URL,
   },
   openGraph: {
-    title: "Digital Ninja Technologies | Design & Software Development Agency",
+    title: "Digital Ninja Technologies | Design & Software Development Agency in Nigeria",
     description:
-      "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+      "Empowering brands and start-ups with impactful digital solutions through strategic design and development. Based in Nigeria, serving clients globally.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Digital Ninja Technologies",
+        alt: "Digital Ninja Technologies — Design & Software Development Agency",
       },
     ],
     url: BASE_URL,
@@ -89,32 +94,56 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD Structured Data
+// ── Structured Data ────────────────────────────────────────────────────────────
+
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
+  "@id": `${BASE_URL}/#organization`,
   name: "Digital Ninja Technologies",
+  alternateName: "Digital Ninja Tech",
   url: BASE_URL,
-  logo: `${BASE_URL}/Digital-Ninja-Logo.png`,
+  logo: {
+    "@type": "ImageObject",
+    url: `${BASE_URL}/Digital-Ninja-Logo.png`,
+    width: 512,
+    height: 512,
+  },
   image: `${BASE_URL}/og-image.jpg`,
   description:
-    "Digital Ninja Technologies is a full-service digital agency in Nigeria specialising in UI/UX design, custom software, mobile apps, AI automation, and MVP development.",
-  foundingLocation: {
-    "@type": "Place",
+    "Digital Ninja Technologies is a full-service digital agency in Nigeria specialising in UI/UX design, custom software development, mobile apps, AI automation, and MVP development for startups, SMEs, and enterprises across Africa and globally.",
+  foundingDate: "2022",
+  address: {
+    "@type": "PostalAddress",
     addressCountry: "NG",
-    addressLocality: "Nigeria",
+    addressLocality: "Lagos",
+    addressRegion: "Lagos State",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 6.5244,
+    longitude: 3.3792,
+  },
+  areaServed: [
+    { "@type": "Country", name: "Nigeria" },
+    { "@type": "Continent", name: "Africa" },
+    { "@type": "AdministrativeArea", name: "Global" },
+  ],
+  priceRange: "₦₦₦",
+  telephone: "+2348145865720",
+  email: "Info@thedigitalninjatech.com",
   contactPoint: [
     {
       "@type": "ContactPoint",
       telephone: "+2348145865720",
       contactType: "customer service",
       availableLanguage: "English",
+      contactOption: "TollFree",
     },
     {
       "@type": "ContactPoint",
       email: "Info@thedigitalninjatech.com",
-      contactType: "customer service",
+      contactType: "sales",
     },
   ],
   sameAs: [
@@ -127,12 +156,60 @@ const organizationSchema = {
     "@type": "OfferCatalog",
     name: "Digital Services",
     itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Software Development" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Website Design & Development" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mobile App Development" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Solutions & Automation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "UI/UX Design" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "MVP Development" } },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Software Development",
+          description: "Scalable software solutions tailored to specific business needs.",
+          provider: { "@type": "Organization", name: "Digital Ninja Technologies" },
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Website Design & Development",
+          description: "Corporate websites, landing pages, web portals, and web applications.",
+          provider: { "@type": "Organization", name: "Digital Ninja Technologies" },
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Mobile App Development",
+          description: "iOS and Android applications with modern, intuitive user experiences.",
+          provider: { "@type": "Organization", name: "Digital Ninja Technologies" },
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "AI Solutions & Automation",
+          description: "AI-powered tools, chatbots, workflow automation, and business intelligence.",
+          provider: { "@type": "Organization", name: "Digital Ninja Technologies" },
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "UI/UX Design",
+          description: "User-centered interface design that improves engagement and drives conversions.",
+          provider: { "@type": "Organization", name: "Digital Ninja Technologies" },
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "MVP Development",
+          description: "Rapid product development for startups to validate ideas and reach market quickly.",
+          provider: { "@type": "Organization", name: "Digital Ninja Technologies" },
+        },
+      },
     ],
   },
 };
@@ -140,8 +217,10 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${BASE_URL}/#website`,
   name: "Digital Ninja Technologies",
   url: BASE_URL,
+  publisher: { "@id": `${BASE_URL}/#organization` },
   potentialAction: {
     "@type": "SearchAction",
     target: {
@@ -152,6 +231,61 @@ const websiteSchema = {
   },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What services does Digital Ninja Technologies offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Digital Ninja Technologies offers custom software development, website design and development, mobile app development (iOS and Android), AI solutions and automation, UI/UX design, and MVP development for startups.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Where is Digital Ninja Technologies located?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Digital Ninja Technologies is based in Lagos, Nigeria, and serves clients across Africa and globally.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can I hire Digital Ninja Technologies for my project?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can reach Digital Ninja Technologies via email at Info@thedigitalninjatech.com, by phone or WhatsApp at +2348145865720, or through the contact form at https://www.thedigitalninjatech.com/contact.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Digital Ninja Technologies work with startups?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Digital Ninja Technologies specialises in helping startups build MVPs, design product experiences, and develop scalable software to validate ideas and go to market quickly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries does Digital Ninja Technologies serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Digital Ninja Technologies serves startups, SMEs, enterprises, fintech companies, logistics companies, healthcare organisations, schools and EdTechs, NGOs, and government agencies.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Digital Ninja Technologies have a referral programme?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Digital Ninja Technologies offers a 10% commission referral programme. Refer a business that signs a project and earn 10% of the project value — for example, a ₦1,000,000 project earns you ₦100,000.",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -160,9 +294,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href={BASE_URL} />
-        <meta name="geo.region" content="NG" />
-        <meta name="geo.placename" content="Nigeria" />
+        <meta name="geo.region" content="NG-LA" />
+        <meta name="geo.placename" content="Lagos, Nigeria" />
+        <meta name="geo.position" content="6.5244;3.3792" />
+        <meta name="ICBM" content="6.5244, 3.3792" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body
         className={`${montserrat.className} font-sans`}
@@ -178,6 +315,12 @@ export default function RootLayout({
           id="website-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          strategy="beforeInteractive"
+        />
+        <Script
+          id="faq-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
           strategy="beforeInteractive"
         />
         <LoadingWrapper>

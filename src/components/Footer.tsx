@@ -18,10 +18,10 @@ export default function Footer() {
 
         <div className="relative container mx-auto px-2 py-[6rem] md:py-80 flex flex-col md:flex-row items-center space-x-10 max-w-6xl">
           <div className="flex mt-8  md:mt-0">
-            <h1 className="text-[24px] text-center md:text-start mb-4 md:text-6xl lg:text-[64px] font-[700] text-white leading-tight">
+            <h2 className="text-[24px] text-center md:text-start mb-4 md:text-6xl lg:text-[64px] font-[700] text-white leading-tight">
               Let's create great <br className="hidden md:block" />
               work together
-            </h1>
+            </h2>
           </div>
           <div className="md:flex-shrink-0 md:ml-8">
             <Button

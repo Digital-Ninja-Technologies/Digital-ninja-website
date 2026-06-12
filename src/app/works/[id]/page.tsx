@@ -2,6 +2,7 @@ import MoreProjects from "@/components/More-projects";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 // Project data
 const projects = [
@@ -209,8 +210,36 @@ export default async function ProjectPage({
     notFound();
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.thedigitalninjatech.com" },
+      { "@type": "ListItem", position: 2, name: "Works", item: "https://www.thedigitalninjatech.com/works" },
+      { "@type": "ListItem", position: 3, name: project.title, item: `https://www.thedigitalninjatech.com/works/${id}` },
+    ],
+  };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${project.title} — Case Study`,
+    description: project.overview.description,
+    image: `https://www.thedigitalninjatech.com/og-image.jpg`,
+    author: { "@type": "Organization", name: "Digital Ninja Technologies", url: "https://www.thedigitalninjatech.com" },
+    publisher: {
+      "@type": "Organization",
+      name: "Digital Ninja Technologies",
+      logo: { "@type": "ImageObject", url: "https://www.thedigitalninjatech.com/Digital-Ninja-Logo.png" },
+    },
+    url: `https://www.thedigitalninjatech.com/works/${id}`,
+    mainEntityOfPage: `https://www.thedigitalninjatech.com/works/${id}`,
+  };
+
   return (
     <div className="min-h-screen max-w-[75rem] mx-auto mt-20 py-12">
+      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Header */}
       <div className="mb-4">
         <Link

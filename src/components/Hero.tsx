@@ -215,6 +215,14 @@ export default function Hero() {
               <span className="block text-[#2E2D2D]">drives results.</span>
             </motion.h1>
 
+            {/* SEO: descriptive paragraph for search engine crawlers */}
+            <p className="sr-only">
+              Digital Ninja Technologies is a full-service digital agency based in Lagos, Nigeria.
+              We specialise in custom software development, UI/UX design, mobile app development for iOS and Android,
+              AI solutions and automation, and MVP development for startups. We help founders, SMEs, enterprises,
+              and organisations across Nigeria and Africa build impactful digital products that drive results.
+            </p>
+
             <div className="flex items-center md:justify-start justify-center">
               <motion.button
                 onClick={() => setIsModalOpen(true)}

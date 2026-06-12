@@ -3,15 +3,17 @@ import Testimonials from "@/components/Testimonials";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Work & Portfolio",
+  title: "Portfolio & Case Studies | Digital Products We've Built",
   description:
-    "Explore Digital Ninja Technologies' portfolio of digital products — mobile apps, websites, and software built for startups and brands across Africa and beyond.",
-  alternates: { canonical: "https://www.thedigitalninjatech.com/works" },
+    "Explore Digital Ninja Technologies' portfolio of digital products — including mobile apps, web platforms, SaaS tools, and brand identities built for startups and enterprises across Nigeria and Africa.",
+  alternates: {
+    canonical: "https://www.thedigitalninjatech.com/works",
+  },
   openGraph: {
-    title: "Portfolio | Digital Ninja Technologies",
+    title: "Portfolio | Digital Products Built by Digital Ninja Technologies",
     description:
-      "Explore our portfolio of digital products — mobile apps, websites, and software built for startups and brands.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies" }],
+      "Browse our selected works — mobile apps, web platforms, SaaS products, and brand identities built for startups and enterprises across Nigeria and Africa.",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies Portfolio" }],
     url: "https://www.thedigitalninjatech.com/works",
     siteName: "Digital Ninja Technologies",
     locale: "en_US",
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Portfolio | Digital Ninja Technologies",
     description:
-      "Explore our portfolio of digital products — mobile apps, websites, and software built for startups and brands.",
+      "Mobile apps, web platforms, SaaS products, and brand identities built for startups and enterprises.",
     images: ["/og-image.jpg"],
   },
 };
