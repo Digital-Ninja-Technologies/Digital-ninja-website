@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     apple: "/Digital-Ninja-Logo.png",
   },
   verification: {
-    google: "add-your-google-search-console-token-here",
+    google: "MO09tHFNCT_513t1hh3UzmYulK9evpgIZ3rn4aYCi_c",
   },
 };
 
