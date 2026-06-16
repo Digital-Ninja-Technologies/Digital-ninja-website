@@ -138,8 +138,8 @@ export default function AboutHeroAnimated() {
                   }}>
                   excellence
                 </motion.span>
-                , we are a small team of designers and developers that do great
-                work.
+                We are a team of designers and developers who do great
+                works.
               </motion.h1>
             </motion.div>
 
