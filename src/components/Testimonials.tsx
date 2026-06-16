@@ -1,32 +1,3 @@
-Skip to content
-Digital-Ninja-Technologies
-Digital-ninja-website
-Repository navigation
-Code
-Issues
-Pull requests
-Agents
-Actions
-Projects
-Security and quality
-Insights
-Settings
-Digital-ninja-website/src/components
-/Testimonials.tsx
-Go to file
-t
-T
-onifa1
-onifa1
-Remove personal details from testimonials
-898bf53
- · 
-1 minute ago
-
-Code
-
-Blame
-150 lines (134 loc) · 5.19 KB
 "use client";
 
 import { Star } from "lucide-react";
@@ -41,27 +12,37 @@ export default function Testimonials() {
     {
       quote:
         "DigitalNinja handled our project with utmost professionalism, we were able to attract the right audience.",
-     
+      name: "Patrick Umoh",
+      title: "CEO, Whichcar",
+      avatar: "/user1.svg",
     },
     {
       quote:
         "We got exactly what we wanted, the new blog design feels so alive, users now interact better with our posts and are happy to leave comments, thank you to the entire team! This was a truly outstanding experience from start to finish.",
-      
+      name: "Sandra Oluwatemitope",
+      title: "Product Manager, MoneyWise",
+      avatar: "/user2.svg",
     },
     {
       quote:
         "Best digital service I have received so far, the team were so helpful in handling the online presence of my business.",
-      
+      name: "John Ayanyemi",
+      title: "CEO, Greenland",
+      avatar: "/user2.svg",
     },
     {
       quote:
         "Another great testimonial praising the team's ability to deliver results and provide excellent service.",
-      
+      name: "Jane Doe",
+      title: "Marketing Head, Innovate Inc.",
+      avatar: "/user1.svg",
     },
     {
       quote:
         "The online presence of my business has never been stronger. A fantastic experience from start to finish.",
-      
+      name: "Chris Eze",
+      title: "Founder, StartRight",
+      avatar: "/user2.svg",
     },
   ];
 
