@@ -35,12 +35,25 @@ export default function ContactForm() {
   // 4. Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent default form submission
-    const message = `Hello Digital Ninja Technologies! 👋\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n\n*Message:*\n${formData.message}`;
-    const whatsappUrl = `https://wa.me/2348145865720?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
-    setSubmissionStatus("success");
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
+    try {
+      const response = await fetch("https://formspree.io/f/mnnvgyky", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setSubmissionStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmissionStatus("error");
+        setErrorMessage("Failed to send your message. Please try again.");
+      }
+    } catch {
+      setSubmissionStatus("error");
+      setErrorMessage("An unexpected error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -94,7 +107,7 @@ export default function ContactForm() {
                 {/* Submission feedback messages */}
                 {submissionStatus === "success" && (
                   <p className="text-green-600 font-medium">
-                    WhatsApp opened with your message — just hit send! 🚀
+                    Thank you! Your message has been sent.
                   </p>
                 )}
                 {submissionStatus === "error" && (
@@ -105,7 +118,7 @@ export default function ContactForm() {
                     type="submit"
                     disabled={isSubmitting}
                     className="bg-[#FF7E29] hover:bg-[#FF6602] text-white px-6 py-2 h-auto rounded-full text-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed">
-                    {isSubmitting ? "Opening WhatsApp..." : "Send via WhatsApp"}
+                    {isSubmitting ? "Sending..." : "Submit"}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </div>

@@ -158,20 +158,26 @@ export default function MultiStepModal({
     }
 
     setIsSubmitting(true);
+    setSubmissionError(null);
 
-    const services = formData.services.includes("Other")
-      ? [...formData.services.filter(s => s !== "Other"), formData.customService]
-      : formData.services;
-
-    const message = `Hello Digital Ninja Technologies! 👋\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Services Needed:* ${services.join(", ")}\n\n*Project Details:*\n${formData.project}`;
-
-    const whatsappUrl = `https://wa.me/2348145865720?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
-
-    setCurrentStep(3);
-    setFormData({ services: [], customService: "", name: "", email: "", project: "" });
-    setErrors({});
-    setIsSubmitting(false);
+    try {
+      const response = await fetch("https://formspree.io/f/mnnvgyky", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setCurrentStep(3);
+        setFormData({ services: [], customService: "", name: "", email: "", project: "" });
+        setErrors({});
+      } else {
+        setSubmissionError("Failed to submit the form. Please try again.");
+      }
+    } catch {
+      setSubmissionError("An unexpected error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleBack = () => {
