@@ -70,7 +70,7 @@ const stats = [
   { value: "8 wks", label: "Average startup-to-launch timeline" },
   { value: "100%", label: "On-time delivery rate" },
   { value: "10+", label: "Industries served" },
-  { value: "₦0", label: "Hidden fees — ever" },
+  { value: "Zero", label: "Hidden fees — ever" },
 ];
 
 // ─── Animation helpers ─────────────────────────────────────────────────────────
