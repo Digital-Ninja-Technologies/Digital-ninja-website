@@ -1,6 +1,5 @@
 import AboutHero from "@/components/About-hero";
 import AboutSell from "@/components/AboutSell";
-import WhatWeDo from "@/components/What-we-do";
 import React from "react";
 import type { Metadata } from "next";
 
@@ -44,7 +43,6 @@ const About = () => {
   return (
     <>
       <AboutHero />
-      <WhatWeDo />
       <AboutSell />
     </>
   );
