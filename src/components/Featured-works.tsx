@@ -33,34 +33,6 @@ export default function FeaturedWorks({
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
   const projects = [
     {
-      id: "flex2ride",
-      title: "Flex2Ride",
-      description: "App Design • Web Design • Design Systems",
-      image: "/Cover-Designv2.svg",
-      liveUrl: null,
-    },
-    {
-      id: "digital-ninja",
-      title: "Digital-Ninja",
-      description: "Brand Identity • Web Design • Design Systems",
-      image: "/Cover-Designv3.svg",
-      liveUrl: "https://www.thedigitalninjatech.com",
-    },
-    {
-      id: "mixlr",
-      title: "Mixlr",
-      description: "App Design • Web Design • Design Systems",
-      image: "/Cover-Design4.svg",
-      liveUrl: null,
-    },
-    {
-      id: "coinly",
-      title: "Coinly",
-      description: "App Design • Web Design • Design Systems",
-      image: "/Cover-Designv4.svg",
-      liveUrl: null,
-    },
-    {
       id: "moducode",
       title: "Moducode",
       description: "UX/UI Design • B2B SaaS • Talent Platform",
