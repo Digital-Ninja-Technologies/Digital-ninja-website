@@ -1,3 +1,32 @@
+Skip to content
+Digital-Ninja-Technologies
+Digital-ninja-website
+Repository navigation
+Code
+Issues
+Pull requests
+Agents
+Actions
+Projects
+Security and quality
+Insights
+Settings
+Digital-ninja-website/src/components
+/Testimonials.tsx
+Go to file
+t
+T
+onifa1
+onifa1
+Remove personal details from testimonials
+898bf53
+ · 
+1 minute ago
+
+Code
+
+Blame
+150 lines (134 loc) · 5.19 KB
 "use client";
 
 import { Star } from "lucide-react";
