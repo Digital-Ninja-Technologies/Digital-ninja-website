@@ -158,45 +158,20 @@ export default function MultiStepModal({
     }
 
     setIsSubmitting(true);
-    setSubmissionError(null);
 
-    try {
-      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
-      if (!formspreeId) {
-        setSubmissionError("Contact form is not configured. Please email us directly.");
-        setIsSubmitting(false);
-        return;
-      }
-      const formspreeEndpoint = `https://formspree.io/f/${formspreeId}`;
-      const response = await fetch(formspreeEndpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    const services = formData.services.includes("Other")
+      ? [...formData.services.filter(s => s !== "Other"), formData.customService]
+      : formData.services;
 
-      if (response.ok) {
-        console.log("Form submitted successfully to Formspree!");
-        setCurrentStep(3);
-        setFormData({
-          services: [],
-          customService: "",
-          name: "",
-          email: "",
-          project: "",
-        });
-        setErrors({});
-      } else {
-        console.error("Formspree submission failed:", response.statusText);
-        setSubmissionError("Failed to submit the form. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setSubmissionError("An unexpected error occurred. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    const message = `Hello Digital Ninja Technologies! 👋\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Services Needed:* ${services.join(", ")}\n\n*Project Details:*\n${formData.project}`;
+
+    const whatsappUrl = `https://wa.me/2348145865720?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+
+    setCurrentStep(3);
+    setFormData({ services: [], customService: "", name: "", email: "", project: "" });
+    setErrors({});
+    setIsSubmitting(false);
   };
 
   const handleBack = () => {

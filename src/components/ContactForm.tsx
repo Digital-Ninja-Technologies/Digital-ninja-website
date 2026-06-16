@@ -35,42 +35,12 @@ export default function ContactForm() {
   // 4. Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent default form submission
-    setIsSubmitting(true);
-    setSubmissionStatus("idle");
-    setErrorMessage(null);
-
-    try {
-      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
-      if (!formspreeId) {
-        setSubmissionStatus("error");
-        setErrorMessage("Contact form is not configured. Please email us directly.");
-        return;
-      }
-      const formspreeEndpoint = `https://formspree.io/f/${formspreeId}`;
-
-      const response = await fetch(formspreeEndpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmissionStatus("success");
-        setFormData({ name: "", email: "", message: "" }); // Clear form
-      } else {
-        setSubmissionStatus("error");
-        setErrorMessage("Failed to send your message. Please try again.");
-        console.error("Formspree submission failed:", response.statusText);
-      }
-    } catch (error) {
-      setSubmissionStatus("error");
-      setErrorMessage("An unexpected error occurred. Please try again later.");
-      console.error("Error submitting form:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
+    const message = `Hello Digital Ninja Technologies! 👋\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n\n*Message:*\n${formData.message}`;
+    const whatsappUrl = `https://wa.me/2348145865720?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+    setSubmissionStatus("success");
+    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(false);
   };
 
   return (
@@ -124,7 +94,7 @@ export default function ContactForm() {
                 {/* Submission feedback messages */}
                 {submissionStatus === "success" && (
                   <p className="text-green-600 font-medium">
-                    Thank you! Your message has been sent.
+                    WhatsApp opened with your message — just hit send! 🚀
                   </p>
                 )}
                 {submissionStatus === "error" && (
@@ -133,11 +103,10 @@ export default function ContactForm() {
                 <div className="flex justify-start pt-4">
                   <Button
                     type="submit"
-                    disabled={isSubmitting} // Disable button during submission
+                    disabled={isSubmitting}
                     className="bg-[#FF7E29] hover:bg-[#FF6602] text-white px-6 py-2 h-auto rounded-full text-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed">
-                    {isSubmitting ? "Sending..." : "Submit"}
-                    <ArrowRight className="w-5 h-5 ml-2" />{" "}
-                    {/* Added ml-2 for spacing */}
+                    {isSubmitting ? "Opening WhatsApp..." : "Send via WhatsApp"}
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </div>
               </form>
