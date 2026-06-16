@@ -93,7 +93,7 @@ const projects = [
         "/moducode-7.png",
         "/moducode-8.png",
       ],
-      liveUrl: "https://www.moducode.com/",
+      liveUrl: "https://krevops.com/",
       role: "UX/UI Designer",
       responsibilities: [
         "Product discovery and UX direction",
@@ -488,6 +488,20 @@ export default async function ProjectPage({
           <p className="text-[#4D4C4C] font-[400] text-[14px]">
             {project.description}
           </p>
+          {project.overview.liveUrl && (
+            <a
+              href={project.overview.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-5 bg-[#FF7E29] hover:bg-[#FF6602] text-white font-medium text-sm py-3 px-7 rounded-full transition-colors duration-200">
+              View Live Site
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          )}
         </div>
       </div>
 
