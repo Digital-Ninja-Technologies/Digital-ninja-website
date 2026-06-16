@@ -12,27 +12,22 @@ export default function Testimonials() {
     {
       quote:
         "DigitalNinja handled our project with utmost professionalism, and we were able to attract the right audience."
-    
     },
     {
       quote:
         "We got exactly what we wanted, the new blog design feels so alive, users now interact better with our posts and are happy to leave comments, thank you to the entire team! This was a truly outstanding experience from start to finish.",
-      
     },
     {
       quote:
-        "Best digital service I have received so far, the team were so helpful in handling the online presence of my business.",
-      
+        "Best digital service I have received so far, the team was so helpful in handling the online presence of my business."
     },
     {
       quote:
         "Another great testimonial praising the team's ability to deliver results and provide excellent service.",
-      
     },
     {
       quote:
         "The online presence of my business has never been stronger. A fantastic experience from start to finish.",
-      
     },
   ];
 
