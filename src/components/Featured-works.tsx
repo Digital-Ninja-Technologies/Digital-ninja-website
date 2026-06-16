@@ -37,30 +37,35 @@ export default function FeaturedWorks({
       title: "Flex2Ride",
       description: "App Design • Web Design • Design Systems",
       image: "/Cover-Designv2.svg",
+      liveUrl: null,
     },
     {
       id: "digital-ninja",
       title: "Digital-Ninja",
       description: "Brand Identity • Web Design • Design Systems",
       image: "/Cover-Designv3.svg",
+      liveUrl: "https://www.thedigitalninjatech.com",
     },
     {
       id: "mixlr",
       title: "Mixlr",
       description: "App Design • Web Design • Design Systems",
       image: "/Cover-Design4.svg",
+      liveUrl: null,
     },
     {
       id: "coinly",
       title: "Coinly",
       description: "App Design • Web Design • Design Systems",
       image: "/Cover-Designv4.svg",
+      liveUrl: null,
     },
     {
       id: "moducode",
       title: "Moducode",
       description: "UX/UI Design • B2B SaaS • Talent Platform",
       image: "/moducode-cover.png",
+      liveUrl: "https://krevops.com/",
     },
   ];
 
@@ -146,12 +151,19 @@ export default function FeaturedWorks({
                   </button>
                 </Link>
 
-                <Button
-                  variant="ghost"
-                  className="text-[#ff7e29] hidden md:flex hover:text-[#ff7e29]  p-4 h-auto rounded-[2rem] font-medium hover:bg-transparent hover:rounded-[2rem] cursor-pointer hover:border hover:border-[#FFF9F5] hover:px-4 hover:py-1 transition-all duration-200">
-                  View live
-                  <ArrowUpRight className="ml-1 h-4 w-4" />
-                </Button>
+                {project.liveUrl ? (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <Button
+                      variant="ghost"
+                      className="text-[#ff7e29] hidden md:flex hover:text-[#ff7e29] p-4 h-auto rounded-[2rem] font-medium hover:bg-transparent hover:rounded-[2rem] cursor-pointer hover:border hover:border-[#FFF9F5] hover:px-4 hover:py-1 transition-all duration-200">
+                      View live
+                      <ArrowUpRight className="ml-1 h-4 w-4" />
+                    </Button>
+                  </a>
+                ) : null}
               </div>
             </div>
           </div>
