@@ -74,16 +74,25 @@ const projects = [
     id: "moducode",
     title: "Moducode",
     description: "UX/UI Design • B2B SaaS • Talent Platform",
-    image: "/moducode-cover.svg",
+    image: "/moducode-cover.png",
     showcaseType: "standard",
     overview: {
       title: "A trust-driven hiring platform connecting global companies with Africa's best engineers.",
       description:
         "Moducode is a talent-matching platform that helps companies hire vetted remote software and data engineers from Africa. As UX/UI designer, the challenge was to build a modern, trust-driven experience that immediately communicates professionalism, reduces hiring friction, and converts visitors into consultation bookings. The design reduced the recruitment process to three clear steps — book a call, get matched, start work — while strategically placing social proof to build confidence before key conversion points. The result: a cleaner, more conversion-focused product with a scalable UI foundation for future platform growth.",
       features: {
-        mockupImage1: "/brand-1.svg",
-        mockupImage2: "/brand-2.svg",
+        mockupImage1: "/moducode-2.png",
+        mockupImage2: "/moducode-3.png",
       },
+      gallery: [
+        "/moducode-cover.png",
+        "/moducode-1.png",
+        "/moducode-4.png",
+        "/moducode-5.png",
+        "/moducode-6.png",
+        "/moducode-7.png",
+        "/moducode-8.png",
+      ],
     },
   },
 ];
@@ -117,15 +126,40 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
             <img
               src={project.overview.features.mockupImage1 || "/placeholder.svg"}
               alt={`${project.title} app interface`}
-              className="mx-auto"
+              className="mx-auto rounded-2xl shadow-lg"
             />
           </div>
           <div className="relative inline-block">
             <img
               src={project.overview.features.mockupImage2 || "/placeholder.svg"}
               alt={`${project.title} app interface`}
-              className="mx-auto"
+              className="mx-auto rounded-2xl shadow-lg"
             />
+          </div>
+        </div>
+      )}
+
+      {/* Gallery Section */}
+      {project.overview.gallery && project.overview.gallery.length > 0 && (
+        <div className="mt-16">
+          <p className="text-[#ff7e29] font-[600] text-sm tracking-wider uppercase mb-8">
+            MORE SCREENS
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {project.overview.gallery.map((img, i) => (
+              <div
+                key={i}
+                className={`rounded-2xl overflow-hidden shadow-md border border-[#F2F2F2] ${
+                  i === 0 ? "md:col-span-2" : ""
+                }`}
+              >
+                <img
+                  src={img}
+                  alt={`${project.title} screen ${i + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
           </div>
         </div>
       )}

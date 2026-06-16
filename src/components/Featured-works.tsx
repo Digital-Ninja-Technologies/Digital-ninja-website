@@ -60,7 +60,7 @@ export default function FeaturedWorks({
       id: "moducode",
       title: "Moducode",
       description: "UX/UI Design • B2B SaaS • Talent Platform",
-      image: "/moducode-cover.svg",
+      image: "/moducode-cover.png",
     },
   ];
 
