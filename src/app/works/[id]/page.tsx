@@ -70,6 +70,22 @@ const projects = [
       },
     },
   },
+  {
+    id: "moducode",
+    title: "Moducode",
+    description: "UX/UI Design • B2B SaaS • Talent Platform",
+    image: "/moducode-cover.svg",
+    showcaseType: "standard",
+    overview: {
+      title: "A trust-driven hiring platform connecting global companies with Africa's best engineers.",
+      description:
+        "Moducode is a talent-matching platform that helps companies hire vetted remote software and data engineers from Africa. As UX/UI designer, the challenge was to build a modern, trust-driven experience that immediately communicates professionalism, reduces hiring friction, and converts visitors into consultation bookings. The design reduced the recruitment process to three clear steps — book a call, get matched, start work — while strategically placing social proof to build confidence before key conversion points. The result: a cleaner, more conversion-focused product with a scalable UI foundation for future platform growth.",
+      features: {
+        mockupImage1: "/brand-1.svg",
+        mockupImage2: "/brand-2.svg",
+      },
+    },
+  },
 ];
 
 function ProjectOverview({ project }: { project: (typeof projects)[0] }) {

@@ -1,0 +1,75 @@
+<svg width="520" height="487" viewBox="0 0 520 487" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="487" rx="32" fill="#0A0E1A"/>
+
+  <!-- Grid lines -->
+  <line x1="0" y1="97" x2="520" y2="97" stroke="#1E2436" stroke-width="1"/>
+  <line x1="0" y1="194" x2="520" y2="194" stroke="#1E2436" stroke-width="1"/>
+  <line x1="0" y1="291" x2="520" y2="291" stroke="#1E2436" stroke-width="1"/>
+  <line x1="0" y1="388" x2="520" y2="388" stroke="#1E2436" stroke-width="1"/>
+  <line x1="104" y1="0" x2="104" y2="487" stroke="#1E2436" stroke-width="1"/>
+  <line x1="208" y1="0" x2="208" y2="487" stroke="#1E2436" stroke-width="1"/>
+  <line x1="312" y1="0" x2="312" y2="487" stroke="#1E2436" stroke-width="1"/>
+  <line x1="416" y1="0" x2="416" y2="487" stroke="#1E2436" stroke-width="1"/>
+
+  <!-- Glow blob -->
+  <ellipse cx="260" cy="220" rx="180" ry="130" fill="#3B5BDB" fill-opacity="0.15"/>
+  <ellipse cx="380" cy="160" rx="100" ry="80" fill="#FF6602" fill-opacity="0.08"/>
+
+  <!-- Browser window mockup -->
+  <rect x="60" y="80" width="400" height="260" rx="12" fill="#131829" stroke="#2A3050" stroke-width="1.5"/>
+  <!-- Browser chrome -->
+  <rect x="60" y="80" width="400" height="32" rx="12" fill="#1C2240"/>
+  <rect x="60" y="100" width="400" height="12" fill="#1C2240"/>
+  <!-- Traffic lights -->
+  <circle cx="86" cy="96" r="5" fill="#FF5F57"/>
+  <circle cx="102" cy="96" r="5" fill="#FFBD2E"/>
+  <circle cx="118" cy="96" r="5" fill="#28CA41"/>
+  <!-- URL bar -->
+  <rect x="140" y="88" width="240" height="16" rx="8" fill="#0D1120"/>
+  <text x="260" y="100" font-family="monospace" font-size="8" fill="#6B7DB3" text-anchor="middle">moducode.com</text>
+
+  <!-- Hero section mockup -->
+  <rect x="76" y="128" width="388" height="196" rx="4" fill="#0D1120"/>
+  <!-- Nav bar inside browser -->
+  <rect x="76" y="128" width="388" height="24" fill="#111628"/>
+  <rect x="86" y="135" width="40" height="10" rx="3" fill="#3B5BDB" fill-opacity="0.6"/>
+  <rect x="280" y="136" width="30" height="8" rx="2" fill="#2A3050"/>
+  <rect x="318" y="136" width="30" height="8" rx="2" fill="#2A3050"/>
+  <rect x="356" y="133" width="40" height="14" rx="7" fill="#FF6602"/>
+
+  <!-- Hero content -->
+  <rect x="96" y="168" width="160" height="14" rx="4" fill="#3B5BDB" fill-opacity="0.5"/>
+  <rect x="96" y="188" width="220" height="8" rx="3" fill="#2A3050"/>
+  <rect x="96" y="202" width="190" height="8" rx="3" fill="#2A3050"/>
+  <rect x="96" y="216" width="140" height="8" rx="3" fill="#2A3050"/>
+  <rect x="96" y="234" width="80" height="22" rx="11" fill="#FF6602"/>
+  <rect x="186" y="234" width="80" height="22" rx="11" fill="#1C2240" stroke="#3B5BDB" stroke-width="1"/>
+
+  <!-- Hero image placeholder (right side) -->
+  <rect x="300" y="158" width="148" height="148" rx="8" fill="#1C2240"/>
+  <rect x="316" y="172" width="116" height="80" rx="6" fill="#0D1120"/>
+  <rect x="316" y="258" width="50" height="8" rx="3" fill="#3B5BDB" fill-opacity="0.5"/>
+  <rect x="372" y="258" width="60" height="8" rx="3" fill="#2A3050"/>
+  <!-- Avatar circles -->
+  <circle cx="326" cy="212" r="14" fill="#3B5BDB" fill-opacity="0.3"/>
+  <circle cx="346" cy="212" r="14" fill="#FF6602" fill-opacity="0.3"/>
+  <circle cx="366" cy="212" r="14" fill="#28CA41" fill-opacity="0.3"/>
+
+  <!-- Stats row -->
+  <rect x="76" y="324" width="118" height="56" rx="8" fill="#111628" stroke="#1E2436" stroke-width="1"/>
+  <rect x="201" y="324" width="118" height="56" rx="8" fill="#111628" stroke="#1E2436" stroke-width="1"/>
+  <rect x="326" y="324" width="118" height="56" rx="8" fill="#111628" stroke="#1E2436" stroke-width="1"/>
+  <text x="135" y="348" font-family="sans-serif" font-size="14" fill="#FF6602" text-anchor="middle" font-weight="bold">94%</text>
+  <text x="135" y="364" font-family="sans-serif" font-size="7" fill="#6B7DB3" text-anchor="middle">Match Rate</text>
+  <text x="260" y="348" font-family="sans-serif" font-size="14" fill="#3B5BDB" text-anchor="middle" font-weight="bold">2x</text>
+  <text x="260" y="364" font-family="sans-serif" font-size="7" fill="#6B7DB3" text-anchor="middle">Faster Hiring</text>
+  <text x="385" y="348" font-family="sans-serif" font-size="14" fill="#28CA41" text-anchor="middle" font-weight="bold">500+</text>
+  <text x="385" y="364" font-family="sans-serif" font-size="7" fill="#6B7DB3" text-anchor="middle">Engineers</text>
+
+  <!-- Bottom label -->
+  <rect x="60" y="400" width="400" height="56" rx="12" fill="#111628" stroke="#1E2436" stroke-width="1"/>
+  <text x="80" y="425" font-family="sans-serif" font-size="13" fill="#FFFFFF" font-weight="600">Moducode</text>
+  <text x="80" y="443" font-family="sans-serif" font-size="10" fill="#6B7DB3">UX/UI Design  •  Talent Platform  •  B2B SaaS</text>
+  <rect x="360" y="412" width="80" height="28" rx="14" fill="#FF6602" fill-opacity="0.15" stroke="#FF6602" stroke-width="1"/>
+  <text x="400" y="430" font-family="sans-serif" font-size="9" fill="#FF6602" text-anchor="middle" font-weight="600">Case Study</text>
+</svg>

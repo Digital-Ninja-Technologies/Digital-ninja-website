@@ -56,6 +56,12 @@ export default function FeaturedWorks({
       description: "App Design • Web Design • Design Systems",
       image: "/Cover-Designv4.svg",
     },
+    {
+      id: "moducode",
+      title: "Moducode",
+      description: "UX/UI Design • B2B SaaS • Talent Platform",
+      image: "/moducode-cover.svg",
+    },
   ];
 
   return (
