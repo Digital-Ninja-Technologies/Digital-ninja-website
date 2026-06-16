@@ -6,6 +6,7 @@ import ProcessSteps from "@/components/Process-steps";
 import TawkMessenger from "@/components/TawkMessenger";
 import Testimonials from "@/components/Testimonials";
 import WhatWeDo from "@/components/What-we-do";
+import WhoWeAre from "@/components/WhoWeAre";
 
 export default function Home() {
   return (
@@ -15,6 +16,10 @@ export default function Home() {
       <main className="absolute top-20 left-0">
         <TawkMessenger />
       </main>
+
+      {/* Who We Are — CEO voice, problem-aware, conversion-focused */}
+      <WhoWeAre />
+
       {/* Client Marquee Section */}
       <div className="w-full mt-4 md:mt-1 pb-10">
         <ClientsSlide />
