@@ -136,10 +136,10 @@ export default function AboutHeroAnimated() {
                     backgroundPosition: "0% 100%",
                     backgroundSize: "0% 3px",
                   }}>
-                  excellence
+                  excellence.
                 </motion.span>
-                We are a team of designers and developers who do great
-                works.
+                 We are a team of designers and developers who do great
+                work.
               </motion.h1>
             </motion.div>
 
