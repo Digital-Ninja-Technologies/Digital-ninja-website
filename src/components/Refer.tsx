@@ -72,9 +72,9 @@ const steps = [
 ];
 
 const earnings = [
-  { project: "₦500,000", commission: "₦50,000" },
-  { project: "₦1,000,000", commission: "₦100,000" },
-  { project: "₦5,000,000", commission: "₦500,000" },
+  { project: "₦500,000", projectUsd: "~$300", commission: "₦50,000", commissionUsd: "~$30" },
+  { project: "₦1,000,000", projectUsd: "~$600", commission: "₦100,000", commissionUsd: "~$60" },
+  { project: "₦5,000,000", projectUsd: "~$3,000", commission: "₦500,000", commissionUsd: "~$300" },
 ];
 
 // ─── Animation helpers ────────────────────────────────────────────────────────
@@ -254,9 +254,10 @@ export default function ReferPage() {
                 <p className="text-[#999797] text-sm font-medium mb-1 uppercase tracking-wider">
                   Project Value
                 </p>
-                <p className="text-[#2E2D2D] text-2xl font-bold mb-5">
+                <p className="text-[#2E2D2D] text-2xl font-bold">
                   {e.project}
                 </p>
+                <p className="text-[#999797] text-xs font-medium mb-5">{e.projectUsd}</p>
                 <div className="w-full h-px bg-[#FFE0CC] mb-5" />
                 <p className="text-[#FF7E29] text-sm font-medium mb-1 uppercase tracking-wider">
                   Your Commission
@@ -264,6 +265,7 @@ export default function ReferPage() {
                 <p className="text-[#FD3600] text-3xl font-bold">
                   {e.commission}
                 </p>
+                <p className="text-[#FF7E29]/70 text-xs font-medium mt-1">{e.commissionUsd}</p>
               </motion.div>
             ))}
           </Section>
