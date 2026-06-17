@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import MultiStepModal from "./Multi-step-modal";
 import { useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 import Image from "next/image";
@@ -10,7 +9,6 @@ import Image from "next/image";
 const tags = ["Lagos, Nigeria", "Founded 2022", "Global Clients", "10+ Industries"];
 
 export default function AboutHero() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.2 });
@@ -122,12 +120,12 @@ export default function AboutHero() {
             >
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 <Button
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={() => window.open("https://cal.com/the-digital-ninja-technologies-fucsfq/15min", "_blank")}
                   className="bg-gradient-to-r from-[#FF6602] to-[#FF7E29] hover:from-[#FF8A3D] hover:to-[#FFAA66] text-white rounded-full text-base font-semibold py-6 px-8 relative overflow-hidden group"
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                   <span className="relative z-10 flex items-center gap-2">
-                    Work with us
+                    Book a 15min call
                     <ArrowRight className="h-4 w-4" />
                   </span>
                 </Button>
@@ -198,8 +196,6 @@ export default function AboutHero() {
           </motion.div>
         </div>
       </div>
-
-      <MultiStepModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </div>
   );
 }

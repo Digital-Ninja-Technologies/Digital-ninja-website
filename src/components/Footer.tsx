@@ -2,11 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import MultiStepModal from "./Multi-step-modal";
 import { useState } from "react";
 
 export default function Footer() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <footer className="relative bg-white md:pt-20 overflow-hidden">
       <div className="relative">
@@ -25,10 +23,10 @@ export default function Footer() {
           </div>
           <div className="md:flex-shrink-0 md:ml-8">
             <Button
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => window.open("https://cal.com/the-digital-ninja-technologies-fucsfq/15min", "_blank")}
               className="bg-white text-[#ff7e29] hover:bg-gray-50 px-8 py-3 rounded-full text-lg font-[500]"
               size="lg">
-              Get started
+              Book a 15min call
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
@@ -101,7 +99,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <MultiStepModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </footer>
   );
 }

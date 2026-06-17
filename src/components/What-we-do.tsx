@@ -338,7 +338,7 @@ export default function WhatWeDo() {
                       className="inline-flex items-center gap-2 text-white font-semibold text-sm py-3 px-7 rounded-full transition-all duration-200"
                       style={{ backgroundColor: services[displayed].color }}
                     >
-                      Start this project
+                      Book a 15min call
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
                   </Link>
@@ -382,7 +382,7 @@ export default function WhatWeDo() {
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF6602] to-[#FF7E29] text-white font-semibold text-base py-4 px-9 rounded-full transition-all duration-300"
             >
-              Talk to us
+              Book a 15min call
               <ArrowRight className="w-5 h-5" />
             </motion.button>
           </Link>

@@ -4,10 +4,8 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, type Variants, useScroll, useTransform } from "framer-motion";
-import MultiStepModal from "./Multi-step-modal";
 
 export default function Hero() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   // Parallax scroll effect
@@ -225,7 +223,7 @@ export default function Hero() {
 
             <div className="flex items-center md:justify-start justify-center">
               <motion.button
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => window.open("https://cal.com/the-digital-ninja-technologies-fucsfq/15min", "_blank")}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF6602] to-[#FF7E29] hover:from-[#FF8A3D] hover:to-[#FFAA66] font-medium text-[18px] leading-[160%] tracking-[-0.03em] text-white py-3 px-8 rounded-full transition-all duration-300 relative overflow-hidden group"
                 variants={buttonVariants}
                 initial="hidden"
@@ -237,7 +235,7 @@ export default function Hero() {
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"
                   initial={{ x: "-100%" }}
                 />
-                <span className="relative z-10">Get started</span>
+                <span className="relative z-10">Book a 15min call</span>
                 <motion.div
                   animate={{ x: [0, 3, 0] }}
                   transition={{
@@ -324,8 +322,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-
-      <MultiStepModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </main>
   );
 }

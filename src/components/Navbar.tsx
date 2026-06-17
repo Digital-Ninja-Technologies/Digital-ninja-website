@@ -5,11 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
-import MultiStepModal from "./Multi-step-modal";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
 
   const isActive = (path: string) => pathname === path;
@@ -71,9 +69,9 @@ export default function Navbar() {
           </nav>
 
           <button
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => window.open("https://cal.com/the-digital-ninja-technologies-fucsfq/15min", "_blank")}
             className="hidden md:flex items-center gap-2 px-6 py-3 rounded-full border border-[#FF7E29] text-[#FF7E29] hover:bg-[#ff6602] hover:text-white transition-colors">
-            <span>Start a project</span>
+            <span>Book a 15min call</span>
             <ArrowRight className="h-4 w-4" />
           </button>
 
@@ -143,17 +141,16 @@ export default function Navbar() {
               <button
                 className="mt-3 mx-4 flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-[#ff6602] text-[#ff6602] hover:bg-[#ff6602] hover:text-white transition-colors"
                 onClick={() => {
-                  setIsModalOpen(true);
+                  window.open("https://cal.com/the-digital-ninja-technologies-fucsfq/15min", "_blank");
                   setMobileMenuOpen(false);
                 }}>
-                <span>Start a project</span>
+                <span>Book a 15min call</span>
                 <ArrowRight className="h-4 w-4" />
               </button>
             </nav>
           </div>
         )}
       </header>
-      <MultiStepModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </main>
   );
 }

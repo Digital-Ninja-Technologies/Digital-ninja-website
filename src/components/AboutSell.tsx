@@ -260,7 +260,7 @@ export default function AboutSell() {
                     whileTap={{ scale: 0.97 }}
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF6602] to-[#FF7E29] text-white font-semibold text-base py-4 px-10 rounded-full"
                   >
-                    Start your project
+                    Book a 15min call
                     <ArrowRight className="h-5 w-5" />
                   </motion.button>
                 </Link>
@@ -324,7 +324,7 @@ export default function AboutSell() {
                       whileTap={{ scale: 0.97 }}
                       className="inline-flex items-center gap-2 bg-white text-[#FD3600] font-semibold text-lg py-4 px-10 rounded-full hover:bg-[#FFF0E5] transition-colors duration-200"
                     >
-                      Book a free call
+                      Book a 15min call
                       <ArrowRight className="h-5 w-5" />
                     </motion.button>
                   </Link>
