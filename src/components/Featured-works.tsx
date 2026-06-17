@@ -35,7 +35,7 @@ export default function FeaturedWorks({
     {
       id: "moducode",
       title: "Moducode",
-      description: "UX/UI Design • B2B SaaS • Talent Platform",
+      description: "UX UI Design • B2B SaaS • Talent Platform",
       image: "/moducode-cover.png",
       liveUrl: "https://krevops.com/",
     },

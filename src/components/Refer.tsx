@@ -28,12 +28,12 @@ const services = [
   {
     icon: "🤖",
     title: "AI Solutions & Automation",
-    desc: "AI-powered tools, chatbots, workflow automation, and business intelligence.",
+    desc: "AI powered tools, chatbots, workflow automation, and business intelligence.",
   },
   {
     icon: "🎨",
-    title: "UI/UX Design",
-    desc: "User-centered interfaces that improve engagement and conversions.",
+    title: "UI UX Design",
+    desc: "User centered interfaces that improve engagement and conversions.",
   },
   {
     icon: "⚡",
@@ -62,7 +62,7 @@ const steps = [
   {
     number: "02",
     title: "We Close",
-    desc: "We handle discovery, proposals, and all project execution end-to-end.",
+    desc: "We handle discovery, proposals, and all project execution end to end.",
   },
   {
     number: "03",

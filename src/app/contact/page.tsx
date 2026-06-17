@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us | Hire a Digital Agency in Nigeria",
   description:
-    "Get in touch with Digital Ninja Technologies. Hire a top digital agency in Nigeria for software development, UI/UX design, mobile apps, and AI solutions. Email us or send a WhatsApp message today.",
+    "Get in touch with Digital Ninja Technologies. Hire a top digital agency in Nigeria for software development, UI UX design, mobile apps, and AI solutions. Email us or send a WhatsApp message today.",
   alternates: {
     canonical: "https://www.thedigitalninjatech.com/contact",
   },

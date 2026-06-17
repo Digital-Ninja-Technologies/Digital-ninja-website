@@ -32,7 +32,7 @@ const differentiators = [
   "Fixed timelines — we commit and we deliver",
   "Transparent pricing — no hidden costs, ever",
   "Direct communication — no middlemen or account managers",
-  "Post-launch support — we don't disappear after launch",
+  "Post launch support — we don't disappear after launch",
   "Global standards, deep African market understanding",
 ];
 

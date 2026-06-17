@@ -22,14 +22,14 @@ const steps = [
     number: "03",
     title: ["Agile", "Development"],
     bg: "#FD3600",
-    body: "We build in iterative sprints using the best-fit technologies — whether it's no-code, low-code, or full custom development. You get frequent updates, working demos, and flexibility to adapt.",
+    body: "We build in iterative sprints using the best fit technologies — whether it's no code, low code, or full custom development. You get frequent updates, working demos, and flexibility to adapt.",
     radius: "40px",
   },
   {
     number: "04",
     title: ["Launch &", "Optimize"],
     bg: "#FD5527",
-    body: "After rigorous testing, we launch with confidence. But we don't stop there — we monitor performance, gather feedback, and continuously improve based on real-world use.",
+    body: "After rigorous testing, we launch with confidence. But we don't stop there — we monitor performance, gather feedback, and continuously improve based on real world use.",
     radius: "40px",
   },
   {

@@ -9,13 +9,13 @@ const projects = [
   {
     id: "moducode",
     title: "Moducode",
-    description: "UX/UI Design • B2B SaaS • Talent Platform",
+    description: "UX UI Design • B2B SaaS • Talent Platform",
     image: "/moducode-cover.png",
     showcaseType: "standard",
     overview: {
-      title: "A trust-driven hiring platform connecting global companies with Africa's best engineers.",
+      title: "A trust driven hiring platform connecting global companies with Africa's best engineers.",
       description:
-        "Moducode is a talent-matching platform focused on helping companies hire vetted remote software and data engineers from Africa. The product positions itself as a bridge between global companies and high-quality African tech talent, while simplifying recruitment, onboarding, and management. As the UX/UI designer, my role was to design a modern, trust-driven experience that communicates professionalism, reduces hiring friction, and guides potential clients toward booking a consultation call.",
+        "Moducode is a talent matching platform focused on helping companies hire vetted remote software and data engineers from Africa. The product positions itself as a bridge between global companies and high quality African tech talent, while simplifying recruitment, onboarding, and management. As the UX UI designer, my role was to design a modern, trust driven experience that communicates professionalism, reduces hiring friction, and guides potential clients toward booking a consultation call.",
       features: {
         mockupImage1: "/moducode-2.png",
         mockupImage2: "/moducode-3.png",
@@ -30,7 +30,7 @@ const projects = [
         "/moducode-8.png",
       ],
       liveUrl: "https://krevops.com/",
-      role: "UX/UI Designer",
+      role: "UX UI Designer",
       responsibilities: [
         "Product discovery and UX direction",
         "User flow planning",
@@ -63,7 +63,7 @@ const projects = [
         {
           step: "01",
           title: "Establish Trust Quickly",
-          desc: "The hero section immediately communicates what Moducode does, who it serves, and the value proposition — reducing cognitive load and helping visitors quickly self-identify.",
+          desc: "The hero section immediately communicates what Moducode does, who it serves, and the value proposition — reducing cognitive load and helping visitors quickly self identify.",
         },
         {
           step: "02",
@@ -82,7 +82,7 @@ const projects = [
         summary:
           "The design successfully positioned Moducode as a modern African tech talent platform capable of serving global companies professionally.",
         points: [
-          "A cleaner and more conversion-focused hiring experience",
+          "A cleaner and more conversion focused hiring experience",
           "Stronger trust in communication",
           "Clearer user flow",
           "Improved readability and structure",
@@ -336,7 +336,7 @@ export async function generateMetadata({
   const project = projects.find((p) => p.id === id);
   const title = project ? project.title : "Project";
   const description = project?.overview.description ??
-    "Explore this project by Digital Ninja Technologies — a full-service digital agency in Nigeria.";
+    "Explore this project by Digital Ninja Technologies — a full service digital agency in Nigeria.";
   const url = `https://www.thedigitalninjatech.com/works/${id}`;
 
   return {

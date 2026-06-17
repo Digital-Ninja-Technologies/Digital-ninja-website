@@ -32,19 +32,19 @@ export default function WhatWeDo() {
               <ServiceCard
                 number="01"
                 title="Web Design & Development"
-                description="We craft sleek, responsive, and high-performing websites tailored to your brand's vision and business goals, from landing pages to full-scale web platforms."
+                description="We craft sleek, responsive, and high performing websites tailored to your brand's vision and business goals, from landing pages to full scale web platforms."
               />
 
               <ServiceCard
                 number="02"
                 title="Mobile App Design & Development"
-                description="From concept to launch, we design and build intuitive, user-centered mobile apps for iOS and Android that keep users engaged and coming back."
+                description="From concept to launch, we design and build intuitive, user centered mobile apps for iOS and Android that keep users engaged and coming back."
               />
 
               <ServiceCard
                 number="03"
                 title="No-Code & Low-Code Solutions"
-                description="Need to move fast? We leverage no-code and low-code platforms like Wordpress, Webflow, Framer, Shopify, and more to launch functional MVPs and internal tools faster and cost-effectively."
+                description="Need to move fast? We leverage no code and low code platforms like Wordpress, Webflow, Framer, Shopify, and more to launch functional MVPs and internal tools faster and cost effectively."
               />
             </div>
 

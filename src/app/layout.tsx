@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Digital Ninja Technologies",
   },
   description:
-    "Digital Ninja Technologies is a full-service digital agency in Nigeria specialising in UI/UX design, custom software development, mobile app development, AI automation, and MVP development for startups, SMEs, and enterprises.",
+    "Digital Ninja Technologies is a full service digital agency in Nigeria specialising in UI UX design, custom software development, mobile app development, AI automation, and MVP development for startups, SMEs, and enterprises.",
   keywords: [
     "digital agency Nigeria",
     "software development company Nigeria",
@@ -120,7 +120,7 @@ const organizationSchema = {
   },
   image: `${BASE_URL}/og-image.jpg`,
   description:
-    "Digital Ninja Technologies is a full-service digital agency in Nigeria specialising in UI/UX design, custom software development, mobile apps, AI automation, and MVP development for startups, SMEs, and enterprises across Africa and globally.",
+    "Digital Ninja Technologies is a full service digital agency in Nigeria specialising in UI UX design, custom software development, mobile apps, AI automation, and MVP development for startups, SMEs, and enterprises across Africa and globally.",
   foundingDate: "2022",
   address: {
     "@type": "PostalAddress",
@@ -197,7 +197,7 @@ const organizationSchema = {
         itemOffered: {
           "@type": "Service",
           name: "AI Solutions & Automation",
-          description: "AI-powered tools, chatbots, workflow automation, and business intelligence.",
+          description: "AI powered tools, chatbots, workflow automation, and business intelligence.",
           provider: { "@type": "Organization", name: "Digital Ninja Technologies" },
         },
       },
@@ -205,8 +205,8 @@ const organizationSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "UI/UX Design",
-          description: "User-centered interface design that improves engagement and drives conversions.",
+          name: "UI UX Design",
+          description: "User centered interface design that improves engagement and drives conversions.",
           provider: { "@type": "Organization", name: "Digital Ninja Technologies" },
         },
       },
@@ -249,7 +249,7 @@ const faqSchema = {
       name: "What services does Digital Ninja Technologies offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Digital Ninja Technologies offers custom software development, website design and development, mobile app development (iOS and Android), AI solutions and automation, UI/UX design, and MVP development for startups.",
+        text: "Digital Ninja Technologies offers custom software development, website design and development, mobile app development (iOS and Android), AI solutions and automation, UI UX design, and MVP development for startups.",
       },
     },
     {

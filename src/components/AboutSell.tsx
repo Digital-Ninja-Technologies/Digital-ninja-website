@@ -53,7 +53,7 @@ const values = [
   {
     number: "04",
     title: "We stay after launch",
-    desc: "Most agencies disappear the moment the project closes. We offer post-launch support, iteration, and growth partnerships for clients who want a long-term partner.",
+    desc: "Most agencies disappear the moment the project closes. We offer post launch support, iteration, and growth partnerships for clients who want a long term partner.",
   },
 ];
 
@@ -62,12 +62,12 @@ const services = [
   { label: "Website Design & Development", href: "/contact" },
   { label: "Mobile App Development", href: "/contact" },
   { label: "AI Solutions & Automation", href: "/contact" },
-  { label: "UI/UX Design", href: "/contact" },
+  { label: "UI UX Design", href: "/contact" },
   { label: "MVP Development", href: "/contact" },
 ];
 
 const stats = [
-  { value: "8 wks", label: "Average startup-to-launch timeline" },
+  { value: "8 wks", label: "Average startup to launch timeline" },
   { value: "100%", label: "On-time delivery rate" },
   { value: "10+", label: "Industries served" },
   { value: "Zero", label: "Hidden fees — ever" },
@@ -131,7 +131,7 @@ export default function AboutSell() {
 
             <FadeUp delay={0.2} className="space-y-6">
               <p className="text-[#B0AFAF] text-lg leading-[175%]">
-                Digital Ninja Technologies is a full-service digital agency headquartered in
+                Digital Ninja Technologies is a full service digital agency headquartered in
                 Lagos, Nigeria. We design and build software, mobile apps, websites, and AI
                 tools — but that's not what makes us different.
               </p>
