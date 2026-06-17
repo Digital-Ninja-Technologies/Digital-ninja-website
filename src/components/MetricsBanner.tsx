@@ -5,7 +5,7 @@ import { useRef, useEffect, useState } from "react";
 
 const metrics = [
   { value: 10, suffix: "+", label: "Websites" },
-  { value: 3, suffix: "+", label: "Product Designs" },
+  { value: 6, suffix: "+", label: "Product Designs" },
   { value: 2, suffix: "+", label: "Logo & Branding" },
   { value: 1, suffix: "+", label: "Animation Project" },
 ];
