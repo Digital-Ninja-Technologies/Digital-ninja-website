@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Digital Ninja Technologies | Design & Software Development Agency in Nigeria",
     description:
-      "Empowering brands and start-ups with impactful digital solutions through strategic design and development. Based in Nigeria, serving clients globally.",
+      "Empowering brands and startups with impactful digital solutions through strategic design and development. Based in Nigeria, serving clients globally.",
     images: [
       {
         url: "/og-image.jpg",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Digital Ninja Technologies | Design & Software Development Agency",
     description:
-      "Empowering brands and start-ups with impactful digital solutions through strategic design and development.",
+      "Empowering brands and startups with impactful digital solutions through strategic design and development.",
     images: ["/og-image.jpg"],
     site: "@theninjatechies",
     creator: "@theninjatechies",

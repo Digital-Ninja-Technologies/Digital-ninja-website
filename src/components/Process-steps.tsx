@@ -41,20 +41,29 @@ const steps = [
   },
 ];
 
-function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
-  const ref = useRef(null);
+// Each card takes up one "screen" of scroll to stack in
+const CARD_SCROLL_HEIGHT = 100; // vh per card
+const TOTAL_SCROLL = steps.length * CARD_SCROLL_HEIGHT;
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "start 0.3"],
-  });
+function StepCard({
+  step,
+  index,
+  scrollYProgress,
+}: {
+  step: (typeof steps)[0];
+  index: number;
+  scrollYProgress: import("framer-motion").MotionValue<number>;
+}) {
+  const n = steps.length;
+  // Each card animates in during its slice of [0, 1]
+  const start = index / n;
+  const end = (index + 0.6) / n;
 
-  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+  const y = useTransform(scrollYProgress, [start, end], ["100%", "0%"]);
+  const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
 
   return (
     <motion.div
-      ref={ref}
       style={{
         backgroundColor: step.bg,
         borderTopLeftRadius: step.radius,
@@ -62,11 +71,15 @@ function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
         y,
         opacity,
         zIndex: index + 1,
-        position: "relative",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
       }}
-      className="p-6 md:p-12 lg:p-16 pb-20 lg:pb-28"
+      className="p-6 md:p-12 lg:p-16 flex flex-col justify-center"
     >
-      <div className="flex flex-col md:flex-row md:items-center">
+      <div className="flex flex-col md:flex-row md:items-center max-w-[90rem] mx-auto w-full">
         <div className="md:w-1/2 mb-6 md:mb-0">
           <div className="flex items-center">
             <h2 className="text-6xl font-semibold md:text-[80px] leading-[110%] tracking-[-0.03em] text-white mr-4">
@@ -97,14 +110,31 @@ function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
 }
 
 export default function ProcessSteps() {
+  // The outer container is tall enough to scroll through all cards
+  const containerRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-full mx-auto">
-        <div className="bg-gradient-to-b from-[#FFF0EB] via-[#FFF0EB] to-white">
-          {steps.map((step, i) => (
-            <StepCard key={step.number} step={step} index={i} />
-          ))}
-        </div>
+    // Scroll canvas — tall enough for all 5 card reveals
+    <div
+      ref={containerRef}
+      style={{ height: `${TOTAL_SCROLL}vh` }}
+      className="relative bg-gradient-to-b from-[#FFF0EB] via-[#FFF0EB] to-white"
+    >
+      {/* Sticky viewport that holds all stacking cards */}
+      <div className="sticky top-0 h-screen overflow-hidden">
+        {steps.map((step, i) => (
+          <StepCard
+            key={step.number}
+            step={step}
+            index={i}
+            scrollYProgress={scrollYProgress}
+          />
+        ))}
       </div>
     </div>
   );

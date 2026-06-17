@@ -317,7 +317,7 @@ export default function Hero() {
                 repeat: Number.POSITIVE_INFINITY,
                 ease: "easeInOut",
               }}>
-              Empowering brands and start-ups with impactful digital solutions
+              Empowering brands and startups with impactful digital solutions
               through <br className="md:block hidden" /> strategic design and
               development.
             </motion.p>
