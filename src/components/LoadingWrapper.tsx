@@ -13,7 +13,7 @@ export default function LoadingWrapper({ children }: LoadingWrapperProps) {
   const [loadingProgress, setLoadingProgress] = useState(0);
 
   useEffect(() => {
-    const MINIMUM_LOADING_TIME = 3000; // 3 seconds minimum for animation visibility
+    const MINIMUM_LOADING_TIME = 800; // 0.8 seconds
     const startTime = Date.now();
     let assetsLoaded = false;
     let progressInterval: NodeJS.Timeout;
@@ -84,9 +84,9 @@ export default function LoadingWrapper({ children }: LoadingWrapperProps) {
           clearInterval(progressInterval);
           setTimeout(() => {
             setIsLoading(false);
-          }, 800); // Show 100% for a moment
+          }, 300); // Show 100% briefly
         }
-      }, 100);
+      }, 40);
     };
 
     // Start the animation
