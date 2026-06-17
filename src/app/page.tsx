@@ -1,4 +1,5 @@
 import Approach from "@/components/Approach";
+import CalBooking from "@/components/CalBooking";
 import ClientsSlide from "@/components/ClientsSlide";
 import FeaturedWorks from "@/components/Featured-works";
 import Hero from "@/components/Hero";
@@ -33,6 +34,7 @@ export default function Home() {
       <WhatWeDo />
       <FeaturedWorks title="Featured works" buttonClassName="md:flex hidden" />
       <Testimonials />
+      <CalBooking />
     </main>
   );
 }
