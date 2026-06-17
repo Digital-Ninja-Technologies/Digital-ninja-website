@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
           <div className="md:flex-shrink-0 md:ml-8">
             <Button
-              onClick={() => window.location.href = "/booking"}
+              onClick={() => window.open("https://cal.com/the-digital-ninja-technologies-fucsfq/15min", "_blank")}
               className="bg-white text-[#ff7e29] hover:bg-gray-50 px-8 py-3 rounded-full text-lg font-[500]"
               size="lg">
               Book a 15min call

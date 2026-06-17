@@ -163,7 +163,7 @@ export default function WhoWeAre() {
 
         {/* ── CTA ── */}
         <motion.div {...fadeUp(0.85)} className="flex flex-col sm:flex-row items-center gap-4">
-          <Link href="/booking">
+          <Link href="https://cal.com/the-digital-ninja-technologies-fucsfq/15min" target="_blank" rel="noopener noreferrer">
             <motion.button
               whileHover={{ scale: 1.04, boxShadow: "0 10px 32px rgba(255,102,2,0.3)" }}
               whileTap={{ scale: 0.97 }}

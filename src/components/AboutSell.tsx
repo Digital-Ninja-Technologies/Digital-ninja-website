@@ -254,7 +254,7 @@ export default function AboutSell() {
                 </p>
               </FadeUp>
               <FadeUp delay={0.3}>
-                <Link href="/booking">
+                <Link href="/contact">
                   <motion.button
                     whileHover={{ scale: 1.04, boxShadow: "0 10px 32px rgba(255,102,2,0.3)" }}
                     whileTap={{ scale: 0.97 }}
@@ -318,7 +318,7 @@ export default function AboutSell() {
                   honest conversation about what you need.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-                  <Link href="/booking">
+                  <Link href="/contact">
                     <motion.button
                       whileHover={{ scale: 1.04 }}
                       whileTap={{ scale: 0.97 }}
