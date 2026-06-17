@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Digital Ninja Technologies | Hire a Digital Agency in Nigeria",
     description:
-      "Reach out to Digital Ninja Technologies for custom software, web design, mobile apps, and AI automation. Based in Lagos, Nigeria — serving clients globally.",
+      "Reach out to Digital Ninja Technologies for custom software, web design, mobile apps, and AI automation. Based in Lagos, Nigeria. Serving clients globally.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies" }],
     url: "https://www.thedigitalninjatech.com/contact",
     siteName: "Digital Ninja Technologies",

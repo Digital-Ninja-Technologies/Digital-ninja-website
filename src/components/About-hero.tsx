@@ -91,7 +91,7 @@ export default function AboutHero() {
               transition={{ duration: 0.7, delay: 0.3 }}
             >
               Digital Ninja Technologies is a full service digital agency in{" "}
-              <span className="text-white font-medium">Lagos, Nigeria</span> — designing and
+              <span className="text-white font-medium">Lagos, Nigeria</span>. Designing and
               building software, apps, and web products for startups, SMEs, and global businesses
               that are tired of agencies that disappear.
             </motion.p>
@@ -111,7 +111,7 @@ export default function AboutHero() {
               transition={{ duration: 0.6, delay: 0.5 }}
             >
               We're designers, engineers, and strategists who care about one thing above
-              everything else — delivering a product you're proud to put your name on.
+              everything else. Delivering a product you're proud to put your name on.
             </motion.p>
 
             <motion.div
@@ -169,7 +169,7 @@ export default function AboutHero() {
               >
                 <Image
                   src="/about-hero.svg"
-                  alt="Digital Ninja Technologies team — designers and developers"
+                  alt="Digital Ninja Technologies team. Designers and developers"
                   width={600}
                   height={420}
                   className="w-full h-auto rounded-2xl"

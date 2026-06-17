@@ -9,30 +9,30 @@ const problems = [
   {
     icon: "💸",
     title: "You paid an agency and they vanished.",
-    body: "You transferred money, got a few mockups — then silence. No updates, no accountability, no product. It happens far too often, and it should never happen to you again.",
+    body: "You transferred money, got a few mockups. Then silence. No updates, no accountability, no product. It happens far too often, and it should never happen to you again.",
   },
   {
     icon: "🐌",
     title: "Your idea has been 'in progress' for months.",
-    body: "You had a vision. You hired someone. Six months later you're still waiting. Meanwhile, your competitors are live and growing. Speed matters — and most teams don't have it.",
+    body: "You had a vision. You hired someone. Six months later you're still waiting while your competitors are live and growing. Speed matters, and most teams simply don't have it.",
   },
   {
     icon: "🤷",
     title: "You don't know what you're paying for.",
-    body: "Vague proposals. Unexplained delays. Deliverables that don't match what was promised. You deserve complete clarity — on every stage, every cost, every decision.",
+    body: "Vague proposals, unexplained delays, and deliverables that don't match what was promised. You deserve complete clarity on every stage, every cost, and every decision.",
   },
   {
     icon: "📉",
     title: "Your website or app isn't converting.",
-    body: "You have traffic but no leads. Downloads but no retention. The product exists, but it's not doing its job. Great design and smart UX fix this — and that's exactly our work.",
+    body: "You have traffic but no leads, downloads but no retention. The product exists but it is not doing its job. Great design and smart UX fix this, and that is exactly what we do.",
   },
 ];
 
 const differentiators = [
-  "Fixed timelines — we commit and we deliver",
-  "Transparent pricing — no hidden costs, ever",
-  "Direct communication — no middlemen or account managers",
-  "Post launch support — we don't disappear after launch",
+  "Fixed timelines, we commit and we deliver",
+  "Transparent pricing, no hidden costs ever",
+  "Direct communication, no middlemen or account managers",
+  "Post launch support, we stay with you beyond delivery",
   "Global standards, deep African market understanding",
 ];
 
@@ -74,16 +74,16 @@ export default function WhoWeAre() {
 
             <motion.div {...fadeUp(0.2)} className="border-l-4 border-[#FF7E29] pl-6 space-y-5 mb-10">
               <p className="text-[#B0AFAF] text-lg leading-[175%]">
-                "I've spoken to hundreds of founders, executives, and business owners — in Lagos, Abuja, London, and beyond. The story is almost always the same.
+                "I've spoken to hundreds of founders, executives, and business owners. In Lagos, Abuja, London, and beyond. The story is almost always the same.
               </p>
               <p className="text-[#B0AFAF] text-lg leading-[175%]">
-                They hired a developer or an agency, got burned, lost money, lost months, and lost faith. They came back to square one — except now they're more cautious, more frustrated, and further behind.
+                They hired a developer or an agency, got burned, lost money, lost months, and lost faith. They came back to square one. Except now they're more cautious, more frustrated, and further behind.
               </p>
               <p className="text-[#B0AFAF] text-lg leading-[175%]">
-                That frustration is exactly why Digital Ninja Technologies exists. We don't just write code or push pixels. We become your digital execution partner — the team that shows up, stays accountable, and delivers what we promise.
+                That frustration is exactly why Digital Ninja Technologies exists. We don't just write code or push pixels. We become your digital execution partner. The team that shows up, stays accountable, and delivers what we promise.
               </p>
               <p className="text-white text-lg leading-[175%] font-medium">
-                Whether you're a startup founder in Lagos validating your MVP, a logistics company in Abuja needing a custom platform, or a foreign business seeking a reliable tech partner in Africa — we were built specifically for you."
+                Whether you're a startup founder in Lagos validating your MVP, a logistics company in Abuja needing a custom platform, or a foreign business seeking a reliable tech partner in Africa. We were built specifically for you."
               </p>
             </motion.div>
 
@@ -141,7 +141,7 @@ export default function WhoWeAre() {
           Sound familiar?
         </motion.p>
         <motion.h3 {...fadeUp(0.4)} className="text-2xl md:text-[36px] font-semibold tracking-[-0.03em] leading-tight text-white mb-10 max-w-2xl">
-          These are the real problems we solve — every single day.
+          These are the real problems we solve. Every single day.
         </motion.h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-16">

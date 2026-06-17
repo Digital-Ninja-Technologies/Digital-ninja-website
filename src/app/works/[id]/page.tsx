@@ -63,7 +63,7 @@ const projects = [
         {
           step: "01",
           title: "Establish Trust Quickly",
-          desc: "The hero section immediately communicates what Moducode does, who it serves, and the value proposition — reducing cognitive load and helping visitors quickly self identify.",
+          desc: "The hero section immediately communicates what Moducode does, who it serves, and the value proposition. Reducing cognitive load and helping visitors quickly self identify.",
         },
         {
           step: "02",
@@ -336,7 +336,7 @@ export async function generateMetadata({
   const project = projects.find((p) => p.id === id);
   const title = project ? project.title : "Project";
   const description = project?.overview.description ??
-    "Explore this project by Digital Ninja Technologies — a full service digital agency in Nigeria.";
+    "Explore this project by Digital Ninja Technologies. A full service digital agency in Nigeria.";
   const url = `https://www.thedigitalninjatech.com/works/${id}`;
 
   return {
@@ -390,7 +390,7 @@ export default async function ProjectPage({
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${project.title} — Case Study`,
+    headline: `${project.title} | Case Study`,
     description: project.overview.description,
     image: `https://www.thedigitalninjatech.com/og-image.jpg`,
     author: { "@type": "Organization", name: "Digital Ninja Technologies", url: "https://www.thedigitalninjatech.com" },

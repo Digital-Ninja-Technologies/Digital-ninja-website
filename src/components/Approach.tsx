@@ -20,7 +20,7 @@ const steps = [
     label: "Design",
     color: "#FF7E29",
     lightColor: "#FFF4EC",
-    body: "Our design team creates intuitive, engaging user experiences backed by strategy. Every wireframe, screen, and interaction is crafted to serve a purpose — and to convert.",
+    body: "Our design team creates intuitive, engaging user experiences backed by strategy. Every wireframe, screen, and interaction is crafted to serve a clear purpose and to convert.",
     deliverables: ["Wireframes & prototypes", "UI design system", "User testing", "Responsive designs"],
   },
   {
@@ -29,7 +29,7 @@ const steps = [
     label: "Build",
     color: "#FD3600",
     lightColor: "#FFF0EE",
-    body: "We build in iterative sprints using the best fit technologies — whether it is no code, low code, or full custom development. You get frequent updates, working demos, and flexibility to adapt.",
+    body: "We build in iterative sprints using the best fit technologies, whether it is no code, low code, or full custom development. You get frequent updates, working demos, and the flexibility to adapt.",
     deliverables: ["Weekly sprint demos", "Clean codebase", "API integrations", "QA testing"],
   },
   {
@@ -38,7 +38,7 @@ const steps = [
     label: "Launch",
     color: "#FD5527",
     lightColor: "#FFF1EE",
-    body: "After rigorous testing, we launch with confidence. But we don't stop there — we monitor performance, gather feedback, and continuously improve based on real world use.",
+    body: "After rigorous testing, we launch with confidence. Then we monitor performance, gather feedback, and continuously improve based on real world use.",
     deliverables: ["Deployment & go live", "Performance monitoring", "Analytics setup", "Feedback loops"],
   },
   {
@@ -47,7 +47,7 @@ const steps = [
     label: "Grow",
     color: "#FFA501",
     lightColor: "#FFF8EC",
-    body: "We are not just a service provider — we are your product partner. Your success is our success, and we stay committed beyond the final delivery to ensure you keep growing.",
+    body: "We are not just a service provider. We are your product partner. Your success is our success, and we stay committed beyond the final delivery to ensure you keep growing.",
     deliverables: ["Post launch support", "Growth strategy", "Feature iterations", "Long term partnership"],
   },
 ];
@@ -97,7 +97,7 @@ export default function Approach() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="grid grid-cols-1 lg:grid-cols-5 gap-4"
         >
-          {/* Step tabs — vertical on desktop, horizontal scroll on mobile */}
+          {/* Step tabs. Vertical on desktop, horizontal scroll on mobile */}
           <div className="lg:col-span-2 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
             {steps.map((s, i) => (
               <button

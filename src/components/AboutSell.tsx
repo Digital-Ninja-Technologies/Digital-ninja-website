@@ -12,7 +12,7 @@ const painPoints = [
     icon: "🔥",
     problem: "Tired of agencies that promise the world, deliver nothing?",
     solution:
-      "We operate on fixed scopes, clear milestones, and real accountability. You see progress weekly — not after you've chased three unanswered emails.",
+      "We operate on fixed scopes, clear milestones, and real accountability. You see progress weekly. Not after you've chased three unanswered emails.",
   },
   {
     icon: "⏱️",
@@ -24,13 +24,13 @@ const painPoints = [
     icon: "💰",
     problem: "Blown your budget on a product that doesn't convert?",
     solution:
-      "Every design decision we make is tied to a business outcome — more leads, lower bounce rate, higher retention. We build for results, not portfolios.",
+      "Every design decision we make is tied to a business outcome. More leads, lower bounce rate, higher retention. We build for results, not portfolios.",
   },
   {
     icon: "🌍",
     problem: "Need a team that understands both African and global markets?",
     solution:
-      "We work with founders in Lagos, Abuja, London, Toronto, and Dubai. We understand the nuances of building for Africa — and the standards expected globally.",
+      "We work with founders in Lagos, Abuja, London, Toronto, and Dubai. We understand the nuances of building for Africa and the standards expected globally.",
   },
 ];
 
@@ -38,12 +38,12 @@ const values = [
   {
     number: "01",
     title: "Accountability over excuses",
-    desc: "When we commit to a deadline, we keep it. If something changes, you hear it from us first — not after you've asked five times.",
+    desc: "When we commit to a deadline, we keep it. If something changes, you hear it from us first, not after you have asked five times.",
   },
   {
     number: "02",
     title: "Clarity at every stage",
-    desc: "No jargon. No vague proposals. You get a clear scope, a clear timeline, and a clear price — before work begins.",
+    desc: "No jargon, no vague proposals. You get a clear scope, a clear timeline, and a clear price before work begins.",
   },
   {
     number: "03",
@@ -70,7 +70,7 @@ const stats = [
   { value: "8 wks", label: "Average startup to launch timeline" },
   { value: "100%", label: "On-time delivery rate" },
   { value: "10+", label: "Industries served" },
-  { value: "Zero", label: "Hidden fees — ever" },
+  { value: "Zero", label: "Hidden fees. None." },
 ];
 
 // ─── Animation helpers ─────────────────────────────────────────────────────────
@@ -133,7 +133,7 @@ export default function AboutSell() {
               <p className="text-[#B0AFAF] text-lg leading-[175%]">
                 Digital Ninja Technologies is a full service digital agency headquartered in
                 Lagos, Nigeria. We design and build software, mobile apps, websites, and AI
-                tools — but that's not what makes us different.
+                tools. But that's not what makes us different.
               </p>
               <p className="text-[#B0AFAF] text-lg leading-[175%]">
                 What makes us different is that we treat every project like it's our own
@@ -249,7 +249,7 @@ export default function AboutSell() {
               </FadeUp>
               <FadeUp delay={0.2}>
                 <p className="text-[#B0AFAF] text-lg leading-[170%] mb-10">
-                  We cover every layer of your digital product — so you deal with one trusted
+                  We cover every layer of your digital product. So you deal with one trusted
                   team instead of juggling five different freelancers who don't talk to each other.
                 </p>
               </FadeUp>
@@ -314,7 +314,7 @@ export default function AboutSell() {
                 </h2>
                 <p className="text-white/80 text-lg max-w-xl mx-auto leading-relaxed">
                   Whether you're a Nigerian founder with an idea, or a foreign company looking
-                  for a dependable African tech partner — let's talk. No hard sell. Just an
+                  for a dependable African tech partner. Let's talk. No hard sell. Just an
                   honest conversation about what you need.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">

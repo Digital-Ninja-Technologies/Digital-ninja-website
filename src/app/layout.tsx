@@ -67,7 +67,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Digital Ninja Technologies — Design & Software Development Agency",
+        alt: "Digital Ninja Technologies. Design & Software Development Agency",
       },
     ],
     url: BASE_URL,
@@ -289,7 +289,7 @@ const faqSchema = {
       name: "Does Digital Ninja Technologies have a referral programme?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Digital Ninja Technologies offers a 10% commission referral programme. Refer a business that signs a project and earn 10% of the project value — for example, a ₦1,000,000 project earns you ₦100,000.",
+        text: "Yes. Digital Ninja Technologies offers a 10% commission referral programme. Refer a business that signs a project and earn 10% of the project value. For example, a ₦1,000,000 project earns you ₦100,000.",
       },
     },
   ],

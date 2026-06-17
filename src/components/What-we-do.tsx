@@ -14,7 +14,7 @@ const services = [
     color: "#FF6602",
     light: "#FFF0E5",
     description:
-      "We craft sleek, responsive, high performing websites tailored to your brand vision and business goals — from landing pages to full scale web platforms that turn visitors into customers.",
+      "We craft sleek, responsive, high performing websites tailored to your brand vision and business goals. From landing pages to full scale web platforms that turn visitors into customers.",
     outcomes: ["Higher conversion rates", "Faster load times", "Mobile first design", "SEO optimised code"],
     tools: ["Next.js", "React", "Tailwind", "Framer"],
   },
@@ -26,7 +26,7 @@ const services = [
     color: "#FF7E29",
     light: "#FFF4EC",
     description:
-      "From concept to launch, we design and build intuitive mobile apps for iOS and Android that keep users engaged. Beautiful interfaces backed by solid engineering — every time.",
+      "From concept to launch, we design and build intuitive mobile apps for iOS and Android that keep users engaged through beautiful interfaces backed by solid engineering.",
     outcomes: ["iOS & Android", "Smooth UX flows", "Push notifications", "App Store ready"],
     tools: ["Flutter", "React Native", "Firebase", "Swift"],
   },
@@ -38,7 +38,7 @@ const services = [
     color: "#FD3600",
     light: "#FFF0EE",
     description:
-      "Need to move fast? We leverage no code and low code platforms to launch functional MVPs and internal tools in record time — without sacrificing quality or scalability.",
+      "Need to move fast? We leverage no code and low code platforms to launch functional MVPs and internal tools in record time, without sacrificing quality or scalability.",
     outcomes: ["Faster time to market", "Lower build cost", "Easy to manage", "MVP in weeks"],
     tools: ["Webflow", "Framer", "Shopify", "WordPress"],
   },
@@ -62,7 +62,7 @@ const services = [
     color: "#FFA501",
     light: "#FFF8EC",
     description:
-      "We bring games to life with immersive interfaces and smooth performance. From casual games to rich storytelling experiences — we design and build cross platform games that captivate.",
+      "We bring games to life with immersive interfaces and smooth performance. From casual games to rich storytelling experiences, we design and build cross platform games that captivate.",
     outcomes: ["Cross platform", "Immersive UI", "Smooth performance", "Engaging gameplay"],
     tools: ["Unity", "Godot", "WebGL", "Three.js"],
   },
@@ -104,7 +104,7 @@ export default function WhatWeDo() {
               At{" "}
               <span className="text-[#FF6602] font-semibold">Digital Ninja Technologies</span>
               , we bring your digital ideas to life with precision, creativity, and cutting edge
-              technology — built to drive real business results.
+              technology built to drive real business results.
             </p>
           </motion.div>
         </div>
@@ -226,7 +226,7 @@ export default function WhatWeDo() {
             ))}
           </div>
 
-          {/* Right: detail panel — desktop only */}
+          {/* Right: detail panel. Desktop only */}
           <div className="hidden lg:block sticky top-24">
             <AnimatePresence mode="wait">
               {displayed !== null ? (

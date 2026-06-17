@@ -4,7 +4,7 @@ import React from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Digital Agency in Nigeria — Digital Ninja Technologies",
+  title: "About Us | Digital Agency in Nigeria | Digital Ninja Technologies",
   description:
     "Digital Ninja Technologies is a full service digital agency in Lagos, Nigeria. We build custom software, mobile apps, websites, and AI solutions for startups, SMEs, and global businesses. No hidden fees. No vanishing acts. Just results.",
   alternates: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Digital Ninja Technologies | Digital Agency in Nigeria",
     description:
-      "We build software, apps, and digital products that actually work. Full-service digital agency in Lagos, Nigeria — serving startups and businesses across Africa and globally.",
+      "We build software, apps, and digital products that actually work. Full-service digital agency in Lagos, Nigeria. Serving startups and businesses across Africa and globally.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies" }],
     url: "https://www.thedigitalninjatech.com/about",
     siteName: "Digital Ninja Technologies",

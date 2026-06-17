@@ -16,12 +16,12 @@ export default function Home() {
         <TawkMessenger />
       </main>
 
-      {/* Client Marquee Section — above CEO letter */}
+      {/* Client Marquee Section. Above CEO letter */}
       <div className="w-full mt-4 md:mt-1 pb-10">
         <ClientsSlide />
       </div>
 
-      {/* Who We Are — CEO voice, problem-aware, conversion-focused */}
+      {/* Who We Are. CEO voice, problem-aware, conversion-focused */}
       <WhoWeAre />
       {/* Our Approach Section */}
       <Approach />
