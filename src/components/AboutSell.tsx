@@ -58,12 +58,12 @@ const values = [
 ];
 
 const services = [
-  { label: "Custom Software Development", href: "/contact" },
-  { label: "Website Design & Development", href: "/contact" },
-  { label: "Mobile App Development", href: "/contact" },
-  { label: "AI Solutions & Automation", href: "/contact" },
-  { label: "UI UX Design", href: "/contact" },
-  { label: "MVP Development", href: "/contact" },
+  { label: "Custom Software Development", href: "/#booking" },
+  { label: "Website Design & Development", href: "/#booking" },
+  { label: "Mobile App Development", href: "/#booking" },
+  { label: "AI Solutions & Automation", href: "/#booking" },
+  { label: "UI UX Design", href: "/#booking" },
+  { label: "MVP Development", href: "/#booking" },
 ];
 
 const stats = [
@@ -254,7 +254,7 @@ export default function AboutSell() {
                 </p>
               </FadeUp>
               <FadeUp delay={0.3}>
-                <Link href="/contact">
+                <Link href="/#booking">
                   <motion.button
                     whileHover={{ scale: 1.04, boxShadow: "0 10px 32px rgba(255,102,2,0.3)" }}
                     whileTap={{ scale: 0.97 }}
@@ -318,7 +318,7 @@ export default function AboutSell() {
                   honest conversation about what you need.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-                  <Link href="/contact">
+                  <Link href="/#booking">
                     <motion.button
                       whileHover={{ scale: 1.04 }}
                       whileTap={{ scale: 0.97 }}

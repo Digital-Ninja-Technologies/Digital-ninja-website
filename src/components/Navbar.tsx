@@ -49,15 +49,6 @@ export default function Navbar() {
               Works
             </Link>
             <Link
-              href="/contact"
-              className={`font-medium transition-colors ${
-                isActive("/contact")
-                  ? "text-[#FF7E29] border-b-2 border-[#FF7E29] pb-1"
-                  : "text-[#1f1e1e] hover:text-[#FF7E29]"
-              }`}>
-              Contact
-            </Link>
-            <Link
               href="/refer"
               className={`font-medium transition-colors px-4 py-1.5 rounded-full ${
                 isActive("/refer")
@@ -117,16 +108,6 @@ export default function Navbar() {
                 }`}
                 onClick={() => setMobileMenuOpen(false)}>
                 Works
-              </Link>
-              <Link
-                href="/contact"
-                className={`py-3 px-4 font-medium transition-colors ${
-                  isActive("/contact")
-                    ? "text-[#FF7E29] bg-orange-50 border-l-4 border-[#FF7E29]"
-                    : "text-[#1f1e1e] hover:bg-gray-50"
-                }`}
-                onClick={() => setMobileMenuOpen(false)}>
-                Contact
               </Link>
               <Link
                 href="/refer"
