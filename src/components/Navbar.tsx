@@ -3,135 +3,101 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { X, Menu } from "lucide-react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-
   const isActive = (path: string) => pathname === path;
 
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About us" },
+    { href: "/works", label: "Works" },
+    { href: "/refer", label: "Refer & Earn" },
+  ];
+
   return (
-    <main className="fixed top-0 w-full bg-white z-[100]">
-      <header className="container mx-auto px-4 py-6 flex items-center justify-between relative">
-        <Link href="/" className="flex items-center">
-          <div className="relative h-14 w-48">
-            <Image
-              src="/logo.svg"
-              alt="Digital Ninja Technologies Logo"
-              fill
-              className="object-contain object-left"
-              priority
-            />
-          </div>
-        </Link>
+    <header className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-6 md:px-10 h-20 bg-white/80 backdrop-blur-md border-b border-black/5">
 
-        <div className="flex items-center gap-10">
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-10">
-            <Link
-              href="/about"
-              className={`font-medium transition-colors ${
-                isActive("/about")
-                  ? "text-[#FF7E29] border-b-2 border-[#FF7E29] pb-1"
-                  : "text-[#1f1e1e] hover:text-[#FF7E29]"
-              }`}>
-              About us
-            </Link>
-            <Link
-              href="/works"
-              className={`font-medium transition-colors ${
-                isActive("/works")
-                  ? "text-[#FF7E29] border-b-2 border-[#FF7E29] pb-1"
-                  : "text-[#1f1e1e] hover:text-[#FF7E29]"
-              }`}>
-              Works
-            </Link>
-            <Link
-              href="/refer"
-              className={`font-medium transition-colors px-4 py-1.5 rounded-full ${
-                isActive("/refer")
-                  ? "bg-[#FD3600] text-white"
-                  : "text-[#FF6602] border border-[#FF7E29] hover:bg-[#FF6602] hover:text-white hover:border-[#FF6602]"
-              }`}>
-              Refer & Earn
-            </Link>
-          </nav>
-
-          <button
-            onClick={() => window.location.href = "/booking"}
-            className="hidden md:flex items-center gap-2 px-6 py-3 rounded-full border border-[#FF7E29] text-[#FF7E29] hover:bg-[#ff6602] hover:text-white transition-colors">
-            <span>Book a 15min call</span>
-            <ArrowRight className="h-4 w-4" />
-          </button>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-[#1f1e1e] relative h-6 w-6"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu">
-            <div className="relative h-6 w-6">
-              <Image
-                src={
-                  mobileMenuOpen ? "/icons/close.svg" : "/icons/handburger.svg"
-                }
-                alt={mobileMenuOpen ? "Close menu" : "Open menu"}
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-          </button>
+      {/* ── Logo ── */}
+      <Link href="/" className="flex items-center gap-2 shrink-0">
+        <div className="relative h-10 w-36">
+          <Image
+            src="/logo.svg"
+            alt="Digital Ninja Technologies"
+            fill
+            className="object-contain object-left"
+            priority
+          />
         </div>
+      </Link>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white shadow-lg z-50 md:hidden">
-            <nav className="flex flex-col p-4">
+      {/* ── Center pill nav (desktop) ── */}
+      <nav className="hidden md:flex items-center bg-[#F2F2F0] rounded-full px-2 py-1.5 gap-1">
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              isActive(link.href)
+                ? "bg-white text-[#2E2D2D] shadow-sm"
+                : "text-[#6B6A6A] hover:text-[#2E2D2D] hover:bg-white/60"
+            }`}
+          >
+            {link.label}
+          </Link>
+        ))}
+      </nav>
+
+      {/* ── CTA button (desktop) ── */}
+      <button
+        onClick={() => (window.location.href = "/booking")}
+        className="hidden md:flex items-center gap-2 bg-[#1A1A1A] hover:bg-[#333] text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-200 shrink-0"
+      >
+        Book a 15min Call
+      </button>
+
+      {/* ── Mobile hamburger ── */}
+      <button
+        className="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-[#F2F2F0] text-[#2E2D2D]"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        aria-label="Toggle menu"
+      >
+        {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+      </button>
+
+      {/* ── Mobile menu ── */}
+      {mobileMenuOpen && (
+        <div className="absolute top-full left-0 right-0 bg-white border-b border-black/5 shadow-lg md:hidden">
+          <nav className="flex flex-col p-4 gap-1">
+            {navLinks.map((link) => (
               <Link
-                href="/about"
-                className={`py-3 px-4 font-medium transition-colors ${
-                  isActive("/about")
-                    ? "text-[#FF7E29] bg-orange-50 border-l-4 border-[#FF7E29]"
-                    : "text-[#1f1e1e] hover:bg-gray-50"
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`px-4 py-3 rounded-xl text-sm font-medium transition-colors duration-200 ${
+                  isActive(link.href)
+                    ? "bg-[#FFF0E5] text-[#FF6602]"
+                    : "text-[#2E2D2D] hover:bg-[#F5F5F3]"
                 }`}
-                onClick={() => setMobileMenuOpen(false)}>
-                About us
+              >
+                {link.label}
               </Link>
-              <Link
-                href="/works"
-                className={`py-3 px-4 font-medium transition-colors ${
-                  isActive("/works")
-                    ? "text-[#FF7E29] bg-orange-50 border-l-4 border-[#FF7E29]"
-                    : "text-[#1f1e1e] hover:bg-gray-50"
-                }`}
-                onClick={() => setMobileMenuOpen(false)}>
-                Works
-              </Link>
-              <Link
-                href="/refer"
-                className={`py-3 px-4 font-medium transition-colors ${
-                  isActive("/refer")
-                    ? "text-[#FF7E29] bg-orange-50 border-l-4 border-[#FF7E29]"
-                    : "text-[#FF6602] hover:bg-orange-50"
-                }`}
-                onClick={() => setMobileMenuOpen(false)}>
-                Refer & Earn 💸
-              </Link>
-              <button
-                className="mt-3 mx-4 flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-[#ff6602] text-[#ff6602] hover:bg-[#ff6602] hover:text-white transition-colors"
-                onClick={() => {
-                  window.location.href = "/booking";
-                  setMobileMenuOpen(false);
-                }}>
-                <span>Book a 15min call</span>
-                <ArrowRight className="h-4 w-4" />
-              </button>
-            </nav>
-          </div>
-        )}
-      </header>
-    </main>
+            ))}
+            <button
+              onClick={() => {
+                window.location.href = "/booking";
+                setMobileMenuOpen(false);
+              }}
+              className="mt-2 w-full bg-[#1A1A1A] text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-200"
+            >
+              Book a 15min Call
+            </button>
+          </nav>
+        </div>
+      )}
+    </header>
   );
 }
