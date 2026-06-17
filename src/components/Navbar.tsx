@@ -69,7 +69,7 @@ export default function Navbar() {
           </nav>
 
           <button
-            onClick={() => window.open("https://cal.com/the-digital-ninja-technologies-fucsfq/15min", "_blank")}
+            onClick={() => window.location.href = "/booking"}
             className="hidden md:flex items-center gap-2 px-6 py-3 rounded-full border border-[#FF7E29] text-[#FF7E29] hover:bg-[#ff6602] hover:text-white transition-colors">
             <span>Book a 15min call</span>
             <ArrowRight className="h-4 w-4" />
@@ -141,7 +141,7 @@ export default function Navbar() {
               <button
                 className="mt-3 mx-4 flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-[#ff6602] text-[#ff6602] hover:bg-[#ff6602] hover:text-white transition-colors"
                 onClick={() => {
-                  window.open("https://cal.com/the-digital-ninja-technologies-fucsfq/15min", "_blank");
+                  window.location.href = "/booking";
                   setMobileMenuOpen(false);
                 }}>
                 <span>Book a 15min call</span>

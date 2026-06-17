@@ -223,7 +223,7 @@ export default function Hero() {
 
             <div className="flex items-center md:justify-start justify-center">
               <motion.button
-                onClick={() => window.open("https://cal.com/the-digital-ninja-technologies-fucsfq/15min", "_blank")}
+                onClick={() => window.location.href = "/booking"}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF6602] to-[#FF7E29] hover:from-[#FF8A3D] hover:to-[#FFAA66] font-medium text-[18px] leading-[160%] tracking-[-0.03em] text-white py-3 px-8 rounded-full transition-all duration-300 relative overflow-hidden group"
                 variants={buttonVariants}
                 initial="hidden"

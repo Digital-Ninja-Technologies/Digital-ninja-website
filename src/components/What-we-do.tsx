@@ -331,7 +331,7 @@ export default function WhatWeDo() {
                   </div>
 
                   {/* CTA */}
-                  <Link href="/contact">
+                  <Link href="/booking">
                     <motion.button
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.97 }}
@@ -376,7 +376,7 @@ export default function WhatWeDo() {
               Tell us your goal and we'll figure out the best approach together.
             </p>
           </div>
-          <Link href="/contact" className="shrink-0">
+          <Link href="/booking" className="shrink-0">
             <motion.button
               whileHover={{ scale: 1.04, boxShadow: "0 8px 24px rgba(255,102,2,0.25)" }}
               whileTap={{ scale: 0.97 }}
