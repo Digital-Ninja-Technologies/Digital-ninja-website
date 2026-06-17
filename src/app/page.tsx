@@ -2,6 +2,7 @@ import Approach from "@/components/Approach";
 import ClientsSlide from "@/components/ClientsSlide";
 import FeaturedWorks from "@/components/Featured-works";
 import Hero from "@/components/Hero";
+import MetricsBanner from "@/components/MetricsBanner";
 import TawkMessenger from "@/components/TawkMessenger";
 import Testimonials from "@/components/Testimonials";
 import WhatWeDo from "@/components/What-we-do";
@@ -15,6 +16,9 @@ export default function Home() {
       <main className="absolute top-20 left-0">
         <TawkMessenger />
       </main>
+
+      {/* Metrics banner */}
+      <MetricsBanner />
 
       {/* Client Marquee Section. Above CEO letter */}
       <div className="w-full mt-4 md:mt-1 pb-10">
