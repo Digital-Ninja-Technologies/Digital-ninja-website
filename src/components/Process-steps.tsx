@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const steps = [
   {
@@ -52,7 +52,7 @@ function StepCard({
 }: {
   step: (typeof steps)[0];
   index: number;
-  scrollYProgress: MotionValue<number>;
+  scrollYProgress: import("framer-motion").MotionValue<number>;
 }) {
   const n = steps.length;
   // Each card animates in during its slice of [0, 1]
