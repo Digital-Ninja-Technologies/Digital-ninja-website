@@ -4,17 +4,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Script from "next/script";
 
-// ── Skeleton image component ───────────────────────────────────────────────
-function SkeletonImage({ src, alt, className }: { src: string; alt: string; className?: string }) {
-  "use client";
-  return (
-    <div className="relative overflow-hidden rounded-2xl bg-[#F5F5F3]">
-      <div className="absolute inset-0 -translate-x-full animate-[shimmer_1.4s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-white/60 to-transparent z-10" />
-      <img src={src} alt={alt} className={className} loading="lazy" />
-    </div>
-  );
-}
-
 // Project data
 const projects = [
   {
@@ -234,9 +223,16 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
       {/* Hero screens */}
       {o.features && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[o.features.mockupImage1, o.features.mockupImage2].map((src, i) => (
-            <SkeletonImage key={i} src={src} alt={`${project.title} screen ${i + 1}`} className="w-full rounded-2xl shadow-md border border-[#F2F2F2]" />
-          ))}
+          <img
+            src={o.features.mockupImage1}
+            alt={`${project.title} landing page`}
+            className="w-full rounded-2xl shadow-md border border-[#F2F2F2]"
+          />
+          <img
+            src={o.features.mockupImage2}
+            alt={`${project.title} product screen`}
+            className="w-full rounded-2xl shadow-md border border-[#F2F2F2]"
+          />
         </div>
       )}
 
@@ -315,7 +311,7 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
                 className={`rounded-2xl overflow-hidden shadow-sm border border-[#F2F2F2] ${
                   i === 0 ? "md:col-span-2" : ""
                 }`}>
-                <SkeletonImage
+                <img
                   src={img}
                   alt={`${project.title} screen ${i + 1}`}
                   className="w-full h-full object-cover"

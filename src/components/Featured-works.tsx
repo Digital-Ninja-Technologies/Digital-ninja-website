@@ -160,15 +160,6 @@ function ProjectCard({
           }}
         />
 
-        {/* Skeleton loader */}
-        {!imgLoaded && (
-          <div className="absolute inset-8 z-10 rounded-2xl overflow-hidden">
-            <div className="w-full h-full rounded-2xl bg-black/8 relative overflow-hidden">
-              <div className="absolute inset-0 -translate-x-full animate-[shimmer_1.4s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-            </div>
-          </div>
-        )}
-
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={imgLoaded ? { scale: 1, opacity: 1 } : {}}
