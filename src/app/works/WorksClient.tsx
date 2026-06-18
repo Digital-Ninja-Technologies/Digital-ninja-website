@@ -82,7 +82,8 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
             height={500}
             className="w-full h-auto object-contain rounded-2xl shadow-2xl"
             priority={index === 0}
-            quality={92}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            quality={85}
             onLoad={() => setImgLoaded(true)}
           />
         </motion.div>
