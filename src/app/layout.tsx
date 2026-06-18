@@ -318,19 +318,19 @@ export default function RootLayout({
           id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
         <Script
           id="website-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
         <Script
           id="faq-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
         <Script
           id="tawkto"
