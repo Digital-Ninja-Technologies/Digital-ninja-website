@@ -14,7 +14,7 @@ const projects = [
     image: "/moducode-cover.png",
     liveUrl: "https://krevops.com/",
     tags: ["UI/UX", "SaaS", "Web"],
-    year: "2024",
+    year: "2026",
     bg: "#F0FDF4",
     accent: "#16A34A",
   },

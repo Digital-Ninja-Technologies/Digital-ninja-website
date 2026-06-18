@@ -12,7 +12,7 @@ const projects = [
     title: "Moducode",
     category: "UX UI Design",
     tags: ["B2B SaaS", "Talent Platform", "Web"],
-    year: "2024",
+    year: "2026",
     description:
       "A trust-driven hiring platform connecting global companies with Africa's best engineers. Designed to reduce hiring friction and drive consultation bookings.",
     image: "/moducode-cover.png",
