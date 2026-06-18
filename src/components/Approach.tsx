@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const steps = [
   {
@@ -62,7 +62,7 @@ function StepCard({
 }: {
   step: (typeof steps)[0];
   index: number;
-  scrollYProgress: MotionValue<number>;
+  scrollYProgress: import("framer-motion").MotionValue<number>;
 }) {
   const n = steps.length;
   const enter = index / n;
@@ -82,8 +82,8 @@ function StepCard({
 
   return (
     <motion.div
-      style={{ y, opacity, zIndex: index + 1 }}
-      className="absolute inset-0 p-6 md:p-10 flex flex-col justify-center"
+      style={{ y, opacity, position: "absolute", inset: 0, zIndex: index + 1 }}
+      className="p-6 md:p-10 flex flex-col justify-center"
     >
       <div
         className="rounded-3xl p-8 md:p-10 h-full flex flex-col justify-center"
@@ -234,7 +234,7 @@ function ActiveStep({
 }: {
   step: (typeof steps)[0];
   index: number;
-  scrollYProgress: MotionValue<number>;
+  scrollYProgress: import("framer-motion").MotionValue<number>;
   stepStart: number;
   stepEnd: number;
 }) {
