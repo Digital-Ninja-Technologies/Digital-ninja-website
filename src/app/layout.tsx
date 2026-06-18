@@ -140,7 +140,7 @@ const organizationSchema = {
   ],
   priceRange: "₦₦₦",
   telephone: "+2348145865720",
-  email: "Info@thedigitalninjatech.com",
+  email: "thedigitalninjatechnologies@gmail.com",
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -151,7 +151,7 @@ const organizationSchema = {
     },
     {
       "@type": "ContactPoint",
-      email: "Info@thedigitalninjatech.com",
+      email: "thedigitalninjatechnologies@gmail.com",
       contactType: "sales",
     },
   ],
@@ -265,7 +265,7 @@ const faqSchema = {
       name: "How can I hire Digital Ninja Technologies for my project?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can reach Digital Ninja Technologies via email at Info@thedigitalninjatech.com, by phone or WhatsApp at +2348145865720, or through the contact form at https://www.thedigitalninjatech.com/contact.",
+        text: "You can reach Digital Ninja Technologies via email at thedigitalninjatechnologies@gmail.com, by phone or WhatsApp at +2348145865720, or through the contact form at https://www.thedigitalninjatech.com/contact.",
       },
     },
     {

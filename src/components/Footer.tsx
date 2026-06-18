@@ -52,9 +52,9 @@ export default function Footer() {
 
             <div className="text-xl font-[600] md:text-[28px]">
               <a
-                href="mailto:Info@thedigitalninjatech.com"
+                href="mailto:thedigitalninjatechnologies@gmail.com"
                 className="text-[#FF6602] underline hover:text-[#FF6602] transition-colors">
-                Info@thedigitalninjatech.com
+                thedigitalninjatechnologies@gmail.com
               </a>
             </div>
           </div>
