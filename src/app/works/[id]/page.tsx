@@ -494,7 +494,7 @@ export default async function ProjectPage({
         </Link>
 
         <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-[40px] font-[600] text-gray-900 mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-[40px] font-[600] text-gray-900 mb-4">
             {project.title}
           </h1>
           <p className="text-[#4D4C4C] font-[400] text-[14px]">

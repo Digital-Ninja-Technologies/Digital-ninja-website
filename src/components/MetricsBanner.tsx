@@ -71,7 +71,7 @@ export default function MetricsBanner() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="flex flex-col items-center text-center py-2 md:px-8"
             >
-              <p className="text-4xl md:text-5xl font-bold text-[#2E2D2D] mb-1 tabular-nums">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2E2D2D] mb-1 tabular-nums">
                 <CountUp to={m.value} suffix={m.suffix} />
               </p>
               <p className="text-[#999797] text-sm font-medium">{m.label}</p>

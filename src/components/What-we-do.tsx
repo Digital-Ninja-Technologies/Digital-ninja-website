@@ -349,7 +349,7 @@ export default function WhatWeDo() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="rounded-3xl border-2 border-dashed border-[#FFE0CC] p-10 flex flex-col items-center justify-center text-center min-h-[420px]"
+                  className="rounded-3xl border-2 border-dashed border-[#FFE0CC] p-10 flex flex-col items-center justify-center text-center min-h-[280px] md:min-h-[420px]"
                 >
                   <div className="text-5xl mb-5">👆</div>
                   <p className="text-[#C8C7C7] font-medium text-lg">

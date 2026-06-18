@@ -123,7 +123,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           </div>
 
           {/* Title */}
-          <h2 className="text-[38px] md:text-[52px] font-semibold leading-[105%] tracking-[-0.04em] text-[#2E2D2D] mb-5 group-hover:text-[#FF6602] transition-colors duration-300">
+          <h2 className="text-[28px] sm:text-[34px] md:text-[44px] font-semibold leading-[108%] tracking-[-0.04em] text-[#2E2D2D] mb-5 group-hover:text-[#FF6602] transition-colors duration-300">
             {project.title}
           </h2>
 
@@ -201,7 +201,7 @@ export default function WorksPage() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={heroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="text-[40px] md:text-[64px] font-semibold leading-[108%] tracking-[-0.04em] text-[#2E2D2D]"
+                className="text-[28px] sm:text-[36px] md:text-[52px] lg:text-[64px] font-semibold leading-[108%] tracking-[-0.04em] text-[#2E2D2D]"
               >
                 Building the next generation of{" "}
                 <span className="text-[#FF7E29] italic">impactful</span> digital products.

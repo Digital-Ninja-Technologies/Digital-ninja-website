@@ -85,11 +85,11 @@ export default function BookingClient() {
         {/* ── Cal.com embed ── */}
         <div
           className="bg-white rounded-2xl shadow-sm overflow-hidden"
-          style={{ minHeight: "700px" }}
+          
         >
           <div
             id="my-cal-booking-page"
-            style={{ width: "100%", height: "700px", overflow: "scroll" }}
+            style={{ width: "100%", minHeight: "600px", height: "auto", overflow: "auto" }}
           />
         </div>
 

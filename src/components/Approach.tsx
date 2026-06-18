@@ -98,7 +98,7 @@ export default function Approach() {
           className="grid grid-cols-1 lg:grid-cols-5 gap-4"
         >
           {/* Step tabs. Vertical on desktop, horizontal scroll on mobile */}
-          <div className="lg:col-span-2 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
+          <div className="lg:col-span-2 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-3 lg:pb-0 scrollbar-hide -mx-4 px-4 lg:mx-0 lg:px-0">
             {steps.map((s, i) => (
               <button
                 key={s.number}

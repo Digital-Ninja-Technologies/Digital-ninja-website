@@ -179,7 +179,7 @@ export default function AboutHero() {
 
             {/* Floating badge */}
             <motion.div
-              className="absolute -bottom-5 -left-5 bg-white rounded-2xl px-5 py-4 shadow-xl shadow-black/20 flex items-center gap-3"
+              className="absolute -bottom-4 left-2 md:-bottom-5 md:-left-5 bg-white rounded-2xl px-4 py-3 md:px-5 md:py-4 shadow-xl shadow-black/20 flex items-center gap-3"
               initial={{ opacity: 0, y: 12 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.9 }}

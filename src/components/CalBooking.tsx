@@ -75,11 +75,10 @@ export default function CalBooking() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="rounded-3xl overflow-hidden border border-[#FFE0CC] shadow-sm"
-          style={{ minHeight: "600px" }}
         >
           <div
             id="my-cal-inline-15min"
-            style={{ width: "100%", height: "700px", overflow: "scroll" }}
+            style={{ width: "100%", minHeight: "600px", height: "auto", overflow: "auto" }}
           />
         </motion.div>
 
