@@ -22,12 +22,12 @@ const projects = [
     id: "korlodworks",
     title: "Korlod Works",
     description: "Web Design · Brand Identity · Agency Website",
-    image: "/korlod-cover.svg",
+    image: "/korlod-1.jpg",
     liveUrl: "https://korlodworks.com/",
     tags: ["Web Design", "Branding", "Agency"],
     year: "2025",
-    bg: "#1A0D00",
-    accent: "#FF6B35",
+    bg: "#E8ECF5",
+    accent: "#3A4A7A",
   },
 ];
 

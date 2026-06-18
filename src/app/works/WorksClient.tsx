@@ -28,10 +28,10 @@ const projects = [
     year: "2025",
     description:
       "A bold, conversion-focused website for Korlod Works, a creative agency that builds unique brand experiences through identity design, video, messaging, and web design.",
-    image: "/korlod-cover.svg",
+    image: "/korlod-1.jpg",
     liveUrl: "https://korlodworks.com/",
-    bg: "#1A0D00",
-    accent: "#FF6B35",
+    bg: "#E8ECF5",
+    accent: "#3A4A7A",
   },
 ];
 

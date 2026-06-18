@@ -95,15 +95,15 @@ const projects = [
     id: "korlodworks",
     title: "Korlod Works",
     description: "Web Design · Brand Identity · Agency Website",
-    image: "/korlod-cover.svg",
+    image: "/korlod-1.jpg",
     showcaseType: "standard",
     overview: {
       title: "A bold agency website that communicates creativity, builds trust, and converts visitors into clients.",
       description:
         "Korlod Works is a creative agency that builds unique brand experiences through identity design, video, messaging, and web design. The brief was to design and build a website that instantly communicates their creative depth, positions them as a premium agency, and guides visitors toward booking a consultation. The design balances bold visual identity with clear information hierarchy, ensuring the site works as both a portfolio and a lead generation tool.",
       features: {
-        mockupImage1: "/korlod-cover.svg",
-        mockupImage2: "/korlod-cover.svg",
+        mockupImage1: "/korlod-1.jpg",
+        mockupImage2: "/korlod-2.jpg",
       },
       liveUrl: "https://korlodworks.com/",
       role: "Web Designer & Developer",
@@ -148,7 +148,7 @@ const projects = [
           desc: "Every section leads to a clear call to action. The consultation booking flow was designed to be as frictionless as possible, reducing drop-off at the most critical conversion point.",
         },
       ],
-      challenges: "The biggest challenge was balancing a strong visual personality with clear, structured content. Creative agencies risk websites that look impressive but don't convert. The solution was to let the work speak loudly while keeping the navigation and structure clean and conventional.",
+      challenges: "The biggest challenge was balancing a strong visual personality with clear, structured content. Creative agencies risk websites that look impressive but do not convert. The solution was to let the work speak loudly while keeping the navigation and structure clean and conventional.",
       outcome: {
         summary: "The final site positioned Korlod Works as a credible, premium creative agency with a web presence that reflects the quality of their output.",
         points: [
@@ -159,7 +159,12 @@ const projects = [
           "Improved organic discoverability through SEO-optimised structure",
         ],
       },
-      gallery: [],
+      gallery: [
+        "/korlod-1.jpg",
+        "/korlod-2.jpg",
+        "/korlod-3.jpg",
+        "/korlod-4.jpg",
+      ],
     },
   },
 ];
