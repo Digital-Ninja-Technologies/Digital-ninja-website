@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 import Image from "next/image";
 
-const tags = ["Lagos, Nigeria", "Founded 2022", "Global Clients", "10+ Industries"];
+const tags = ["Global Clients", "10+ Industries"];
 
 export default function AboutHero() {
   const [imageLoaded, setImageLoaded] = useState(false);
