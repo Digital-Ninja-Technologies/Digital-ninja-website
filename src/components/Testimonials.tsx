@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
@@ -83,9 +83,31 @@ export default function Testimonials() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
   const next = () => setCurrent((c) => (c + 1) % testimonials.length);
+
+  // Auto-slide every 6 seconds, pause when hovered or manually interacted
+  useEffect(() => {
+    if (paused) {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      return;
+    }
+    intervalRef.current = setInterval(() => {
+      setCurrent((c) => (c + 1) % testimonials.length);
+    }, 6000);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [paused]);
+
+  const handleManualNav = (index: number) => {
+    setCurrent(index);
+    // Restart the timer after manual interaction
+    setPaused(false);
+  };
 
   const t = testimonials[current];
 
@@ -119,7 +141,7 @@ export default function Testimonials() {
             className="flex items-center gap-3"
           >
             <button
-              onClick={prev}
+              onClick={() => { prev(); setPaused(false); }}
               className="w-11 h-11 rounded-full border border-[#F2F2F2] bg-white hover:border-[#FF7E29] hover:text-[#FF7E29] flex items-center justify-center transition-all duration-200 text-[#6B6A6A]"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -128,7 +150,7 @@ export default function Testimonials() {
               {String(current + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
             </span>
             <button
-              onClick={next}
+              onClick={() => { next(); setPaused(false); }}
               className="w-11 h-11 rounded-full border border-[#F2F2F2] bg-white hover:border-[#FF7E29] hover:text-[#FF7E29] flex items-center justify-center transition-all duration-200 text-[#6B6A6A]"
             >
               <ChevronRight className="w-5 h-5" />
@@ -142,6 +164,9 @@ export default function Testimonials() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mb-8"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          onClick={() => setPaused(true)}
         >
           <AnimatePresence mode="wait">
             <motion.div
@@ -197,7 +222,7 @@ export default function Testimonials() {
           {testimonials.map((_, i) => (
             <button
               key={i}
-              onClick={() => setCurrent(i)}
+              onClick={() => handleManualNav(i)}
               className="rounded-full transition-all duration-300"
               style={{
                 width: i === current ? "24px" : "8px",
@@ -218,7 +243,7 @@ export default function Testimonials() {
           {testimonials.map((item, i) => (
             <button
               key={i}
-              onClick={() => setCurrent(i)}
+              onClick={() => handleManualNav(i)}
               className={`text-left p-4 rounded-2xl border transition-all duration-200 ${
                 i === current
                   ? "border-[#FFE0CC] bg-[#FFF8F3]"
