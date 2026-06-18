@@ -91,6 +91,77 @@ const projects = [
       },
     },
   },
+  {
+    id: "korlodworks",
+    title: "Korlod Works",
+    description: "Web Design · Brand Identity · Agency Website",
+    image: "/korlod-cover.svg",
+    showcaseType: "standard",
+    overview: {
+      title: "A bold agency website that communicates creativity, builds trust, and converts visitors into clients.",
+      description:
+        "Korlod Works is a creative agency that builds unique brand experiences through identity design, video, messaging, and web design. The brief was to design and build a website that instantly communicates their creative depth, positions them as a premium agency, and guides visitors toward booking a consultation. The design balances bold visual identity with clear information hierarchy, ensuring the site works as both a portfolio and a lead generation tool.",
+      features: {
+        mockupImage1: "/korlod-cover.svg",
+        mockupImage2: "/korlod-cover.svg",
+      },
+      liveUrl: "https://korlodworks.com/",
+      role: "Web Designer & Developer",
+      responsibilities: [
+        "Brand direction and visual strategy",
+        "Information architecture",
+        "UI design and design system",
+        "Responsive web development",
+        "Conversion rate optimisation",
+        "Performance and SEO setup",
+      ],
+      problem: {
+        intro: "Korlod Works needed a digital presence that matched the quality of the brand work they do for clients. The key challenges were:",
+        points: [
+          { label: "Trust", detail: "Prospective clients needed to immediately trust them as a premium creative partner." },
+          { label: "Clarity", detail: "The services and process needed to be communicated quickly and clearly." },
+          { label: "Conversion", detail: "The site had to guide visitors toward a consultation call or direct engagement." },
+        ],
+        summary: "The goal was a website that felt as crafted as the work Korlod Works delivers for its own clients.",
+      },
+      goals: [
+        "Position Korlod Works as a premium creative agency",
+        "Drive consultation bookings and direct enquiries",
+        "Clearly communicate services and past work",
+        "Build instant credibility through design quality",
+        "Create a scalable web foundation for future growth",
+      ],
+      uxStrategy: [
+        {
+          step: "01",
+          title: "Lead with credibility",
+          desc: "The hero section immediately communicates what Korlod Works does, who they serve, and the value they bring. Social proof and client logos are placed early to build trust before the ask.",
+        },
+        {
+          step: "02",
+          title: "Simplify the service offering",
+          desc: "Instead of overwhelming visitors with a long list of services, we organised their offering into clear categories with concise descriptions that help visitors self-identify quickly.",
+        },
+        {
+          step: "03",
+          title: "Make next steps obvious",
+          desc: "Every section leads to a clear call to action. The consultation booking flow was designed to be as frictionless as possible, reducing drop-off at the most critical conversion point.",
+        },
+      ],
+      challenges: "The biggest challenge was balancing a strong visual personality with clear, structured content. Creative agencies risk websites that look impressive but don't convert. The solution was to let the work speak loudly while keeping the navigation and structure clean and conventional.",
+      outcome: {
+        summary: "The final site positioned Korlod Works as a credible, premium creative agency with a web presence that reflects the quality of their output.",
+        points: [
+          "A bold, conversion-focused website that reflects the brand",
+          "Clear service structure that helps visitors self-qualify",
+          "Streamlined consultation booking flow",
+          "Strong visual identity carried consistently across all pages",
+          "Improved organic discoverability through SEO-optimised structure",
+        ],
+      },
+      gallery: [],
+    },
+  },
 ];
 
 function ProjectOverview({ project }: { project: (typeof projects)[0] }) {

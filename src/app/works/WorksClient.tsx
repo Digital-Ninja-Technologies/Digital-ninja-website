@@ -20,6 +20,19 @@ const projects = [
     bg: "#F0FDF4",
     accent: "#16A34A",
   },
+  {
+    id: "korlodworks",
+    title: "Korlod Works",
+    category: "Web Design",
+    tags: ["Brand Identity", "Agency Website", "UI/UX"],
+    year: "2025",
+    description:
+      "A bold, conversion-focused website for Korlod Works, a creative agency that builds unique brand experiences through identity design, video, messaging, and web design.",
+    image: "/korlod-cover.svg",
+    liveUrl: "https://korlodworks.com/",
+    bg: "#1A0D00",
+    accent: "#FF6B35",
+  },
 ];
 
 const stats = [

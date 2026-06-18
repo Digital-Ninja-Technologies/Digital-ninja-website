@@ -18,6 +18,17 @@ const projects = [
     bg: "#F0FDF4",
     accent: "#16A34A",
   },
+  {
+    id: "korlodworks",
+    title: "Korlod Works",
+    description: "Web Design · Brand Identity · Agency Website",
+    image: "/korlod-cover.svg",
+    liveUrl: "https://korlodworks.com/",
+    tags: ["Web Design", "Branding", "Agency"],
+    year: "2025",
+    bg: "#1A0D00",
+    accent: "#FF6B35",
+  },
 ];
 
 interface FeaturedWorksProps {
