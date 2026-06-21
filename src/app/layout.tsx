@@ -156,7 +156,7 @@ const organizationSchema = {
     },
   ],
   sameAs: [
-    "https://www.linkedin.com/company/digitalninja-technology/",
+    "https://www.linkedin.com/company/digitalninja-technologies",
     "https://x.com/theninjatechies",
     "https://www.instagram.com/theninjatechies",
     "https://www.tiktok.com/@theninjatechies",

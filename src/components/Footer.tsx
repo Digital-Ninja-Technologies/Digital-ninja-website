@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="pt-8 md:pt-12">
             <div className="flex flex-wrap justify-center items-center space-x-4  font-[500] text-[#6b6a6a] text-[16px]">
               <a
-                href="https://www.linkedin.com/company/digitalninja-technology/"
+                href="https://www.linkedin.com/company/digitalninja-technologies"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#ff7e29] transition-colors">
