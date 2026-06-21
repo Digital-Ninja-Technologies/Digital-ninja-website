@@ -33,6 +33,19 @@ const projects = [
     bg: "#E8ECF5",
     accent: "#3A4A7A",
   },
+  {
+    id: "veritas",
+    title: "Veritas",
+    category: "Web Design & Mobile App Development",
+    tags: ["Fintech", "Escrow", "Mobile App", "Waitlist"],
+    year: "2026",
+    description:
+      "Waitlist landing page design and development for Veritas, a cross-border escrow payment app built for freelancers and clients doing borderless, modern work. Mobile app development is ongoing.",
+    image: "/veritas-1.png",
+    liveUrl: "https://www.useveritasapp.com",
+    bg: "#FEFCE8",
+    accent: "#EAB308",
+  },
 ];
 
 const stats = [

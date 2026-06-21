@@ -167,6 +167,84 @@ const projects = [
       ],
     },
   },
+  {
+    id: "veritas",
+    title: "Veritas",
+    description: "Web Design · Mobile App Development · Fintech · Escrow",
+    image: "/veritas-1.png",
+    showcaseType: "standard",
+    overview: {
+      title: "A waitlist landing page that builds trust and drives signups for Africa's cross-border escrow payment app.",
+      description:
+        "Veritas is a cross-border escrow payment platform built for freelancers and clients doing modern, borderless work. It holds every payment safely in escrow and settles in the user's local currency — NGN, GHS, KES, ZAR, USD and more. As the designer and developer behind the waitlist landing page, the goal was to communicate a complex fintech product clearly, build trust with an unproven audience, and convert visitors into waitlist signups before launch. Mobile app development is currently ongoing.",
+      features: {
+        mockupImage1: "/veritas-1.png",
+        mockupImage2: "/veritas-2.png",
+      },
+      liveUrl: "https://www.useveritasapp.com",
+      role: "Web Designer & Developer · Mobile App Developer",
+      responsibilities: [
+        "Landing page design and copywriting",
+        "Waitlist flow and conversion optimisation",
+        "Mobile app UI/UX design",
+        "Flutter mobile app development",
+        "Brand identity and visual language",
+        "Performance and SEO setup",
+      ],
+      problem: {
+        intro: "Launching a fintech product without an existing user base means every visitor arrives sceptical. Three core challenges shaped the design:",
+        points: [
+          { label: "Trust", detail: "Freelancers have been burned before. The product needed to feel credible, safe, and serious from the first second." },
+          { label: "Clarity", detail: "Escrow is a complex concept. The page had to explain it simply without losing the sophistication that makes it trustworthy." },
+          { label: "Conversion", detail: "Getting an email address before launch requires a compelling reason. The waitlist pitch had to feel exclusive, not desperate." },
+        ],
+        summary: "The challenge was to make a pre-launch fintech product feel like a product people could already trust with their money.",
+      },
+      goals: [
+        "Drive early waitlist signups before public launch",
+        "Communicate escrow protection clearly and simply",
+        "Build brand credibility in the freelance and fintech space",
+        "Create a scalable design system for the mobile app",
+        "Establish Veritas as the go-to escrow tool for African freelancers",
+      ],
+      uxStrategy: [
+        {
+          step: "01",
+          title: "Lead with the problem, not the product",
+          desc: "The hero section opens with the freelancer's pain: getting paid, every time, without worry. The product is the answer, not the introduction. This immediately resonates with the target audience.",
+        },
+        {
+          step: "02",
+          title: "Use social proof early",
+          desc: "The waitlist counter showing 51+ freelancers already waiting, combined with stacked avatar circles, creates a sense of momentum and community before anyone has to commit.",
+        },
+        {
+          step: "03",
+          title: "Make the escrow concept visual",
+          desc: "Instead of explaining escrow in text, the app mockup screens show it in action: funds locked, milestone approved, money released. Seeing is believing when trust is the product.",
+        },
+      ],
+      challenges:
+        "The hardest part was balancing a bold, expressive visual identity — bright yellow, chunky type, playful 3D assets — with the seriousness required to ask someone to trust you with their money. The solution was to let the visuals be bold while keeping the copy grounded, honest, and specific about how the product actually works.",
+      outcome: {
+        summary: "Veritas launched with 50+ freelancers on the waitlist before a single line of app code shipped, validating both the product and the design direction.",
+        points: [
+          "50+ waitlist signups before public launch",
+          "Clear communication of a complex fintech concept",
+          "Strong brand identity carried from web to mobile",
+          "Waitlist conversion optimised through social proof and exclusivity",
+          "Mobile app design system ready for Flutter development",
+        ],
+      },
+      gallery: [
+        "/veritas-1.png",
+        "/veritas-2.png",
+        "/veritas-3.png",
+        "/veritas-4.png",
+        "/veritas-5.png",
+      ],
+    },
+  },
 ];
 
 function ProjectOverview({ project }: { project: (typeof projects)[0] }) {

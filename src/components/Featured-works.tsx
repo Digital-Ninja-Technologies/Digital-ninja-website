@@ -29,6 +29,17 @@ const projects = [
     bg: "#E8ECF5",
     accent: "#3A4A7A",
   },
+  {
+    id: "veritas",
+    title: "Veritas",
+    description: "Web Design · Mobile App · Fintech · Escrow",
+    image: "/veritas-1.png",
+    liveUrl: "https://www.useveritasapp.com",
+    tags: ["Fintech", "Mobile App", "Web"],
+    year: "2026",
+    bg: "#FEFCE8",
+    accent: "#EAB308",
+  },
 ];
 
 interface FeaturedWorksProps {
