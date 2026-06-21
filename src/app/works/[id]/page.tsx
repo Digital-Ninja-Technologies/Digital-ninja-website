@@ -227,9 +227,9 @@ const projects = [
       challenges:
         "The hardest part was balancing a bold, expressive visual identity — bright yellow, chunky type, playful 3D assets — with the seriousness required to ask someone to trust you with their money. The solution was to let the visuals be bold while keeping the copy grounded, honest, and specific about how the product actually works.",
       outcome: {
-        summary: "Veritas launched with 50+ freelancers on the waitlist before a single line of app code shipped, validating both the product and the design direction.",
+        summary: "Veritas will launch with freelancers on the waitlist before a single line of app code shipped, validating both the product and the design direction.",
         points: [
-          "50+ waitlist signups before public launch",
+          "Client can easily capture emails for marketing campaign before public launch",
           "Clear communication of a complex fintech concept",
           "Strong brand identity carried from web to mobile",
           "Waitlist conversion optimised through social proof and exclusivity",
