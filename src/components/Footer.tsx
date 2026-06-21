@@ -89,11 +89,11 @@ export default function Footer() {
               <span className="bg-[#FF7E29] rounded-full h-[5px] w-[5px] " />
 
               <a
-                href="https://youtube.com/@designninjaacademy?si=jCFTROBjs1cCEQ9l"
+                href="https://www.tiktok.com/@theninjatechies"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#ff7e29] transition-colors">
-                Youtube
+                TikTok
               </a>
             </div>
           </div>

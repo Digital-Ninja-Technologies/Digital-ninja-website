@@ -159,7 +159,7 @@ const organizationSchema = {
     "https://www.linkedin.com/company/digitalninja-technology/",
     "https://x.com/theninjatechies",
     "https://www.instagram.com/theninjatechies",
-    "https://youtube.com/@designninjaacademy",
+    "https://www.tiktok.com/@theninjatechies",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
