@@ -242,6 +242,8 @@ const projects = [
         "/veritas-3.png",
         "/veritas-4.png",
         "/veritas-5.png",
+        "/veritas-6.png",
+        "/veritas-7.png",
       ],
     },
   },
