@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Digital Ninja Technologies",
   },
   description:
-    "Digital Ninja Technologies is a full service digital agency in Nigeria specialising in UI UX design, custom software development, mobile app development, AI automation, and MVP development for startups, SMEs, and enterprises.",
+    "Global Design & Software Development Agency. We build Websites, Mobile Apps, Software and Games for startups, SMEs and enterprises across Africa and beyond.",
   keywords: [
     "digital agency Nigeria",
     "software development company Nigeria",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Digital Ninja Technologies | Design & Software Development Agency in Nigeria",
     description:
-      "Empowering brands and startups with impactful digital solutions through strategic design and development. Based in Nigeria, serving clients globally.",
+      "Global Design & Software Development Agency. We build Websites, Mobile Apps, Software and Games for startups, SMEs and enterprises across Africa and beyond.",
     images: [
       {
         url: "/og-image.jpg",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Digital Ninja Technologies | Design & Software Development Agency",
     description:
-      "Empowering brands and startups with impactful digital solutions through strategic design and development.",
+      "Global Design & Software Development Agency. Websites, Mobile Apps, Software and Games for startups, SMEs and enterprises.",
     images: ["/og-image.jpg"],
     site: "@theninjatechies",
     creator: "@theninjatechies",
