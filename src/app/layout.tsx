@@ -18,8 +18,8 @@ export const BASE_URL = "https://www.thedigitalninjatech.com";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Digital Ninja Technologies | Design & Software Development Agency in Nigeria",
-    template: "%s | Digital Ninja Technologies",
+    default: "The Digital Ninja Technologies | Global Design & Software Development Agency",
+    template: "%s | The Digital Ninja Technologies",
   },
   description:
     "Global Design & Software Development Agency. We build Websites, Mobile Apps, Software and Games for startups, SMEs and enterprises across Africa and beyond.",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     canonical: BASE_URL,
   },
   openGraph: {
-    title: "Digital Ninja Technologies | Design & Software Development Agency in Nigeria",
+    title: "The Digital Ninja Technologies | Global Design & Software Development Agency",
     description:
       "Global Design & Software Development Agency. We build Websites, Mobile Apps, Software and Games for startups, SMEs and enterprises across Africa and beyond.",
     images: [
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Ninja Technologies | Design & Software Development Agency",
+    title: "The Digital Ninja Technologies | Global Design & Software Development Agency",
     description:
       "Global Design & Software Development Agency. Websites, Mobile Apps, Software and Games for startups, SMEs and enterprises.",
     images: ["/og-image.jpg"],
