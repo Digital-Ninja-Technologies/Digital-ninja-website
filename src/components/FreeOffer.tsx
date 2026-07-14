@@ -99,8 +99,8 @@ export default function FreeOffer() {
               {stats.map((s, i) => (
                 <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
                   <s.icon className="w-4 h-4 text-[#FF7E29] mx-auto mb-2" />
-                  <p className="text-white font-bold text-lg leading-none mb-1">{s.value}</p>
-                  <p className="text-[#6B6A6A] text-xs">{s.label}</p>
+                  <p className="text-[#6B6A6A] text-xs mb-1">{s.label}</p>
+                  <p className="text-white font-bold text-lg leading-none">{s.value}</p>
                 </div>
               ))}
             </motion.div>
