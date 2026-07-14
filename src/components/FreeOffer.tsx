@@ -178,7 +178,7 @@ export default function FreeOffer() {
                       <input
                         type="text"
                         required
-                        placeholder="Ifeoluwa Onifade"
+                        placeholder="John Doe"
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
                         className="w-full border border-[#E5E5E3] rounded-xl px-4 py-3 text-sm text-[#2E2D2D] placeholder-[#C8C7C7] focus:outline-none focus:border-[#FF7E29] transition-colors"
