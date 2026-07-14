@@ -2,6 +2,7 @@ import Approach from "@/components/Approach";
 import CalBooking from "@/components/CalBooking";
 import ClientsSlide from "@/components/ClientsSlide";
 import FeaturedWorks from "@/components/Featured-works";
+import FreeOffer from "@/components/FreeOffer";
 import Hero from "@/components/Hero";
 import MetricsBanner from "@/components/MetricsBanner";
 import TawkMessenger from "@/components/TawkMessenger";
@@ -33,6 +34,7 @@ export default function Home() {
 
       <WhatWeDo />
       <FeaturedWorks title="Featured works" buttonClassName="md:flex hidden" />
+      <FreeOffer />
       <Testimonials />
       <CalBooking />
     </main>
