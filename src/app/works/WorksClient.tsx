@@ -3,6 +3,7 @@
 import { ArrowRight, ArrowUpRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import FreeOffer from "@/components/FreeOffer";
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
@@ -306,6 +307,7 @@ export default function WorksPage() {
           </motion.div>
         </div>
       </section>
+      <FreeOffer />
     </div>
   );
 }

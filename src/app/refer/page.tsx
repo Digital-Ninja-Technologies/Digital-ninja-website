@@ -1,4 +1,5 @@
 import ReferPage from "@/components/Refer";
+import FreeOffer from "@/components/FreeOffer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,5 +29,10 @@ export const metadata: Metadata = {
 };
 
 export default function Refer() {
-  return <ReferPage />;
+  return (
+    <>
+      <ReferPage />
+      <FreeOffer />
+    </>
+  );
 }

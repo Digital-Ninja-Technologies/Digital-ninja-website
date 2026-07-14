@@ -86,7 +86,7 @@ export default function FreeOffer() {
               className="text-[#8A8888] text-lg leading-[170%] mb-8"
             >
               10 things every business owner and startup must set up before spending a single naira on marketing.
-              A practical, no-fluff checklist guide built for Nigerian founders and global entrepreneurs.
+              A practical, no-fluff checklist guide built for founders, startups and business owners worldwide.
             </motion.p>
 
             {/* Stats */}

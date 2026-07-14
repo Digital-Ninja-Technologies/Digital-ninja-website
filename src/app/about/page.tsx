@@ -1,5 +1,6 @@
 import AboutHero from "@/components/About-hero";
 import AboutSell from "@/components/AboutSell";
+import FreeOffer from "@/components/FreeOffer";
 import React from "react";
 import type { Metadata } from "next";
 
@@ -44,6 +45,7 @@ const About = () => {
     <>
       <AboutHero />
       <AboutSell />
+      <FreeOffer />
     </>
   );
 };
