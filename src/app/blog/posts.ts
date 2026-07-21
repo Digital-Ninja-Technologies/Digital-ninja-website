@@ -1068,3 +1068,252 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 export function getAllSlugs(): string[] {
   return posts.map((p) => p.slug);
 }
+
+// Additional posts appended
+const additionalPosts: BlogPost[] = [
+  {
+    slug: "website-hosting-vs-domain-what-business-owners-need-to-know",
+    title: "Website Hosting vs Domain: All You Need to Know as a Business Owner",
+    metaTitle: "Website Hosting vs Domain: What Business Owners Need to Know | Digital Ninja Technologies",
+    metaDescription: "Confused about the difference between website hosting and a domain name? This plain-language guide explains both, how they work together, and what to buy first.",
+    excerpt: "Domain names and web hosting are two different things that work together to make your website live. Most business owners mix them up. This guide explains both clearly.",
+    category: "Web Design",
+    tags: ["website hosting vs domain", "what is web hosting", "what is a domain name", "domain hosting Nigeria", "website hosting Nigeria"],
+    readTime: "6 min read",
+    publishDate: "2025-08-19",
+    author: "Digital Ninja Technologies",
+    content: `
+## The simple analogy first
+
+Think of your website as a physical shop.
+
+Your **domain name** is your shop's address — the location people use to find you. For example: thedigitalninjatech.com.
+
+Your **web hosting** is the actual building — the space where your products, shelves, and everything inside the shop physically exist.
+
+You need both. Without an address, nobody can find your shop. Without a building, there is nothing at the address for them to enter.
+
+---
+
+## What is a domain name?
+
+A domain name is the address people type into their browser to visit your website. Examples:
+
+- thedigitalninjatech.com
+- mybusiness.ng
+- onlineshop.co
+
+Domain names are registered through companies called **registrars** — Namecheap, GoDaddy, Whogohost, Qservers, and many others. You do not own a domain permanently. You rent it, typically on an annual basis. If you stop renewing it, someone else can register it.
+
+### Domain extensions explained
+
+- **.com** — the most recognised globally, best choice if available
+- **.ng** — Nigerian country code, signals local presence
+- **.co** — widely accepted alternative to .com
+- **.org** — traditionally for nonprofits and organisations
+- **.io** — popular with tech companies and startups
+
+For most Nigerian businesses, securing both **.com** and **.ng** versions of your name is ideal. Register the .com first.
+
+### How much does a domain cost?
+
+A .com domain typically costs between **$10 and $15 per year** (approximately ₦10,000 to ₦15,000). Premium or already-registered domains can cost significantly more. Nigerian .ng domains are available from local registrars like Whogohost and Qservers for similar annual fees.
+
+---
+
+## What is web hosting?
+
+Web hosting is a service that stores all your website files — the HTML, CSS, images, videos, databases, and code — on a server that is connected to the internet 24 hours a day, 7 days a week.
+
+When someone types your domain name into a browser, the domain points them to your hosting server, which then delivers your website files to their screen.
+
+### Types of web hosting
+
+**Shared hosting:** Your website shares a server with many other websites. Cheapest option. Works well for most small business websites. Can be slow if other sites on the same server get heavy traffic.
+
+**VPS hosting (Virtual Private Server):** You get a dedicated portion of a server. Faster, more reliable, and more customisable than shared hosting. Good for growing businesses and websites with moderate traffic.
+
+**Dedicated hosting:** You rent an entire server. Most expensive. Necessary only for high-traffic websites or applications with strict security requirements.
+
+**Cloud hosting:** Your website runs across multiple servers. Scales up automatically when you get traffic spikes. What most modern websites and apps use.
+
+**Managed WordPress hosting:** Hosting specifically optimised for WordPress websites, with automatic updates, backups, and security managed by the host.
+
+### How much does web hosting cost?
+
+| Hosting Type | Monthly Cost |
+|---|---|
+| Shared hosting | $2 to $10 per month |
+| VPS hosting | $10 to $80 per month |
+| Cloud hosting | $15 to $100+ per month |
+| Managed WordPress | $15 to $50 per month |
+
+---
+
+## Domain vs hosting: the key differences
+
+| | Domain Name | Web Hosting |
+|---|---|---|
+| What it is | Your website address | Storage space for your files |
+| What happens without it | Nobody can find your site | There is nothing to find |
+| Who you buy from | Domain registrar | Hosting provider |
+| Typical cost | $10 to $15 per year | $3 to $100+ per month |
+| Can you buy both together? | Yes, from most providers | Yes |
+
+---
+
+## Can I buy both from the same company?
+
+Yes. Most hosting providers also sell domain names, and most registrars offer hosting packages. Buying both from the same company (like Namecheap, GoDaddy, or local Nigerian providers like Whogohost) simplifies management — one login, one renewal reminder, one support team.
+
+However, some professionals prefer to keep domain and hosting separate. This way, if you ever switch hosting providers, your domain is not locked to the same company. Both approaches work.
+
+---
+
+## What to buy first
+
+Buy your domain name first, as soon as possible. Domain names are available on a first-come, first-served basis. The name you want may be registered by someone else tomorrow.
+
+Once you have your domain, you have time to decide on the right hosting package based on your website requirements.
+
+---
+
+## What Nigerian businesses specifically should know
+
+**Use a local payment method:** Many international hosting providers now accept Paystack, Flutterwave, and Nigerian debit cards. If international payment is a barrier, use a local provider like Whogohost, Smartweb, or Qservers.
+
+**Consider server location:** Hosting your website on a server closer to your users reduces load time. For businesses primarily serving Nigerian audiences, hosting on servers in Europe or Africa (rather than the US) can improve performance.
+
+**Renew early:** Many Nigerian business owners lose their domains because they miss renewal notices sent to an old email address. Set a calendar reminder 60 days before your domain expires.
+
+---
+
+## We handle hosting and domain setup for our clients
+
+When Digital Ninja Technologies builds a website for a client, we handle domain recommendations, hosting setup, SSL certificate installation, and all the technical configuration so you do not have to.
+
+[Book a free 15-minute discovery call](/booking) and we will walk you through exactly what your website needs.
+    `,
+  },
+  {
+    slug: "top-5-website-development-agencies-in-africa",
+    title: "Top 5 Website Development Agencies in Africa (2025)",
+    metaTitle: "Top 5 Website Development Agencies in Africa (2025) | Digital Ninja Technologies",
+    metaDescription: "Looking for the best website development agency in Africa? Here are 5 agencies delivering world-class digital work from Nigeria, Kenya, South Africa, and beyond.",
+    excerpt: "Africa's digital agency landscape has matured significantly. These are 5 agencies on the continent building websites and digital products to global standards.",
+    category: "Agency Advice",
+    tags: ["website development agency Africa", "best web agency Africa", "top digital agencies Nigeria", "web development companies Africa 2025"],
+    readTime: "7 min read",
+    publishDate: "2025-08-26",
+    author: "Digital Ninja Technologies",
+    content: `
+## Africa's digital agency ecosystem is maturing fast
+
+Five years ago, most businesses in Africa looking for high-quality digital work either flew in teams from Europe or the US, or settled for locally available options that did not meet global standards.
+
+That has changed. Africa now has a growing number of agencies delivering world-class websites, mobile apps, and digital products — at competitive rates, with deep understanding of African markets and users.
+
+This guide profiles five standout agencies across the continent for businesses looking for quality partners.
+
+---
+
+## What makes a great African digital agency in 2025?
+
+Before the list, it is worth establishing what separates strong agencies from mediocre ones — the same criteria we apply whether evaluating our own work or anyone else's.
+
+**Live portfolio:** Can you visit the websites and use the apps they have built? Work that exists only as mockups or screenshots should be treated with caution.
+
+**Process transparency:** Can they explain how they work, from discovery to launch? Agencies that jump straight to pricing without understanding your goals are skipping the part that determines whether the project succeeds.
+
+**Post-launch accountability:** Do they offer support after delivery? The launch is not the end of the relationship.
+
+**Communication:** How they communicate before you hire them is how they will communicate during the project.
+
+---
+
+## 1. Digital Ninja Technologies (Nigeria)
+
+**Location:** Lagos, Nigeria  
+**Services:** Web design and development, mobile app development, UI/UX design, brand identity, software development  
+**Notable work:** Veritas (escrow payment app), Moducode (B2B talent platform), Korlod Works (agency website)  
+**Website:** thedigitalninjatech.com
+
+Digital Ninja Technologies is a full-service digital agency serving clients across Nigeria, the UK, Canada, and the UAE. The team handles everything from early-stage startup MVPs to established SME websites, with a strong emphasis on conversion-focused design and clean engineering.
+
+What distinguishes the team is a commitment to transparent communication, milestone-based delivery, and genuine post-launch support. Projects are scoped properly before work begins, and clients are kept informed throughout.
+
+For startups and businesses looking for a reliable agency with both design and development capabilities in-house, Digital Ninja Technologies is a strong first call.
+
+---
+
+## 2. Andela (Pan-African, originally Nigeria)
+
+**Location:** Originally Lagos, now global  
+**Services:** Software engineering talent and development  
+**Known for:** Training and placing African software engineers with global companies
+
+Andela began as a talent development programme and has evolved into one of the most recognised African tech brands globally. While not a traditional agency in the project delivery sense, Andela connects companies with vetted African engineering talent and has been instrumental in establishing Africa's reputation for world-class software development.
+
+For companies looking to embed African engineering talent into their teams rather than hire a project-based agency, Andela is a leader in that model.
+
+---
+
+## 3. Savannah Digital (Kenya)
+
+**Location:** Nairobi, Kenya  
+**Services:** Web development, digital strategy, e-commerce, enterprise software  
+**Known for:** Enterprise-grade digital solutions for East African markets
+
+Kenya's digital agency landscape is anchored by several strong players, with Savannah Digital standing out for enterprise-level work. The agency has delivered digital solutions for financial institutions, development organisations, and major brands operating across East Africa.
+
+For businesses with complex requirements and larger budgets, Kenya's agency market offers strong options with particular depth in fintech and e-commerce for the East African market.
+
+---
+
+## 4. Webfactory (South Africa)
+
+**Location:** Cape Town and Johannesburg, South Africa  
+**Services:** Web development, UX design, digital strategy, e-commerce  
+**Known for:** Premium digital work for South African and pan-African brands
+
+South Africa has one of the most mature digital agency ecosystems on the continent, with agencies operating at a consistently high level across design and development. Cape Town in particular has a strong creative and technical talent base that competes with major global markets.
+
+South African agencies typically command higher rates than their West or East African counterparts, reflecting both the depth of talent and the cost of living in those markets. For businesses where premium quality and a strong track record are the primary criteria, South Africa's market has excellent options.
+
+---
+
+## 5. MEST Africa (Pan-African, HQ Ghana)
+
+**Location:** Accra, Ghana (with presence across multiple African cities)  
+**Services:** Tech entrepreneurship training, investment, and digital product development  
+**Known for:** Developing Africa's next generation of tech founders and products
+
+MEST Africa sits at the intersection of agency and startup incubator. The organisation has trained hundreds of African tech entrepreneurs and has built digital products that have gone on to raise significant funding.
+
+While not a traditional project agency, MEST-affiliated ventures and teams have built digital products across health, finance, logistics, and commerce for African and global markets. For companies interested in co-building or partnering with African tech talent at an early stage, the MEST ecosystem is worth exploring.
+
+---
+
+## How to choose the right agency for your project
+
+The right agency depends on your specific requirements, budget, timeline, and the kind of relationship you want.
+
+**For most SMEs and startups in Nigeria:** A full-service Nigerian agency with in-house design and development capability offers the best combination of quality, speed, cultural alignment, and value. You get a team that understands your market, speaks your language, and is in your time zone.
+
+**For enterprise projects or pan-African reach:** Consider agencies with proven track records in your specific industry and the geography you are targeting.
+
+**For building a technology team rather than a one-off project:** Andela and similar platforms offer a different model that may be more cost-effective at scale.
+
+---
+
+## Ready to discuss your project?
+
+Digital Ninja Technologies offers a free 15-minute discovery call for businesses and startups looking to build or redesign their digital presence.
+
+[Book your free call](/booking) and let us show you how we approach your project before you commit to anything.
+    `,
+  },
+];
+
+// Merge into main posts array
+posts.push(...additionalPosts);
