@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Download, CheckCircle, ArrowRight, BookOpen, Lightbulb, Star, Heart } from "lucide-react";
+import { Download, CheckCircle, ArrowRight, BookOpen, Lightbulb, Star, Heart, Calendar, Mail, Smartphone, DollarSign, TrendingUp, FileText } from "lucide-react";
 import Link from "next/link";
 
 const resources = [
