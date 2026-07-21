@@ -26,5 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/blog/what-is-a-minimum-viable-product`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blog/website-hosting-vs-domain-what-business-owners-need-to-know`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blog/top-5-website-development-agencies-in-africa`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/blog/why-hire-us-as-your-startup-technical-partner`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
   ];
 }
