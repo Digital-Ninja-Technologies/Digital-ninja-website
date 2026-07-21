@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Download, CheckCircle, ArrowRight, BookOpen, Lightbulb, Star, Heart, Calendar, Mail, Smartphone, DollarSign, TrendingUp, FileText } from "lucide-react";
+import { Download, CheckCircle, ArrowRight, BookOpen, Lightbulb, Star, Heart, Calendar, Mail, Smartphone, DollarSign, BarChart2, FileText } from "lucide-react";
 import Link from "next/link";
 
 const resources = [
@@ -38,7 +38,7 @@ const resources = [
   },
   {
     id: "rate-calculator",
-    icon: TrendingUp,
+    icon: BarChart2,
     color: "#FD3600",
     light: "#FFF0EE",
     badge: "Freelancers & Service Providers",
