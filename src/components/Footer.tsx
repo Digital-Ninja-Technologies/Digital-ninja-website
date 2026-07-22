@@ -46,10 +46,6 @@ export default function Footer() {
           </h2>
 
           <div className="space-y-6">
-            <div className="text-2xl md:text-[28px] font-[600] text-[#FF6602]">
-              +2348145865720
-            </div>
-
             <div className="text-xl font-[600] md:text-[28px]">
               <a
                 href="mailto:thedigitalninjatechnologies@gmail.com"
