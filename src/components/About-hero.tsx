@@ -88,9 +88,8 @@ export default function AboutHero() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.3 }}
             >
-              Digital Ninja Technologies is a full service digital agency in{" "}
-              <span className="text-white font-medium">Lagos, Nigeria</span>. Designing and
-              building software, apps, and web products for startups, SMEs, and global businesses
+              Digital Ninja Technologies is a global design and software development agency. We design and
+              build software, apps, and web products for startups, SMEs, and global businesses
               that are tired of agencies that disappear.
             </motion.p>
 
