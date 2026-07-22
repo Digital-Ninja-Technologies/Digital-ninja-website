@@ -215,7 +215,7 @@ export default function Hero() {
 
             {/* SEO: descriptive paragraph for search engine crawlers */}
             <p className="sr-only">
-              Digital Ninja Technologies is a full-service digital agency based in Lagos.
+              Digital Ninja Technologies is a global design and software development agency.
               We specialise in custom software development, UI/UX design, mobile app development for iOS and Android,
               AI solutions and automation, and MVP development for startups. We help founders, SMEs, enterprises,
               and organisations across Nigeria and Africa build impactful digital products that drive results.

@@ -571,7 +571,7 @@ export async function generateMetadata({
   const project = projects.find((p) => p.id === id);
   const title = project ? project.title : "Project";
   const description = project?.overview.description ??
-    "Explore this project by Digital Ninja Technologies. A full service digital agency in Nigeria.";
+    "Explore this project by Digital Ninja Technologies. A global design and software development agency.";
   const url = `https://www.thedigitalninjatech.com/works/${id}`;
 
   return {

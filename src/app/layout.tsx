@@ -26,15 +26,15 @@ export const metadata: Metadata = {
   keywords: [
     "digital agency Nigeria",
     "software development company Nigeria",
-    "UI UX design agency Lagos",
+    "UI UX design agency",
     "mobile app development Nigeria",
     "web design and development Nigeria",
     "startup MVP development Africa",
     "AI automation solutions Nigeria",
-    "product design agency Lagos",
+    "product design agency global",
     "custom software Nigeria",
     "tech agency Nigeria",
-    "app development Lagos",
+    "app development",
     "website development Nigeria",
     "Digital Ninja Technologies",
     "digital solutions for startups",
@@ -120,7 +120,7 @@ const organizationSchema = {
   },
   image: `${BASE_URL}/og-image.jpg`,
   description:
-    "Digital Ninja Technologies is a full service digital agency in Nigeria specialising in UI UX design, custom software development, mobile apps, AI automation, and MVP development for startups, SMEs, and enterprises across Africa and globally.",
+    "Digital Ninja Technologies is a global design and software development agency specialising in UI UX design, custom software development, mobile apps, AI automation, and MVP development for startups, SMEs, and enterprises worldwide.",
   foundingDate: "2022",
   address: {
     "@type": "PostalAddress",
@@ -257,7 +257,7 @@ const faqSchema = {
       name: "Where is Digital Ninja Technologies located?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Digital Ninja Technologies is based in Lagos, serving clients across Africa and globally.",
+        text: "Digital Ninja Technologies is serving clients clients across Africa and globally.",
       },
     },
     {
@@ -303,10 +303,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="geo.region" content="NG-LA" />
-        <meta name="geo.placename" content="Lagos, Nigeria" />
-        <meta name="geo.position" content="6.5244;3.3792" />
-        <meta name="ICBM" content="6.5244, 3.3792" />
+        
+        
+        
+        
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>

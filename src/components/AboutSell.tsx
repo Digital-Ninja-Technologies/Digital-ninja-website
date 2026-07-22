@@ -121,7 +121,7 @@ export default function AboutSell() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <FadeUp delay={0.1}>
               <h2 className="text-3xl md:text-[44px] font-semibold leading-[115%] tracking-[-0.03em] text-white">
-                Most digital agencies in Nigeria are{" "}
+                Most digital agencies are{" "}
                 <span className="text-[#FF7E29]">selling you a service.</span>
                 <br className="hidden md:block" />
                 We're offering you{" "}
@@ -132,7 +132,7 @@ export default function AboutSell() {
             <FadeUp delay={0.2} className="space-y-6">
               <p className="text-[#B0AFAF] text-lg leading-[175%]">
                 Digital Ninja Technologies is a full service digital agency headquartered in
-                Lagos, Nigeria. We design and build software, mobile apps, websites, and AI
+                We design and build software, mobile apps, websites, and AI
                 tools. But that's not what makes us different.
               </p>
               <p className="text-[#B0AFAF] text-lg leading-[175%]">
@@ -305,7 +305,7 @@ export default function AboutSell() {
 
               <div className="relative z-10 space-y-6">
                 <p className="text-white/80 font-semibold text-sm uppercase tracking-widest">
-                  Lagos · Abuja · London · Toronto · Dubai
+                  London · Toronto · Dubai · Lagos · Global
                 </p>
                 <h2 className="text-white text-4xl md:text-5xl font-semibold leading-tight tracking-[-0.03em]">
                   Ready to stop planning
@@ -313,7 +313,7 @@ export default function AboutSell() {
                   and start building?
                 </h2>
                 <p className="text-white/80 text-lg max-w-xl mx-auto leading-relaxed">
-                  Whether you're a Nigerian founder with an idea, or a foreign company looking
+                  Whether you're a founder with an idea, or a company looking
                   for a dependable African tech partner. Let's talk. No hard sell. Just an
                   honest conversation about what you need.
                 </p>

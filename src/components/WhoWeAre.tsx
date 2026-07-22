@@ -40,7 +40,7 @@ const stats = [
   { value: "100%", label: "Project delivery rate" },
   { value: "48hr", label: "Average kickoff time" },
   { value: "10+", label: "Industries served" },
-  { value: "🌍", label: "Nigeria · Africa · Global" },
+  { value: "🌍", label: "Global" },
 ];
 
 export default function WhoWeAre() {
@@ -74,7 +74,7 @@ export default function WhoWeAre() {
 
             <motion.div {...fadeUp(0.2)} className="border-l-4 border-[#FF7E29] pl-6 space-y-5 mb-10">
               <p className="text-[#B0AFAF] text-lg leading-[175%]">
-                "I've spoken to hundreds of founders, executives, and business owners. In Lagos, Abuja, London, and beyond. The story is almost always the same.
+                "I've spoken to hundreds of founders, executives, and business owners. Across every market we have worked in. The story is almost always the same.
               </p>
               <p className="text-[#B0AFAF] text-lg leading-[175%]">
                 They hired a developer or an agency, got burned, lost money, lost months, and lost faith. They came back to square one. Except now they're more cautious, more frustrated, and further behind.

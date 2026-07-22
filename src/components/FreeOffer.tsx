@@ -85,7 +85,7 @@ export default function FreeOffer() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-[#8A8888] text-lg leading-[170%] mb-8"
             >
-              10 things every business owner and startup must set up before spending a single naira on marketing.
+              10 things every business owner and startup must set up before spending money on marketing.
               A practical, no-fluff checklist guide built for founders, startups and business owners worldwide.
             </motion.p>
 
