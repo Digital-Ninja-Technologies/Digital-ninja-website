@@ -241,6 +241,8 @@ const projects = [
       gallery: [
         "/brandface-1.png",
         "/brandface-2.png",
+        "/brandface-3.png",
+        "/brandface-4.png",
       ],
     },
   },

@@ -44,8 +44,8 @@ const projects = [
       "A modern, conversion-focused website for Brandface, a digital marketing agency. Designed to clearly communicate their expertise, build credibility, and generate qualified leads through strategic calls-to-action.",
     image: "/brandface-1.png",
     liveUrl: "https://brandface-eta.vercel.app",
-    bg: "#F0F4FF",
-    accent: "#3B5BDB",
+    bg: "#111110",
+    accent: "#FAFAF0",
   },
   {
     id: "veritas",
