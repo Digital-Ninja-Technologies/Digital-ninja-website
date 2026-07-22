@@ -35,8 +35,20 @@ const projects = [
     accent: "#3A4A7A",
   },
   {
+    id: "brandface",
+    title: "Brandface",
+    category: "Web Design & Development",
+    tags: ["Lead Conversion", "Landing Page", "Marketing Website"],
+    year: "2026",
+    description:
+      "A modern, conversion-focused website for Brandface, a digital marketing agency. Designed to clearly communicate their expertise, build credibility, and generate qualified leads through strategic calls-to-action.",
+    image: "/brandface-1.png",
+    liveUrl: "https://brandface-eta.vercel.app",
+    bg: "#F0F4FF",
+    accent: "#3B5BDB",
+  },
+  {
     id: "veritas",
-    title: "Veritas",
     category: "Web Design & Mobile App Development",
     tags: ["Fintech", "Escrow", "Mobile App", "Waitlist"],
     year: "2026",

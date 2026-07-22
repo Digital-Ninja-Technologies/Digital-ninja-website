@@ -168,6 +168,83 @@ const projects = [
     },
   },
   {
+    id: "brandface",
+    title: "Brandface",
+    description: "Web Design · Lead Conversion · Marketing Website",
+    image: "/brandface-1.png",
+    showcaseType: "standard",
+    overview: {
+      title: "A conversion-focused website that positions Brandface as a credible digital marketing agency and turns visitors into leads.",
+      description:
+        "Brandface is a digital marketing and IT solutions agency that needed a modern website to clearly communicate their expertise, showcase their work, and generate qualified leads. The challenge was designing a site that answers the three questions every visitor asks within seconds: who are you, what do you do, and why should I trust you. The result is a fast, responsive, visually polished website with strategic calls-to-action throughout.",
+      features: {
+        mockupImage1: "/brandface-1.png",
+        mockupImage2: "/brandface-2.png",
+      },
+      liveUrl: "https://brandface-eta.vercel.app",
+      role: "Website Designer & Developer",
+      responsibilities: [
+        "UI/UX Design",
+        "Information Architecture",
+        "Responsive Website Development",
+        "Interaction & Animation Design",
+        "Performance Optimisation",
+        "Cross-browser Testing & Deployment",
+      ],
+      problem: {
+        intro: "Many agency websites overwhelm visitors with excessive content or unclear messaging. Brandface needed a site that could:",
+        points: [
+          { label: "Communicate clearly", detail: "Deliver the value proposition within seconds of landing on the page." },
+          { label: "Present services cleanly", detail: "Showcase multiple service offerings without overwhelming users or burying the key message." },
+          { label: "Build trust", detail: "Use project showcases and testimonials to establish credibility with potential clients." },
+          { label: "Convert visitors", detail: "Generate qualified leads through strategically placed calls-to-action without disrupting the browsing experience." },
+        ],
+        summary: "The goal was a website that works as hard as the agency itself — credible, clear, and consistently pointing visitors toward a conversation.",
+      },
+      goals: [
+        "Establish a professional and credible online presence",
+        "Communicate service offerings clearly without overwhelming visitors",
+        "Generate qualified inbound leads through strategic CTAs",
+        "Deliver a seamless experience across all devices",
+        "Build a scalable architecture for future content growth",
+      ],
+      uxStrategy: [
+        {
+          step: "01",
+          title: "Clear information hierarchy",
+          desc: "Content was organised to answer three questions immediately: who is Brandface, what do they do, and why should clients trust them. Every section earns the scroll to the next.",
+        },
+        {
+          step: "02",
+          title: "Conversion-focused layout",
+          desc: "Every major section guides visitors toward contacting the agency through strategically placed CTAs — without interrupting the browsing experience or creating friction.",
+        },
+        {
+          step: "03",
+          title: "Consistent visual language",
+          desc: "A unified typography system, spacing scale, iconography, and colour palette creates a polished brand experience from the first scroll to the final CTA.",
+        },
+      ],
+      challenges:
+        "Balancing visual ambition with performance was the central tension. The site needed to feel premium and modern while loading fast on any connection. Every animation and interaction was evaluated for whether it added to the experience or just added weight.",
+      outcome: {
+        summary: "The completed website gives Brandface a professional digital home that reflects the quality of their work and consistently guides visitors toward a conversation.",
+        points: [
+          "Professional online presence that matches the agency's quality of work",
+          "Improved brand credibility through consistent visual design",
+          "Clear service presentation that helps visitors self-qualify",
+          "Enhanced mobile experience across all screen sizes",
+          "Fast page loading through performance optimisation",
+          "Scalable architecture ready for future growth",
+        ],
+      },
+      gallery: [
+        "/brandface-1.png",
+        "/brandface-2.png",
+      ],
+    },
+  },
+  {
     id: "veritas",
     title: "Veritas",
     description: "Web Design · Mobile App Development · Fintech · Escrow",

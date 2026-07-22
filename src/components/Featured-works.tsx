@@ -30,6 +30,17 @@ const projects = [
     accent: "#3A4A7A",
   },
   {
+    id: "brandface",
+    title: "Brandface",
+    description: "Web Design · Lead Conversion · Marketing Website",
+    image: "/brandface-1.png",
+    liveUrl: "https://brandface-eta.vercel.app",
+    tags: ["Web Design", "Landing Page", "Conversion"],
+    year: "2026",
+    bg: "#F0F4FF",
+    accent: "#3B5BDB",
+  },
+  {
     id: "veritas",
     title: "Veritas",
     description: "Web Design · Mobile App · Fintech · Escrow",
