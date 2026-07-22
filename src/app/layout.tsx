@@ -257,7 +257,7 @@ const faqSchema = {
       name: "Where is Digital Ninja Technologies located?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Digital Ninja Technologies is based in Lagos, Nigeria, and serves clients across Africa and globally.",
+        text: "Digital Ninja Technologies is based in Lagos, serving clients across Africa and globally.",
       },
     },
     {

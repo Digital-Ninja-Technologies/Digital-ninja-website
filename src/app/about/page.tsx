@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us | Digital Agency in Nigeria | Digital Ninja Technologies",
   description:
-    "Digital Ninja Technologies is a full service digital agency in Lagos, Nigeria. We build custom software, mobile apps, websites, and AI solutions for startups, SMEs, and global businesses. No hidden fees. No vanishing acts. Just results.",
+    "Digital Ninja Technologies is a full service digital agency in Lagos. We build custom software, mobile apps, websites, and AI solutions for startups, SMEs, and global businesses. No hidden fees. No vanishing acts. Just results.",
   alternates: {
     canonical: "https://www.thedigitalninjatech.com/about",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Digital Ninja Technologies | Digital Agency in Nigeria",
     description:
-      "We build software, apps, and digital products that actually work. Full-service digital agency in Lagos, Nigeria. Serving startups and businesses across Africa and globally.",
+      "We build software, apps, and digital products that actually work. Full-service digital agency in Lagos. Serving startups and businesses across Africa and globally.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies" }],
     url: "https://www.thedigitalninjatech.com/about",
     siteName: "Digital Ninja Technologies",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Digital Ninja Technologies",
     description:
-      "Full-service digital agency in Lagos, Nigeria. Custom software, apps, and websites that convert. No hidden fees. No excuses.",
+      "Full-service digital agency in Lagos. Custom software, apps, and websites that convert. No hidden fees. No excuses.",
     images: ["/og-image.jpg"],
   },
 };
