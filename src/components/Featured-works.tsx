@@ -126,7 +126,7 @@ export default function FeaturedWorks({
 
         {/* Project cards */}
         <div className="space-y-8">
-          {projects.map((project, i) => (
+          {projects.slice(0, 3).map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} inView={inView} />
           ))}
         </div>
