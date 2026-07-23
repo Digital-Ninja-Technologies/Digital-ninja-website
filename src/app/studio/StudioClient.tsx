@@ -8,7 +8,7 @@ import Image from "next/image";
 
 // Portfolio images reused
 const portfolioImages = [
-  { src: "/branface_hero.png", alt: "Brandface hero" },
+  { src: "/brandface-1.png", alt: "Brandface hero" },
   { src: "/korlod-1.jpg", alt: "Korlod Works" },
   { src: "/veritas-1.png", alt: "Veritas" },
   { src: "/moducode-cover.png", alt: "Moducode" },
@@ -31,7 +31,7 @@ const services = [
     title: "Brand Identity",
     desc: "A brand is a point of view, not a logo pack. We build the full identity system — mark, colour, type, and voice — so your business is recognisable, consistent, and unmistakably itself before anyone reads a word.",
     tags: ["Logo Design", "Colour & Typography", "Brand Guidelines", "Visual Language"],
-    images: ["/korlod-2.jpg", "/korlod-4.jpg", "/korlod-3.jpg"],
+    images: ["/korlod-1.jpg", "/korlod-2.jpg", "/korlod-3.jpg"],
   },
   {
     num: "03",
@@ -404,7 +404,7 @@ export default function StudioClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { img: "/branface_hero.png", title: "Brandface", desc: "Lead conversion landing page for a legal marketing agency.", tag: "Web Design" },
+              { img: "/brandface-1.png", title: "Brandface", desc: "Lead conversion landing page for a legal marketing agency.", tag: "Web Design" },
               { img: "/korlod-1.jpg", title: "Korlod Works", desc: "Full website for a creative agency — identity, web, and marketing.", tag: "Branding & Web" },
               { img: "/veritas-1.png", title: "Veritas", desc: "Waitlist site for a cross-border escrow fintech app.", tag: "Web + Mobile" },
             ].map((p, i) => (
@@ -550,17 +550,17 @@ export default function StudioClient() {
               thedigitalninjatechnologies@gmail.com
             </a>
           </div>
-        </div>
 
-        {/* Footer strip */}
-        <div className="max-w-6xl mx-auto mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[#6B6A6A] text-sm">
-            © Digital Ninja Technologies {new Date().getFullYear()} · All Rights Reserved
-          </p>
-          <div className="flex items-center gap-6">
-            <a href="https://www.linkedin.com/company/digitalninja-technologies" target="_blank" rel="noopener noreferrer" className="text-[#6B6A6A] hover:text-white text-sm transition-colors">LinkedIn</a>
-            <a href="https://www.tiktok.com/@theninjatechies" target="_blank" rel="noopener noreferrer" className="text-[#6B6A6A] hover:text-white text-sm transition-colors">TikTok</a>
-            <Link href="/" className="text-[#6B6A6A] hover:text-white text-sm transition-colors">Main site</Link>
+          {/* Footer strip */}
+          <div className="max-w-6xl mx-auto mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-[#6B6A6A] text-sm">
+              © Digital Ninja Technologies {new Date().getFullYear()} · All Rights Reserved
+            </p>
+            <div className="flex items-center gap-6">
+              <a href="https://www.linkedin.com/company/digitalninja-technologies" target="_blank" rel="noopener noreferrer" className="text-[#6B6A6A] hover:text-white text-sm transition-colors">LinkedIn</a>
+              <a href="https://www.tiktok.com/@theninjatechies" target="_blank" rel="noopener noreferrer" className="text-[#6B6A6A] hover:text-white text-sm transition-colors">TikTok</a>
+              <Link href="/" className="text-[#6B6A6A] hover:text-white text-sm transition-colors">Main site</Link>
+            </div>
           </div>
         </div>
       </section>

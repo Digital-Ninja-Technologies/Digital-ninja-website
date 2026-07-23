@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import ConditionalShell from "@/components/ConditionalShell";
 import LoadingWrapper from "@/components/LoadingWrapper";
 import Script from "next/script";
 
@@ -350,9 +349,9 @@ export default function RootLayout({
           }}
         />
         <LoadingWrapper>
-          <Navbar />
-          <div className="mt-20">{children}</div>
-          <Footer />
+          <ConditionalShell>
+            {children}
+          </ConditionalShell>
         </LoadingWrapper>
       </body>
     </html>
