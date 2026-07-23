@@ -465,6 +465,125 @@ export default function StudioClient() {
         </div>
       </section>
 
+      {/* ── PRICING ── */}
+      <section className="py-24 px-6 md:px-12 border-t border-white/5">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16 text-center"
+          >
+            <span className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.2em] block mb-4">Pricing</span>
+            <h2 className="text-[28px] md:text-[44px] font-black leading-tight tracking-[-0.03em]">
+              Clear plans. No surprises.
+            </h2>
+            <p className="text-[#555] text-base mt-4 max-w-lg mx-auto leading-[165%]">
+              Every engagement starts with a free discovery call. From there, we scope and price your project honestly.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              {
+                label: "One-off Project",
+                duration: "2 to 6 Weeks",
+                price: "From $1,500",
+                sub: "Best for focused, clearly scoped work",
+                highlight: false,
+                features: [
+                  "Custom scoped deliverable",
+                  "Professional UI design",
+                  "Milestone-based delivery",
+                  "2 weeks post-launch support",
+                  "Direct team communication",
+                ],
+                cta: "Book a call",
+              },
+              {
+                label: "Growth Retainer",
+                duration: "3 to 6 Months",
+                price: "From $2,500",
+                sub: "For brands with ongoing design and dev needs",
+                highlight: true,
+                features: [
+                  "Everything in One-off",
+                  "Priority turnaround",
+                  "Unlimited revisions",
+                  "Full service access — web, app, brand",
+                  "Slack integration with your team",
+                  "Updates every 48 hours",
+                ],
+                cta: "Book a call",
+              },
+              {
+                label: "Enterprise",
+                duration: "Custom",
+                price: "Let's talk",
+                sub: "For complex, long-term projects",
+                highlight: false,
+                features: [
+                  "Custom scope and timeline",
+                  "Dedicated team",
+                  "Design system development",
+                  "Full brand and product suite",
+                  "SLA and priority support",
+                ],
+                cta: "Reach out",
+              },
+            ].map((plan, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                whileHover={!plan.highlight ? { y: -4 } : {}}
+                className={`rounded-3xl p-8 flex flex-col border transition-all duration-300 ${
+                  plan.highlight
+                    ? "bg-[#FF6602] border-[#FF6602]"
+                    : "bg-white/[0.02] border-white/8 hover:border-[#FF6602]/40"
+                }`}
+              >
+                <div className="mb-7">
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-1 ${plan.highlight ? "text-white/70" : "text-[#FF7E29]"}`}>
+                    {plan.label}
+                  </p>
+                  <p className={`text-xs mb-5 ${plan.highlight ? "text-white/60" : "text-[#444]"}`}>{plan.duration}</p>
+                  <p className={`text-[38px] font-black tracking-tight leading-none mb-1 ${plan.highlight ? "text-white" : "text-white"}`}>
+                    {plan.price}
+                  </p>
+                  <p className={`text-sm mt-2 ${plan.highlight ? "text-white/75" : "text-[#444]"}`}>{plan.sub}</p>
+                </div>
+
+                <ul className="space-y-3 flex-1 mb-8">
+                  {plan.features.map((f, j) => (
+                    <li key={j} className={`flex items-start gap-3 text-sm leading-snug ${plan.highlight ? "text-white/90" : "text-[#555]"}`}>
+                      <span className={`w-1.5 h-1.5 rounded-full shrink-0 mt-1.5 ${plan.highlight ? "bg-white" : "bg-[#FF6602]"}`} />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link href="/booking">
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.97 }}
+                    className={`w-full py-3.5 rounded-full font-bold text-sm transition-all duration-200 ${
+                      plan.highlight
+                        ? "bg-white text-[#FF6602] hover:bg-[#FFF0E5]"
+                        : "border border-[#FF6602]/35 text-[#FF7E29] hover:bg-[#FF6602] hover:text-white hover:border-[#FF6602]"
+                    }`}
+                  >
+                    {plan.cta}
+                  </motion.button>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section className="py-24 px-6 md:px-12 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
