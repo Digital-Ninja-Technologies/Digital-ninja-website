@@ -1,205 +1,108 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
-import { ArrowRight, Plus, Minus } from "lucide-react";
+import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { ArrowRight, Plus, Minus, ArrowUpRight, Zap, Shield, Clock, Globe } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-// Portfolio images reused
+// ── DATA ──────────────────────────────────────────────────────────────────────
+
 const portfolioImages = [
-  { src: "/brandface-1.png", alt: "Brandface hero" },
+  { src: "/brandface-1.png", alt: "Brandface" },
   { src: "/korlod-1.jpg", alt: "Korlod Works" },
   { src: "/veritas-1.png", alt: "Veritas" },
   { src: "/moducode-cover.png", alt: "Moducode" },
-  { src: "/korlod-2.jpg", alt: "Korlod services" },
-  { src: "/veritas-2.png", alt: "Veritas app" },
-  { src: "/brandface-2.png", alt: "Brandface case study" },
-  { src: "/korlod-3.jpg", alt: "Korlod about" },
+  { src: "/korlod-2.jpg", alt: "Korlod Services" },
+  { src: "/veritas-2.png", alt: "Veritas App" },
+  { src: "/brandface-2.png", alt: "Brandface Case Study" },
+  { src: "/korlod-3.jpg", alt: "Korlod About" },
 ];
 
-const services = [
-  {
-    num: "01",
-    title: "Web Design & Development",
-    desc: "You launched fast. Now make it worth the visit. We take your existing site or build from scratch — applying real design decisions: layout, hierarchy, typography, motion. All the things that actually convert.",
-    tags: ["Website Design", "Landing Pages", "Web Apps", "Responsive Builds"],
-    images: ["/korlod-1.jpg", "/brandface-2.png", "/veritas-1.png"],
-  },
-  {
-    num: "02",
-    title: "Brand Identity",
-    desc: "A brand is a point of view, not a logo pack. We build the full identity system — mark, colour, type, and voice — so your business is recognisable, consistent, and unmistakably itself before anyone reads a word.",
-    tags: ["Logo Design", "Colour & Typography", "Brand Guidelines", "Visual Language"],
-    images: ["/korlod-1.jpg", "/korlod-2.jpg", "/korlod-3.jpg"],
-  },
-  {
-    num: "03",
-    title: "Mobile App Development",
-    desc: "Beautiful apps backed by solid engineering. We design and build cross-platform mobile apps for iOS and Android that keep users engaged from first open to daily habit.",
-    tags: ["Flutter Apps", "iOS & Android", "App UI/UX", "Launch Ready"],
-    images: ["/veritas-2.png", "/veritas-3.png", "/veritas-4.png"],
-  },
+const process = [
+  { num: "01", title: "We listen first", body: "Before a single wireframe exists, we spend time understanding your business, your users, and what success actually looks like. Most problems become obvious in this conversation." },
+  { num: "02", title: "We define the scope", body: "A clear scope prevents the most expensive problems in any digital project. We document exactly what we are building, what we are not building, and why." },
+  { num: "03", title: "We design with purpose", body: "Every layout decision, colour choice, and interaction is tied to a goal. We do not decorate. We design to guide users toward an action." },
+  { num: "04", title: "We build and iterate", body: "Development happens in transparent sprints. You see progress weekly. You give feedback on real, working builds — not static screenshots." },
+  { num: "05", title: "We launch and stay", body: "The launch is not the end. We monitor performance, fix issues, and stay available. You will not have to chase us after the invoice is paid." },
 ];
 
-const pricing = [
-  {
-    label: "One-off Project",
-    duration: "2 to 6 Weeks",
-    price: "From $1,500",
-    sub: "Best for focused, clearly scoped work",
-    highlight: false,
-    features: [
-      "Custom scoped deliverable",
-      "Professional UI design",
-      "Milestone-based delivery",
-      "2 weeks post-launch support",
-      "Direct communication",
-    ],
-    cta: "Book a call",
-    href: "/booking",
-  },
-  {
-    label: "Growth Retainer",
-    duration: "3 to 6 Months",
-    price: "From $2,500",
-    sub: "For brands with ongoing needs",
-    highlight: true,
-    features: [
-      "Everything in One-off",
-      "Priority turnaround",
-      "Unlimited revisions",
-      "Full service access (web, app, brand)",
-      "Slack integration with your team",
-      "Updates every 48 hours",
-    ],
-    cta: "Book a call",
-    href: "/booking",
-  },
-  {
-    label: "Enterprise",
-    duration: "Custom",
-    price: "Let's talk",
-    sub: "For complex, large-scale projects",
-    highlight: false,
-    features: [
-      "Custom scope and timeline",
-      "Dedicated team",
-      "Design system development",
-      "Full brand and product work",
-      "SLA and priority support",
-    ],
-    cta: "Reach out",
-    href: "/booking",
-  },
+const capabilities = [
+  { icon: Zap, title: "Web Design & Development", body: "From conversion-focused landing pages to full-scale web platforms. Every project is designed to perform, not just to look good.", skills: ["Next.js", "React", "Tailwind", "Framer Motion"] },
+  { icon: Globe, title: "Mobile App Development", body: "Cross-platform apps that feel native on iOS and Android. Fast, polished, and built for the users who will live inside them.", skills: ["Flutter", "iOS", "Android", "Firebase"] },
+  { icon: Shield, title: "Brand Identity", body: "A visual identity that is unmistakably yours. We build the full system: mark, colour, typography, and the rules that keep it consistent.", skills: ["Logo Design", "Design Systems", "Brand Guidelines", "Visual Language"] },
+  { icon: Clock, title: "Custom Software", body: "When off-the-shelf does not cut it. We architect and build custom platforms, dashboards, and tools that match exactly how your business works.", skills: ["Node.js", "PostgreSQL", "APIs", "Cloud"] },
+];
+
+const projects = [
+  { img: "/brandface-1.png", title: "Brandface", type: "Web Design", year: "2026", body: "A high-converting landing page for a legal marketing agency promising 20 to 30 qualified consultations in 90 days.", href: "/works/brandface" },
+  { img: "/korlod-1.jpg", title: "Korlod Works", type: "Brand & Web", year: "2025", body: "Full agency website for a creative firm — bold visual identity, clear services, and a lead generation machine.", href: "/works/korlodworks" },
+  { img: "/veritas-1.png", title: "Veritas", type: "Web + Mobile", year: "2026", body: "Waitlist site and mobile app for a cross-border escrow payment platform built for freelancers doing borderless work.", href: "/works/veritas" },
+  { img: "/moducode-cover.png", title: "Moducode", type: "UI/UX", year: "2026", body: "A trust-driven B2B talent platform connecting global companies with engineers from emerging markets.", href: "/works/moducode" },
+];
+
+const truths = [
+  "Speed without craft is just noise.",
+  "A brief is not a design spec.",
+  "Your users do not read. They scan.",
+  "Cheap is expensive in the long run.",
+  "Motion should mean something.",
+  "The best button is the one that gets clicked.",
 ];
 
 const faqs = [
-  {
-    q: "How long does it take to build a website?",
-    a: "A focused landing page or business site takes 2 to 4 weeks. A full web app or product with custom functionality takes 6 to 16 weeks. Every project starts with a proper discovery so we scope it accurately before work begins.",
-  },
-  {
-    q: "Can I update the website myself after it's launched?",
-    a: "Yes. Depending on the tech stack we use, we set up a CMS or content editing layer so you can update text, images, and content without touching code. We also provide a handover walkthrough on every project.",
-  },
-  {
-    q: "What do I need to have ready before we start?",
-    a: "As much or as little as you have. Ideally: a clear goal, your brand assets if they exist (logo, colours, fonts), and examples of sites or apps you like. We handle the rest — including strategy and content direction if needed.",
-  },
-  {
-    q: "Do you offer ongoing support after a project is done?",
-    a: "Yes. All projects include a post-launch support period. For ongoing work, our retainer plans give you continuous access to the team for updates, improvements, and new features.",
-  },
-  {
-    q: "What industries do you work with?",
-    a: "Fintech, SaaS, agencies, e-commerce, professional services, startups, and consumer apps. We work with founders and businesses across every stage — from pre-launch MVPs to established brands.",
-  },
-  {
-    q: "Do you work with international clients?",
-    a: "Absolutely. We work with clients across Africa, Europe, North America, and the Middle East. All projects are managed remotely with structured communication and regular updates.",
-  },
+  { q: "What makes you different from a freelancer?", a: "You get a team with complementary skills — design, engineering, and strategy — working on your project simultaneously. No waiting for one person to finish before the next can start. We also bring accountability, a defined process, and the capacity to handle projects of any scale." },
+  { q: "How do you handle projects remotely?", a: "Everything is structured. Weekly video calls, a shared project board, async updates between meetings, and a direct line to whoever is working on your project. We have delivered for clients across 4 continents without a single missed deadline attributed to communication." },
+  { q: "What happens if I want changes mid-project?", a: "We scope carefully upfront to reduce surprises. When scope changes happen — and they do — we discuss the impact on timeline and cost transparently before acting. Nothing gets added or changed without your explicit sign-off." },
+  { q: "Do you do ongoing work or only one-off projects?", a: "Both. Many clients start with a defined project and then continue on a retainer for ongoing design and development. We prefer long-term relationships because we understand your product better over time and you get better results." },
+  { q: "Can you work with our existing team?", a: "Yes. We have embedded into in-house teams, worked alongside other agencies, and collaborated with founders who have partial technical capacity. We adapt to what you already have rather than demanding to replace it." },
 ];
 
-const words = ["Startups", "Founders", "Brands", "Products", "You"];
+// ── COMPONENTS ────────────────────────────────────────────────────────────────
 
-// Typewriter headline
-function TypewriterWord() {
-  const [index, setIndex] = useState(0);
-  const [displayed, setDisplayed] = useState("");
-  const [deleting, setDeleting] = useState(false);
-
-  useEffect(() => {
-    const word = words[index];
-    if (!deleting && displayed.length < word.length) {
-      const t = setTimeout(() => setDisplayed(word.slice(0, displayed.length + 1)), 80);
-      return () => clearTimeout(t);
-    }
-    if (!deleting && displayed.length === word.length) {
-      const t = setTimeout(() => setDeleting(true), 1800);
-      return () => clearTimeout(t);
-    }
-    if (deleting && displayed.length > 0) {
-      const t = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 45);
-      return () => clearTimeout(t);
-    }
-    if (deleting && displayed.length === 0) {
-      setDeleting(false);
-      setIndex((i) => (i + 1) % words.length);
-    }
-  }, [displayed, deleting, index]);
-
-  return (
-    <span className="text-[#FF6602]">
-      {displayed}
-      <span className="animate-pulse">|</span>
-    </span>
-  );
-}
-
-// Infinite marquee
-function Marquee({ images, reverse }: { images: typeof portfolioImages; reverse?: boolean }) {
+function Marquee({ images, speed = 28, reverse = false }: { images: typeof portfolioImages; speed?: number; reverse?: boolean }) {
   return (
     <div className="overflow-hidden">
       <motion.div
         className="flex gap-4 w-max"
         animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: speed, repeat: Infinity, ease: "linear" }}
       >
         {[...images, ...images].map((img, i) => (
-          <div key={i} className="shrink-0 w-[320px] h-[200px] rounded-2xl overflow-hidden">
-            <Image
-              src={img.src}
-              alt={img.alt}
-              width={320}
-              height={200}
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <motion.div
+            key={i}
+            className="shrink-0 w-[280px] md:w-[340px] h-[190px] md:h-[220px] rounded-2xl overflow-hidden relative group"
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Image src={img.src} alt={img.alt} fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <p className="absolute bottom-3 left-4 text-white text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">{img.alt}</p>
+          </motion.div>
         ))}
       </motion.div>
     </div>
   );
 }
 
-// FAQ item
-function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
+function FaqItem({ q, a, i }: { q: string; a: string; i: number }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-white/10">
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between py-6 text-left gap-4 group"
-      >
-        <div className="flex items-center gap-4">
-          <span className="text-[#FF6602] text-xs font-bold">0{index + 1}</span>
-          <span className="text-white font-semibold text-base md:text-lg leading-snug group-hover:text-[#FF7E29] transition-colors duration-200">
-            {q}
-          </span>
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: i * 0.06 }}
+      className="border-b border-white/8"
+    >
+      <button onClick={() => setOpen(!open)} className="w-full flex items-start justify-between py-6 text-left gap-6 group">
+        <div className="flex items-start gap-5">
+          <span className="text-[#FF6602] text-xs font-bold mt-1 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+          <span className="text-white font-semibold text-base md:text-lg leading-snug group-hover:text-[#FF7E29] transition-colors duration-200">{q}</span>
         </div>
-        <span className="shrink-0 text-[#FF6602]">
-          {open ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
-        </span>
+        <motion.span animate={{ rotate: open ? 45 : 0 }} transition={{ duration: 0.25 }} className="shrink-0 mt-1 text-[#FF6602]">
+          <Plus className="w-5 h-5" />
+        </motion.span>
       </button>
       <AnimatePresence>
         {open && (
@@ -210,286 +113,353 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <p className="text-[#8A8888] text-base leading-[170%] pb-6 pl-10">{a}</p>
+            <p className="text-[#8A8888] text-base leading-[175%] pb-7 pl-9">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
+    </motion.div>
+  );
+}
+
+// Cursor follower
+function CursorGlow() {
+  const [pos, setPos] = useState({ x: 0, y: 0 });
+  useEffect(() => {
+    const move = (e: MouseEvent) => setPos({ x: e.clientX, y: e.clientY });
+    window.addEventListener("mousemove", move);
+    return () => window.removeEventListener("mousemove", move);
+  }, []);
+  return (
+    <motion.div
+      className="fixed top-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none z-0"
+      style={{ background: "radial-gradient(circle, rgba(255,102,2,0.06) 0%, transparent 70%)" }}
+      animate={{ x: pos.x - 200, y: pos.y - 200 }}
+      transition={{ type: "spring", stiffness: 80, damping: 20 }}
+    />
+  );
+}
+
+// Horizontal scroll ticker
+function TruthTicker() {
+  return (
+    <div className="overflow-hidden border-t border-b border-white/8 py-4">
+      <motion.div
+        className="flex gap-12 w-max whitespace-nowrap"
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+      >
+        {[...truths, ...truths].map((t, i) => (
+          <span key={i} className="text-[#3A3A3A] text-sm font-medium uppercase tracking-widest flex items-center gap-6">
+            {t}
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FF6602] inline-block" />
+          </span>
+        ))}
+      </motion.div>
     </div>
   );
 }
 
+// Parallax wrapper
+function ParallaxSection({ children, offset = 60 }: { children: React.ReactNode; offset?: number }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
+  return <motion.div ref={ref} style={{ y }}>{children}</motion.div>;
+}
+
+// ── MAIN ──────────────────────────────────────────────────────────────────────
+
 export default function StudioClient() {
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
-  const statsRef = useRef(null);
-  const statsInView = useInView(statsRef, { once: true, margin: "-60px" });
 
   return (
-    <div className="bg-[#0A0A0A] min-h-screen text-white">
+    <div className="bg-[#080808] min-h-screen text-white selection:bg-[#FF6602] selection:text-white overflow-x-hidden">
+      <CursorGlow />
+
+      {/* ── MINIMAL NAV ── */}
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 h-16 bg-[#080808]/80 backdrop-blur-md border-b border-white/5">
+        <Link href="/" className="text-white font-bold text-sm tracking-tight flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-[#FF6602] animate-pulse" />
+          Digital Ninja Technologies
+        </Link>
+        <Link href="/booking">
+          <motion.button
+            whileHover={{ backgroundColor: "#FF7E29" }}
+            className="text-white text-xs font-semibold bg-[#FF6602] px-5 py-2.5 rounded-full transition-colors duration-200"
+          >
+            Start a project
+          </motion.button>
+        </Link>
+      </nav>
 
       {/* ── HERO ── */}
-      <section ref={heroRef} className="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-28 pb-20 relative overflow-hidden">
-        {/* Ambient glow */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(ellipse, rgba(255,102,2,0.08) 0%, transparent 70%)" }} />
+      <section ref={heroRef} className="min-h-screen flex flex-col justify-end px-6 md:px-12 pb-20 pt-32 relative overflow-hidden">
+        {/* Animated grid background */}
+        <div className="absolute inset-0 opacity-[0.03]"
+          style={{ backgroundImage: "linear-gradient(#FF6602 1px, transparent 1px), linear-gradient(90deg, #FF6602 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
 
-        <div className="max-w-6xl mx-auto w-full relative z-10">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
-            className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.2em] mb-8"
-          >
-            Digital Ninja Technologies · Studio
-          </motion.p>
+        {/* Large orange orb */}
+        <motion.div
+          className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(255,102,2,0.12) 0%, transparent 65%)" }}
+          animate={{ scale: [1, 1.1, 1], opacity: [0.6, 1, 0.6] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-bold leading-[100%] tracking-[-0.04em] mb-10"
-            style={{ fontSize: "clamp(3.5rem, 10vw, 8rem)" }}
-          >
-            Designing
-            <br />
-            for
-            <br />
-            <TypewriterWord />
-          </motion.h1>
-
+        <div className="max-w-7xl mx-auto w-full relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-6"
+            initial={{ opacity: 0, x: -20 }}
+            animate={heroInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-3 mb-8"
           >
-            <Link href="/booking">
-              <motion.button
-                whileHover={{ scale: 1.04, backgroundColor: "#FF7E29" }}
-                whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-2 bg-[#FF6602] text-white font-semibold text-sm py-4 px-8 rounded-full transition-colors duration-200"
-              >
-                Start a project
-                <ArrowRight className="w-4 h-4" />
-              </motion.button>
-            </Link>
-            <Link href="/works">
-              <span className="text-[#6B6A6A] text-sm hover:text-white transition-colors duration-200 flex items-center gap-2">
-                See our work <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── SCROLLING GALLERY ── */}
-      <section className="py-12 space-y-4 overflow-hidden">
-        <Marquee images={portfolioImages} />
-        <Marquee images={[...portfolioImages].reverse()} reverse />
-      </section>
-
-      {/* ── ABOUT STATEMENT ── */}
-      <section className="py-24 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-[22px] md:text-[32px] font-medium leading-[145%] tracking-[-0.02em] text-[#CCCCCC]"
-          >
-            Digital Ninja Technologies Studio exists because great ideas deserve great design.
-            We turn visions into products that{" "}
-            <span className="text-white font-semibold">look credible, feel effortless,</span>{" "}
-            and <span className="text-[#FF6602] font-semibold">convert.</span>
-          </motion.p>
-        </div>
-      </section>
-
-      {/* ── STATS ── */}
-      <section ref={statsRef} className="py-16 px-6 md:px-12 border-t border-white/5">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { value: "10+", label: "Projects Delivered" },
-            { value: "6+", label: "Product Designs" },
-            { value: "4+", label: "Countries Served" },
-            { value: "100%", label: "On-time Delivery" },
-          ].map((s, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={statsInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="text-center"
-            >
-              <p className="text-4xl md:text-5xl font-bold text-[#FF6602] mb-2">{s.value}</p>
-              <p className="text-[#6B6A6A] text-sm">{s.label}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── SERVICES ── */}
-      <section className="py-24 px-6 md:px-12 border-t border-white/5">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <p className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.2em] mb-4">What We Do</p>
-            <h2 className="text-[28px] md:text-[44px] font-bold leading-tight tracking-[-0.03em]">
-              Two services. The two things that make a<br className="hidden md:block" />
-              first impression actually land.
-            </h2>
+            <span className="w-8 h-px bg-[#FF6602]" />
+            <span className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.25em]">DNT Studio · Est. 2022</span>
           </motion.div>
 
-          <div className="space-y-8">
-            {services.map((svc, i) => (
+          {/* Staggered headline */}
+          <div className="overflow-hidden mb-6">
+            {["We build things", "that work."].map((line, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.7, delay: i * 0.1 }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-8 rounded-3xl border border-white/8 bg-white/3 p-8 md:p-12 hover:border-[#FF6602]/30 transition-all duration-400"
+                initial={{ y: "100%" }}
+                animate={heroInView ? { y: "0%" } : {}}
+                transition={{ duration: 0.9, delay: 0.1 + i * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
               >
-                <div className="flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center gap-3 mb-6">
-                      <span className="text-[#FF6602] text-xs font-bold uppercase tracking-widest">{svc.num}</span>
-                      <div className="h-px flex-1 bg-white/10" />
-                    </div>
-                    <h3 className="text-2xl md:text-[30px] font-bold leading-tight tracking-[-0.02em] mb-4">
-                      {svc.title}
-                    </h3>
-                    <p className="text-[#8A8888] text-base leading-[170%] mb-8">{svc.desc}</p>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {svc.tags.map((tag) => (
-                      <span key={tag} className="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#FF6602]/10 text-[#FF7E29] border border-[#FF6602]/20">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="grid grid-cols-3 gap-3">
-                  {svc.images.map((src, j) => (
-                    <div key={j} className={`rounded-xl overflow-hidden ${j === 0 ? "col-span-3 h-[180px]" : "h-[120px]"}`}>
-                      <Image src={src} alt={svc.title} width={400} height={300} className="w-full h-full object-cover" />
-                    </div>
-                  ))}
-                </div>
+                <h1
+                  className="font-black leading-[0.92] tracking-[-0.05em] text-white"
+                  style={{ fontSize: "clamp(4rem, 12vw, 10rem)" }}
+                >
+                  {i === 1 ? <span className="text-[#FF6602]">{line}</span> : line}
+                </h1>
               </motion.div>
             ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={heroInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 mt-12"
+          >
+            <p className="text-[#555] text-lg leading-[160%] max-w-md">
+              Websites, apps, and brands built for founders and businesses who are done
+              tolerating mediocre digital work. We are the team you hire when quality is non-negotiable.
+            </p>
+            <div className="flex items-center gap-4 shrink-0">
+              <Link href="/booking">
+                <motion.button
+                  whileHover={{ scale: 1.04, gap: "12px" }}
+                  whileTap={{ scale: 0.97 }}
+                  className="inline-flex items-center gap-2 bg-[#FF6602] hover:bg-[#FF7E29] text-white font-bold text-sm py-4 px-8 rounded-full transition-colors duration-200"
+                >
+                  Book a discovery call
+                  <ArrowRight className="w-4 h-4" />
+                </motion.button>
+              </Link>
+              <Link href="/works">
+                <motion.button
+                  whileHover={{ scale: 1.04 }}
+                  className="inline-flex items-center gap-2 border border-white/15 text-white text-sm font-medium py-4 px-6 rounded-full hover:border-[#FF6602]/50 transition-all duration-200"
+                >
+                  Our work <ArrowUpRight className="w-3.5 h-3.5" />
+                </motion.button>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <div className="w-px h-12 bg-gradient-to-b from-transparent to-[#FF6602]" />
+          <span className="text-[#333] text-xs tracking-widest uppercase">scroll</span>
+        </motion.div>
+      </section>
+
+      {/* ── TRUTH TICKER ── */}
+      <TruthTicker />
+
+      {/* ── GALLERY ── */}
+      <section className="py-16 space-y-4">
+        <Marquee images={portfolioImages} speed={32} />
+        <Marquee images={[...portfolioImages].reverse()} speed={26} reverse />
+      </section>
+
+      {/* ── BOLD STATEMENT ── */}
+      <section className="py-32 px-6 md:px-12">
+        <div className="max-w-5xl mx-auto">
+          <ParallaxSection offset={30}>
+            <motion.h2
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="font-black leading-[105%] tracking-[-0.04em]"
+              style={{ fontSize: "clamp(2.2rem, 5.5vw, 5rem)" }}
+            >
+              Most agencies sell you a process.{" "}
+              <span className="text-[#333]">We sell you the result.</span>{" "}
+              <span className="text-[#FF6602]">There is a difference.</span>
+            </motion.h2>
+          </ParallaxSection>
+
+          <motion.div
+            initial={{ scaleX: 0, originX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, delay: 0.3 }}
+            className="h-px bg-gradient-to-r from-[#FF6602] to-transparent mt-16"
+          />
+        </div>
+      </section>
+
+      {/* ── HOW WE WORK ── */}
+      <section className="py-24 px-6 md:px-12 border-t border-white/5">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="sticky top-24"
+              >
+                <span className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.2em] block mb-5">How we work</span>
+                <h2 className="text-[28px] md:text-[38px] font-black leading-tight tracking-[-0.03em] mb-6">
+                  Five steps between your idea and a live product.
+                </h2>
+                <p className="text-[#555] text-base leading-[170%]">
+                  No black boxes. No radio silence. Just a clear process you can follow from first call to final launch.
+                </p>
+              </motion.div>
+            </div>
+
+            <div className="lg:col-span-8 space-y-0">
+              {process.map((step, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.6, delay: i * 0.08 }}
+                  className="group flex gap-8 py-8 border-b border-white/6 hover:border-[#FF6602]/30 transition-colors duration-300"
+                >
+                  <span className="text-[#FF6602] text-xs font-black mt-1 shrink-0 w-8">{step.num}</span>
+                  <div>
+                    <h3 className="text-white font-bold text-xl mb-2 group-hover:text-[#FF7E29] transition-colors duration-200">{step.title}</h3>
+                    <p className="text-[#555] text-base leading-[170%]">{step.body}</p>
+                  </div>
+                  <motion.div
+                    className="shrink-0 mt-1 ml-auto opacity-0 group-hover:opacity-100"
+                    initial={{ x: -4 }}
+                    whileInView={{ x: 0 }}
+                  >
+                    <ArrowRight className="w-4 h-4 text-[#FF6602]" />
+                  </motion.div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── FEATURED PROJECTS ── */}
+      {/* ── CAPABILITIES ── */}
       <section className="py-24 px-6 md:px-12 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-end justify-between mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6"
+          >
             <div>
-              <p className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.2em] mb-3">Portfolio</p>
-              <h2 className="text-[28px] md:text-[40px] font-bold leading-tight tracking-[-0.03em]">
-                A selection of work built<br className="hidden md:block" /> with intention.
+              <span className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.2em] block mb-4">What we build</span>
+              <h2 className="text-[28px] md:text-[44px] font-black leading-tight tracking-[-0.03em]">
+                Four disciplines.<br />One team.
               </h2>
             </div>
-            <Link href="/works" className="hidden md:inline-flex items-center gap-2 text-[#FF7E29] text-sm font-medium hover:gap-3 transition-all duration-200">
-              See all work <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
+            <p className="text-[#555] text-base leading-[165%] max-w-sm">
+              We are not specialists who hand off work to someone else. Every discipline lives in the same team, in the same conversation.
+            </p>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              { img: "/brandface-1.png", title: "Brandface", desc: "Lead conversion landing page for a legal marketing agency.", tag: "Web Design" },
-              { img: "/korlod-1.jpg", title: "Korlod Works", desc: "Full website for a creative agency — identity, web, and marketing.", tag: "Branding & Web" },
-              { img: "/veritas-1.png", title: "Veritas", desc: "Waitlist site for a cross-border escrow fintech app.", tag: "Web + Mobile" },
-            ].map((p, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {capabilities.map((cap, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group rounded-2xl overflow-hidden border border-white/8 bg-white/3 hover:border-[#FF6602]/30 transition-all duration-300"
+                whileHover={{ y: -4, borderColor: "rgba(255,102,2,0.4)" }}
+                className="group rounded-3xl border border-white/8 bg-white/[0.02] p-8 md:p-10 transition-all duration-300 cursor-default"
               >
-                <div className="h-[220px] overflow-hidden">
-                  <Image src={p.img} alt={p.title} width={400} height={300} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="w-10 h-10 rounded-xl bg-[#FF6602]/10 flex items-center justify-center mb-8 group-hover:bg-[#FF6602]/20 transition-colors duration-300">
+                  <cap.icon className="w-5 h-5 text-[#FF7E29]" />
                 </div>
-                <div className="p-6">
-                  <span className="text-xs font-semibold text-[#FF7E29] bg-[#FF6602]/10 px-3 py-1 rounded-full">{p.tag}</span>
-                  <h3 className="text-white font-bold text-xl mt-3 mb-2">{p.title}</h3>
-                  <p className="text-[#6B6A6A] text-sm leading-relaxed">{p.desc}</p>
+                <h3 className="text-white font-bold text-xl md:text-2xl mb-3 tracking-tight">{cap.title}</h3>
+                <p className="text-[#555] text-base leading-[170%] mb-8">{cap.body}</p>
+                <div className="flex flex-wrap gap-2">
+                  {cap.skills.map((s) => (
+                    <span key={s} className="text-xs font-semibold text-[#444] border border-white/8 px-3 py-1.5 rounded-full group-hover:border-[#FF6602]/25 group-hover:text-[#FF7E29] transition-all duration-200">
+                      {s}
+                    </span>
+                  ))}
                 </div>
               </motion.div>
             ))}
           </div>
-
-          <div className="flex justify-center mt-8 md:hidden">
-            <Link href="/works">
-              <button className="inline-flex items-center gap-2 border border-[#FF6602]/40 text-[#FF7E29] text-sm font-medium px-6 py-3 rounded-full">
-                See all work <ArrowRight className="w-4 h-4" />
-              </button>
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* ── PRICING ── */}
+      {/* ── PROJECTS ── */}
       <section className="py-24 px-6 md:px-12 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.2em] mb-4">Pricing</p>
-            <h2 className="text-[28px] md:text-[44px] font-bold leading-tight tracking-[-0.03em]">
-              Plans designed around your needs
-            </h2>
+          <div className="flex items-end justify-between mb-14">
+            <div>
+              <span className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.2em] block mb-4">Selected work</span>
+              <h2 className="text-[28px] md:text-[44px] font-black leading-tight tracking-[-0.03em]">
+                Built with intent.<br />Shipped on time.
+              </h2>
+            </div>
+            <Link href="/works" className="hidden md:inline-flex items-center gap-2 text-[#555] text-sm hover:text-[#FF7E29] transition-colors duration-200">
+              All projects <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {pricing.map((plan, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className={`rounded-3xl p-8 flex flex-col border transition-all duration-300 ${
-                  plan.highlight
-                    ? "bg-[#FF6602] border-[#FF6602] text-white"
-                    : "bg-white/3 border-white/10 hover:border-[#FF6602]/40"
-                }`}
-              >
-                <div className="mb-6">
-                  <p className={`text-xs font-bold uppercase tracking-widest mb-1 ${plan.highlight ? "text-white/70" : "text-[#FF7E29]"}`}>
-                    {plan.label}
-                  </p>
-                  <p className={`text-xs mb-4 ${plan.highlight ? "text-white/70" : "text-[#6B6A6A]"}`}>{plan.duration}</p>
-                  <p className={`text-4xl font-bold tracking-tight ${plan.highlight ? "text-white" : "text-white"}`}>{plan.price}</p>
-                  <p className={`text-sm mt-1 ${plan.highlight ? "text-white/75" : "text-[#6B6A6A]"}`}>{plan.sub}</p>
-                </div>
-
-                <ul className="space-y-3 flex-1 mb-8">
-                  {plan.features.map((f, j) => (
-                    <li key={j} className={`flex items-start gap-2.5 text-sm ${plan.highlight ? "text-white/90" : "text-[#8A8888]"}`}>
-                      <span className={`w-1.5 h-1.5 rounded-full shrink-0 mt-1.5 ${plan.highlight ? "bg-white" : "bg-[#FF6602]"}`} />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link href={plan.href}>
-                  <button className={`w-full py-3.5 rounded-full font-semibold text-sm transition-all duration-200 ${
-                    plan.highlight
-                      ? "bg-white text-[#FF6602] hover:bg-[#FFF0E5]"
-                      : "border border-[#FF6602]/40 text-[#FF7E29] hover:bg-[#FF6602] hover:text-white hover:border-[#FF6602]"
-                  }`}>
-                    {plan.cta}
-                  </button>
-                </Link>
-              </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {projects.map((p, i) => (
+              <Link key={i} href={p.href}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  whileHover={{ y: -6 }}
+                  className="group rounded-3xl overflow-hidden border border-white/8 hover:border-[#FF6602]/35 transition-all duration-400 bg-white/[0.02]"
+                >
+                  <div className="relative h-[230px] overflow-hidden">
+                    <Image src={p.img} alt={p.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute top-4 right-4 bg-[#FF6602] text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {p.type}
+                    </div>
+                  </div>
+                  <div className="p-7 flex items-start justify-between">
+                    <div>
+                      <p className="text-[#444] text-xs mb-2">{p.year} · {p.type}</p>
+                      <h3 className="text-white font-bold text-xl mb-2 group-hover:text-[#FF7E29] transition-colors duration-200">{p.title}</h3>
+                      <p className="text-[#444] text-sm leading-[160%]">{p.body}</p>
+                    </div>
+                    <ArrowUpRight className="w-5 h-5 text-[#333] group-hover:text-[#FF6602] transition-colors duration-200 shrink-0 mt-1 ml-4" />
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
@@ -497,70 +467,89 @@ export default function StudioClient() {
 
       {/* ── FAQ ── */}
       <section className="py-24 px-6 md:px-12 border-t border-white/5">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.2em] mb-4">FAQ</p>
-            <h2 className="text-[28px] md:text-[40px] font-bold leading-tight tracking-[-0.03em]">
-              Quick answers to the things we get asked most.
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-14"
+          >
+            <span className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.2em] block mb-4">Questions</span>
+            <h2 className="text-[28px] md:text-[44px] font-black leading-tight tracking-[-0.03em]">
+              Things people ask before they hire us.
             </h2>
-          </div>
-          <div>
-            {faqs.map((faq, i) => (
-              <FaqItem key={i} q={faq.q} a={faq.a} index={i} />
-            ))}
-          </div>
+          </motion.div>
+          {faqs.map((f, i) => <FaqItem key={i} q={f.q} a={f.a} i={i} />)}
         </div>
       </section>
 
       {/* ── BOTTOM CTA ── */}
-      <section className="py-24 px-6 md:px-12 border-t border-white/5">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py-32 px-6 md:px-12 border-t border-white/5 relative overflow-hidden">
+        <motion.div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse at 50% 100%, rgba(255,102,2,0.1) 0%, transparent 65%)" }}
+        />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="font-bold leading-[105%] tracking-[-0.04em] mb-6"
-            style={{ fontSize: "clamp(2.5rem, 7vw, 5.5rem)" }}
+            transition={{ duration: 0.8 }}
           >
-            Tell us what you're building.
-          </motion.h2>
+            <span className="text-[#FF6602] text-xs font-bold uppercase tracking-[0.2em] block mb-8">Ready when you are</span>
+            <h2
+              className="font-black leading-[100%] tracking-[-0.05em] mb-8 text-white"
+              style={{ fontSize: "clamp(3rem, 9vw, 7.5rem)" }}
+            >
+              Let's build<br />
+              <span className="text-[#FF6602]">something</span><br />
+              real.
+            </h2>
+          </motion.div>
+
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-[#6B6A6A] text-lg leading-[170%] mb-10 max-w-xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-[#555] text-lg leading-[170%] mb-12 max-w-lg mx-auto"
           >
-            We will tell you how we can help — and if we are not the right fit, we will say so.
+            A 15-minute call. No pitch deck. No pressure. Just a conversation about what you are building and whether we can help.
           </motion.p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
             <Link href="/booking">
               <motion.button
-                whileHover={{ scale: 1.04, backgroundColor: "#FF7E29" }}
+                whileHover={{ scale: 1.05, backgroundColor: "#FF7E29" }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-2 bg-[#FF6602] text-white font-semibold text-base py-4 px-10 rounded-full transition-colors duration-200"
+                className="inline-flex items-center gap-3 bg-[#FF6602] text-white font-black text-base py-5 px-10 rounded-full transition-colors duration-200"
               >
                 Book a free 15min call
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
             </Link>
-            <a href="mailto:thedigitalninjatechnologies@gmail.com"
-              className="text-[#6B6A6A] text-sm hover:text-white transition-colors duration-200">
+            <a
+              href="mailto:thedigitalninjatechnologies@gmail.com"
+              className="text-[#444] text-sm hover:text-[#FF7E29] transition-colors duration-200"
+            >
               thedigitalninjatechnologies@gmail.com
             </a>
-          </div>
+          </motion.div>
+        </div>
 
-          {/* Footer strip */}
-          <div className="max-w-6xl mx-auto mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-[#6B6A6A] text-sm">
-              © Digital Ninja Technologies {new Date().getFullYear()} · All Rights Reserved
-            </p>
-            <div className="flex items-center gap-6">
-              <a href="https://www.linkedin.com/company/digitalninja-technologies" target="_blank" rel="noopener noreferrer" className="text-[#6B6A6A] hover:text-white text-sm transition-colors">LinkedIn</a>
-              <a href="https://www.tiktok.com/@theninjatechies" target="_blank" rel="noopener noreferrer" className="text-[#6B6A6A] hover:text-white text-sm transition-colors">TikTok</a>
-              <Link href="/" className="text-[#6B6A6A] hover:text-white text-sm transition-colors">Main site</Link>
-            </div>
+        {/* Minimal footer */}
+        <div className="max-w-6xl mx-auto mt-28 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-[#2A2A2A] text-sm">© Digital Ninja Technologies {new Date().getFullYear()}</p>
+          <div className="flex items-center gap-8">
+            <Link href="/" className="text-[#2A2A2A] hover:text-white text-sm transition-colors duration-200">← Main site</Link>
+            <a href="https://www.linkedin.com/company/digitalninja-technologies" target="_blank" rel="noopener noreferrer" className="text-[#2A2A2A] hover:text-white text-sm transition-colors">LinkedIn</a>
+            <a href="https://www.tiktok.com/@theninjatechies" target="_blank" rel="noopener noreferrer" className="text-[#2A2A2A] hover:text-white text-sm transition-colors">TikTok</a>
           </div>
         </div>
       </section>
