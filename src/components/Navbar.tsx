@@ -15,6 +15,7 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About us" },
     { href: "/works", label: "Works" },
+    { href: "/studio", label: "Studio" },
     { href: "/blog", label: "Blog" },
     { href: "/resources", label: "💰 Free Resources" },
     { href: "/refer", label: "Refer & Earn" },
