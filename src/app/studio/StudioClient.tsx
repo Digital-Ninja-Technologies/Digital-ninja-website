@@ -167,15 +167,110 @@ function ParallaxSection({ children, offset = 60 }: { children: React.ReactNode;
   return <motion.div ref={ref} style={{ y }}>{children}</motion.div>;
 }
 
-// ── MAIN ──────────────────────────────────────────────────────────────────────
+// Counter reveal data
+const counters = [
+  { target: 10, suffix: "+", label: "Projects" },
+  { target: 6, suffix: "+", label: "Product Designs" },
+  { target: 4, suffix: "+", label: "Countries" },
+  { target: 100, suffix: "%", label: "On-time" },
+];
+
+function CounterReveal({ onComplete }: { onComplete: () => void }) {
+  const [counts, setCounts] = useState([0, 0, 0, 0]);
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    const duration = 1400;
+    const fps = 60;
+    const steps = Math.floor((duration / 1000) * fps);
+    let frame = 0;
+
+    const interval = setInterval(() => {
+      frame++;
+      const progress = frame / steps;
+      const ease = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+
+      setCounts(counters.map((c) => Math.min(Math.floor(c.target * ease), c.target)));
+
+      if (frame >= steps) {
+        clearInterval(interval);
+        setCounts(counters.map((c) => c.target));
+        setTimeout(() => {
+          setDone(true);
+          onComplete();
+        }, 600);
+      }
+    }, 1000 / fps);
+
+    return () => clearInterval(interval);
+  }, [onComplete]);
+
+  return (
+    <AnimatePresence>
+      {!done && (
+        <motion.div
+          className="absolute inset-0 z-20 bg-[#080808] flex flex-col items-center justify-center"
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.7, ease: "easeInOut" }}
+        >
+          {/* Scanning line */}
+          <motion.div
+            className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF6602] to-transparent"
+            animate={{ top: ["0%", "100%"] }}
+            transition={{ duration: 1.4, ease: "linear" }}
+          />
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-20 px-8 relative z-10">
+            {counters.map((c, i) => (
+              <div key={i} className="text-center">
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.08 }}
+                  className="font-black text-white leading-none mb-2 tabular-nums"
+                  style={{ fontSize: "clamp(2.5rem, 7vw, 5rem)" }}
+                >
+                  {counts[i]}{c.suffix}
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 + i * 0.08 }}
+                  className="text-[#444] text-xs uppercase tracking-widest font-semibold"
+                >
+                  {c.label}
+                </motion.p>
+              </div>
+            ))}
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="absolute bottom-12 text-[#222] text-xs uppercase tracking-[0.3em]"
+          >
+            Loading Studio...
+          </motion.p>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
+
+
 
 export default function StudioClient() {
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
+  const [heroReady, setHeroReady] = useState(false);
 
   return (
     <div className="bg-[#080808] min-h-screen text-white selection:bg-[#FF6602] selection:text-white overflow-x-hidden">
       <CursorGlow />
+
+      {/* Counter reveal overlay */}
+      <CounterReveal onComplete={() => setHeroReady(true)} />
 
       {/* ── HERO ── */}
       <section ref={heroRef} className="min-h-screen flex flex-col justify-end px-6 md:px-12 pb-20 pt-36 relative overflow-hidden">
@@ -194,7 +289,7 @@ export default function StudioClient() {
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            animate={heroInView ? { opacity: 1, x: 0 } : {}}
+            animate={heroReady ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3 mb-8"
           >
@@ -208,7 +303,7 @@ export default function StudioClient() {
               <motion.div
                 key={i}
                 initial={{ y: "100%" }}
-                animate={heroInView ? { y: "0%" } : {}}
+                animate={heroReady ? { y: "0%" } : {}}
                 transition={{ duration: 0.9, delay: 0.1 + i * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
               >
                 <h1
@@ -223,7 +318,7 @@ export default function StudioClient() {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
+            animate={heroReady ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.5 }}
             className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 mt-12"
           >
