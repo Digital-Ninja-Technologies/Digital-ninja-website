@@ -177,24 +177,8 @@ export default function StudioClient() {
     <div className="bg-[#080808] min-h-screen text-white selection:bg-[#FF6602] selection:text-white overflow-x-hidden">
       <CursorGlow />
 
-      {/* ── MINIMAL NAV ── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 h-16 bg-[#080808]/80 backdrop-blur-md border-b border-white/5">
-        <Link href="/" className="text-white font-bold text-sm tracking-tight flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-[#FF6602] animate-pulse" />
-          Digital Ninja Technologies
-        </Link>
-        <Link href="/booking">
-          <motion.button
-            whileHover={{ backgroundColor: "#FF7E29" }}
-            className="text-white text-xs font-semibold bg-[#FF6602] px-5 py-2.5 rounded-full transition-colors duration-200"
-          >
-            Start a project
-          </motion.button>
-        </Link>
-      </nav>
-
       {/* ── HERO ── */}
-      <section ref={heroRef} className="min-h-screen flex flex-col justify-end px-6 md:px-12 pb-20 pt-32 relative overflow-hidden">
+      <section ref={heroRef} className="min-h-screen flex flex-col justify-end px-6 md:px-12 pb-20 pt-36 relative overflow-hidden">
         {/* Animated grid background */}
         <div className="absolute inset-0 opacity-[0.03]"
           style={{ backgroundImage: "linear-gradient(#FF6602 1px, transparent 1px), linear-gradient(90deg, #FF6602 1px, transparent 1px)", backgroundSize: "60px 60px" }} />

@@ -10,8 +10,8 @@ export default function ConditionalShell({ children }: { children: React.ReactNo
 
   return (
     <>
-      {!isStudio && <Navbar />}
-      <div className={!isStudio ? "mt-20" : ""}>{children}</div>
+      <Navbar />
+      <div className={!isStudio ? "mt-20" : "mt-0"}>{children}</div>
       {!isStudio && <Footer />}
     </>
   );
