@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Portfolio & Case Studies | Digital Products We've Built",
   description:
     "Explore Digital Ninja Technologies portfolio of digital products. Mobile apps, web platforms, SaaS tools, and brand identities built for startups and enterprises across Nigeria and Africa.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   alternates: {
     canonical: "https://www.thedigitalninjatech.com/works",
   },

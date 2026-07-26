@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: "About Us | Digital Ninja Technologies | Global Design & Software Agency",
   description:
     "Digital Ninja Technologies is a global design and software development agency. We build custom software, mobile apps, websites, and AI solutions for startups, SMEs, and global businesses. No hidden fees. No vanishing acts. Just results.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   alternates: {
     canonical: "https://www.thedigitalninjatech.com/about",
   },

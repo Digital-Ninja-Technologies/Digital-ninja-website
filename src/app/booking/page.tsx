@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Book a 15min Call | Digital Ninja Technologies",
   description:
     "Book a free 15 minute discovery call with Digital Ninja Technologies. Select a time that works for you and let us show you how we can bring your digital vision to life.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   alternates: {
     canonical: "https://www.thedigitalninjatech.com/booking",
   },

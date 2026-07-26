@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.metaTitle,
     description: post.metaDescription,
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     alternates: { canonical: `https://www.thedigitalninjatech.com/blog/${post.slug}` },
     openGraph: {
       title: post.metaTitle,

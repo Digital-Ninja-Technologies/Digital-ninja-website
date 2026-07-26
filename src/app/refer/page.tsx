@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Refer & Earn 10% Commission | Digital Ninja Technologies",
   description:
     "Refer a business, startup, or organisation to Digital Ninja Technologies and earn 10% commission when they sign a project. No upfront cost. Earn up to ₦500,000 per referral.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   alternates: {
     canonical: "https://www.thedigitalninjatech.com/refer",
   },

@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Free Resources | Digital Ninja Technologies",
   description:
     "Free guides for founders, startups, and SMEs. Download the Digital Business Launch Kit and the Business Idea Validation Framework — no cost, instant access.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   alternates: {
     canonical: "https://www.thedigitalninjatech.com/resources",
   },

@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Blog | Web Design, Startup & Digital Marketing Insights",
   description:
     "Practical guides on web design, mobile app development, startup advice, SEO, and digital marketing for founders and growing businesses across Africa and globally.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   alternates: { canonical: "https://www.thedigitalninjatech.com/blog" },
   openGraph: {
     title: "Blog | Digital Ninja Technologies",
