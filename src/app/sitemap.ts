@@ -12,9 +12,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/works/brandface`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/works/veritas`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/booking`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/studio`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/resources`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/refer`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/studio`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    // Original 13 posts
     { url: `${BASE_URL}/blog/how-much-does-a-website-cost`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blog/how-to-choose-the-best-digital-agency`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blog/how-to-build-a-mobile-app`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
@@ -28,5 +30,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/blog/website-hosting-vs-domain-what-business-owners-need-to-know`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blog/top-5-website-development-agencies-in-africa`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blog/why-hire-us-as-your-startup-technical-partner`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    // New 7 posts
+    { url: `${BASE_URL}/blog/how-to-hire-a-web-design-agency`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/blog/agency-vs-freelancer-vs-in-house-developer`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/blog/how-long-does-it-take-to-build-a-website`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/blog/what-to-prepare-before-hiring-a-developer`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/blog/how-to-brief-a-design-agency`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/blog/signs-your-website-is-hurting-your-business`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/blog/how-to-build-a-saas-product-as-a-non-technical-founder`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
   ];
 }
