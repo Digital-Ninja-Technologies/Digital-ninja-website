@@ -323,6 +323,7 @@ export default function RootLayout({
         
         
         
+        <meta name="msvalidate.01" content="7576BAC60436FD817984313FD6527A87" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* LLM context files for AI indexing */}
