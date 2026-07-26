@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Studio | Digital Ninja Technologies",
   description:
     "Digital Ninja Technologies Studio. We design and build websites, apps, and brand identities for startups, founders, and growing businesses worldwide.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   alternates: { canonical: "https://www.thedigitalninjatech.com/studio" },
   openGraph: {
     title: "Studio | Digital Ninja Technologies",
