@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us | Digital Ninja Technologies | Global Design & Software Agency",
   description:
-    "Digital Ninja Technologies is a global design and software development agency. We build custom software, mobile apps, websites, and AI solutions for startups, SMEs, and global businesses. No hidden fees. No vanishing acts. Just results.",
+    "Digital Ninja Technologies is a global design and software development agency building websites, mobile apps, and digital products for startups, SMEs, and enterprises worldwide. Meet the team behind the work.",
   robots: {
     index: true,
     follow: true,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "digital agency for foreign clients Africa",
   ],
   openGraph: {
-    title: "About Digital Ninja Technologies | Global Design & Software Development Agency",
+    title: "About Digital Ninja Technologies | Global Design & Software Agency",
     description:
       "We build software, apps, and digital products that actually work. Full-service digital agency in Lagos. Serving startups and businesses across Africa and globally.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Digital Ninja Technologies" }],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Digital Ninja Technologies",
+    title: "About Digital Ninja Technologies | Global Design & Software Agency",
     description:
       "Global design and software development agency. Custom software, apps, and websites that convert. No hidden fees. No excuses.",
     images: ["/og-image.jpg"],

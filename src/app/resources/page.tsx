@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ResourcesClient from "./ResourcesClient";
 
 export const metadata: Metadata = {
-  title: "Free Resources | Digital Ninja Technologies",
+  title: "Free Resources for Founders & Business Owners | Digital Ninja Technologies",
   description:
-    "Free guides for founders, startups, and SMEs. Download the Digital Business Launch Kit and the Business Idea Validation Framework — no cost, instant access.",
+    "Download free guides built for founders, startups, and SMEs. The Digital Business Launch Kit, Startup Idea Validation Framework, Pitch Deck Template, Email Marketing Guide, and more — no cost, instant access.",
   robots: {
     index: true,
     follow: true,
@@ -25,7 +25,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Free Resources | Digital Ninja Technologies",
-    description: "Free guides for founders, startups, and SMEs. Instant download, no cost.",
+    description:
+      "Free PDF guides for founders and business owners. Download the Digital Business Launch Kit, Startup Validation Framework, Pitch Deck Template, and 5 more practical guides. Free, instant access.",
     images: ["/og-image.jpg"],
   },
 };
