@@ -1,52 +1,75 @@
 # Digital Ninja Technologies
 
-> Empowering brands and start-ups with impactful digital solutions through strategic design and development.
+> Global Design & Software Development Agency. We build Websites, Mobile Apps, Software and Games for startups, SMEs and enterprises worldwide.
 
-Digital Ninja Technologies is a full-service digital agency based in Nigeria, specialising in product design, software development, mobile apps, AI automation, and MVP development for startups, SMEs, and enterprises across Africa and globally.
+Digital Ninja Technologies is a global design and software development agency helping founders, startups, and businesses build high-quality digital products. We combine strategic design thinking with modern engineering to ship products that convert, scale, and last.
 
-## About
-
-Digital Ninja Technologies helps founders, brands, and organisations build high-quality digital products. The team combines strategic design thinking with modern software engineering to deliver products that convert and scale.
-
-**Location:** Nigeria (serving clients globally)
-**Contact:** Info@thedigitalninjatech.com | +2348145865720
 **Website:** https://www.thedigitalninjatech.com
+**Contact:** thedigitalninjatechnologies@gmail.com
+**Booking:** https://www.thedigitalninjatech.com/booking
+**Studio:** https://www.thedigitalninjatech.com/studio
 
-## Services
+## What We Do
 
-- **Custom Software Development** — Scalable software solutions tailored to specific business needs
-- **Website Design & Development** — Corporate websites, landing pages, web portals, and web applications
-- **Mobile App Development** — iOS and Android applications with modern, intuitive user experiences
-- **AI Solutions & Automation** — AI-powered tools, chatbots, workflow automation, and business intelligence
-- **UI/UX Design** — User-centered interface design that improves engagement and drives conversions
-- **MVP Development** — Rapid product development for startups to validate ideas and reach market quickly
+- **Web Design & Development** — Conversion-focused websites, landing pages, web apps, and full-scale platforms built with Next.js, React, and Tailwind
+- **Mobile App Development** — Cross-platform iOS and Android apps built with Flutter. Fast, polished, and production-ready
+- **Custom Software Development** — Scalable backend systems, SaaS platforms, dashboards, and internal tools
+- **Brand Identity** — Logo design, visual identity systems, colour, typography, and brand guidelines
+- **UI/UX Design** — User research, wireframes, prototypes, and interface design for web and mobile
+- **MVP Development** — Fastest path from validated idea to live product for early-stage startups
+- **Game UI & Development** — Cross-platform games with immersive interfaces built with Unity and WebGL
 
-## Selected Work
+## Selected Portfolio
 
-- **Flex2Ride** — Ride-hailing platform: full product design including rider app, driver app, and marketing website
-- **Mixlr** — Live audio broadcasting platform redesign; improved listener and broadcaster UX
-- **Coinly** — Personal finance app: onboarding, dashboard, transaction history, and goal-setting flows
-- **Digital Ninja Technologies** — Own brand identity and design system
+- **Veritas** — Waitlist website and mobile app design for a cross-border escrow payment platform. Built for freelancers doing borderless work. Live: https://www.useveritasapp.com
+- **Brandface** — Lead conversion landing page for a legal marketing agency. Live: https://brandface-eta.vercel.app
+- **Moducode** — UI/UX design for a B2B SaaS talent platform connecting global companies with engineers from emerging markets. Live: https://krevops.com
+- **Korlod Works** — Full website design and development for a creative agency covering brand identity, web solutions, and content marketing. Live: https://korlodworks.com
+
+## Blog & Resources
+
+Digital Ninja Technologies publishes practical guides for founders, startups, and business owners:
+
+- How Much Does a Website Cost? — https://www.thedigitalninjatech.com/blog/how-much-does-a-website-cost
+- How to Choose the Right Digital Agency — https://www.thedigitalninjatech.com/blog/how-to-choose-the-best-digital-agency
+- How to Build a Mobile App — https://www.thedigitalninjatech.com/blog/how-to-build-a-mobile-app
+- How to Validate a Startup Idea in Africa — https://www.thedigitalninjatech.com/blog/how-to-validate-a-startup-idea-in-africa
+- UI/UX Design for African Users — https://www.thedigitalninjatech.com/blog/ui-ux-design-for-african-users
+- How to Rank on Google for Your Business — https://www.thedigitalninjatech.com/blog/how-to-rank-on-google-for-your-business
+- What Is a Minimum Viable Product — https://www.thedigitalninjatech.com/blog/what-is-a-minimum-viable-product
+- Why Hire Us as Your Startup Technical Partner — https://www.thedigitalninjatech.com/blog/why-hire-us-as-your-startup-technical-partner
+- Top 5 Website Development Agencies in Africa — https://www.thedigitalninjatech.com/blog/top-5-website-development-agencies-in-africa
+- Website Hosting vs Domain — https://www.thedigitalninjatech.com/blog/website-hosting-vs-domain-what-business-owners-need-to-know
+
+## Free Resources
+
+- The Digital Business Launch Kit (12-page PDF) — https://www.thedigitalninjatech.com/resources
+- How to Validate Your Business Idea (14-page PDF) — https://www.thedigitalninjatech.com/resources
+- The Freelancer Rate Calculator Guide — https://www.thedigitalninjatech.com/resources
+- The 30-Day Social Media Content Calendar — https://www.thedigitalninjatech.com/resources
+- The Startup Pitch Deck Template — https://www.thedigitalninjatech.com/resources
+- The Email Marketing Starter Guide — https://www.thedigitalninjatech.com/resources
+- The App & Software Project Planner — https://www.thedigitalninjatech.com/resources
+- The Business Finance Basics Guide — https://www.thedigitalninjatech.com/resources
 
 ## Referral Programme
 
-Digital Ninja Technologies offers a 10% commission referral programme. Refer a business, startup, or organisation that signs a project, and earn 10% of the project value.
-
-- ₦500,000 project = ₦50,000 commission
-- ₦1,000,000 project = ₦100,000 commission
-- ₦5,000,000 project = ₦500,000 commission
+Digital Ninja Technologies runs a 10% commission referral programme. Refer a business that signs a project and earn 10% of the total project value. Details: https://www.thedigitalninjatech.com/refer
 
 ## Pages
 
-- [Home](https://www.thedigitalninjatech.com)
-- [About](https://www.thedigitalninjatech.com/about)
-- [Works / Portfolio](https://www.thedigitalninjatech.com/works)
-- [Contact](https://www.thedigitalninjatech.com/contact)
-- [Refer & Earn](https://www.thedigitalninjatech.com/refer)
+- Home: https://www.thedigitalninjatech.com
+- About: https://www.thedigitalninjatech.com/about
+- Portfolio: https://www.thedigitalninjatech.com/works
+- Studio: https://www.thedigitalninjatech.com/studio
+- Blog: https://www.thedigitalninjatech.com/blog
+- Free Resources: https://www.thedigitalninjatech.com/resources
+- Refer & Earn: https://www.thedigitalninjatech.com/refer
+- Book a Call: https://www.thedigitalninjatech.com/booking
 
 ## Social
 
-- LinkedIn: https://www.linkedin.com/company/digitalninja-technology/
-- X (Twitter): https://x.com/theninjatechies
+- LinkedIn: https://www.linkedin.com/company/digitalninja-technologies
+- TikTok: https://www.tiktok.com/@theninjatechies
 - Instagram: https://www.instagram.com/theninjatechies
-- YouTube: https://youtube.com/@designninjaacademy
+- Twitter/X: https://x.com/theninjatechies

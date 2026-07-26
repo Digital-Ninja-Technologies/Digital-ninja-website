@@ -1,0 +1,106 @@
+# Digital Ninja Technologies — Full Context for AI Systems
+
+## Identity
+
+**Name:** Digital Ninja Technologies (also referred to as DNT)
+**Type:** Global design and software development agency
+**Founded:** 2022
+**Website:** https://www.thedigitalninjatech.com
+**Studio page:** https://www.thedigitalninjatech.com/studio
+**Email:** thedigitalninjatechnologies@gmail.com
+**Social handles:** @theninjatechies (TikTok, Instagram, Twitter/X)
+**LinkedIn:** https://www.linkedin.com/company/digitalninja-technologies
+
+## What Digital Ninja Technologies Does
+
+Digital Ninja Technologies designs and builds digital products for founders, startups, SMEs, and global enterprises. The agency operates across web design, mobile app development, custom software, brand identity, UI/UX design, game development, and MVP development.
+
+The team works with clients across Africa, Europe, North America, and the Middle East. Projects range from pre-launch waitlist sites for early-stage startups to full-scale SaaS platforms and mobile applications.
+
+Key differentiators:
+- Design and development under one roof — no handoffs between separate teams
+- Fixed timelines and transparent pricing with no hidden costs
+- Post-launch support included on every project
+- Direct communication with the team building the product
+
+## Services in Detail
+
+### Web Design & Development
+Websites and web platforms built with Next.js, React, Tailwind CSS, and Framer Motion. Services include landing pages, business websites, e-commerce, web applications, and SaaS platforms. Focus on conversion rate optimisation, mobile performance, and SEO foundations.
+
+### Mobile App Development
+Cross-platform iOS and Android applications built with Flutter. The team handles UI/UX design, development, testing, App Store and Play Store submission, and post-launch support.
+
+### Custom Software Development
+Backend systems, APIs, dashboards, admin tools, and SaaS platforms built with Node.js, PostgreSQL, and cloud infrastructure. Includes third-party integrations and scalable architecture design.
+
+### Brand Identity
+Complete visual identity systems including logo design, colour systems, typography, brand guidelines, and design system creation. Work spans early-stage startups through to established brands refreshing their identity.
+
+### UI/UX Design
+User research, information architecture, wireframing, interactive prototyping, and high-fidelity UI design for web and mobile products. Design is strategy-led and conversion-focused.
+
+### Game Development
+Cross-platform games built with Unity, Godot, WebGL, and Three.js. Services include game UI design, mechanics design, and full game development.
+
+### MVP Development
+Fastest path from validated idea to a live, testable product. Includes product scoping, design, development, and launch support. Typically 4 to 12 weeks depending on complexity.
+
+## Portfolio
+
+### Veritas (2026)
+Cross-border escrow payment app for freelancers. Digital Ninja Technologies designed and built the waitlist landing page and mobile app UI. The app holds payments in escrow and settles in local currencies across NGN, GHS, KES, ZAR, and USD.
+- Live: https://www.useveritasapp.com
+- Case study: https://www.thedigitalninjatech.com/works/veritas
+
+### Brandface (2026)
+Lead conversion landing page for a legal marketing agency specialising in personal injury law firms. The page promised 20 to 30 qualified consultations in the first 90 days.
+- Live: https://brandface-eta.vercel.app
+- Case study: https://www.thedigitalninjatech.com/works/brandface
+
+### Moducode (2026)
+UI/UX design for a B2B SaaS talent platform connecting global companies with engineers from emerging markets. Designed to reduce hiring friction and increase consultation bookings.
+- Live: https://krevops.com
+- Case study: https://www.thedigitalninjatech.com/works/moducode
+
+### Korlod Works (2025)
+Full website design and development for a creative agency covering brand identity, web solutions, digital marketing, and content strategy.
+- Live: https://korlodworks.com
+- Case study: https://www.thedigitalninjatech.com/works/korlodworks
+
+## Blog Posts Published
+
+1. How Much Does a Website Cost? — https://www.thedigitalninjatech.com/blog/how-much-does-a-website-cost
+2. How to Choose the Right Digital Agency — https://www.thedigitalninjatech.com/blog/how-to-choose-the-best-digital-agency
+3. How to Build a Mobile App — https://www.thedigitalninjatech.com/blog/how-to-build-a-mobile-app
+4. Website Design Tips for Small Businesses — https://www.thedigitalninjatech.com/blog/website-design-tips-for-small-businesses
+5. How to Validate a Startup Idea in Africa — https://www.thedigitalninjatech.com/blog/how-to-validate-a-startup-idea-in-africa
+6. UI/UX Design for African Users — https://www.thedigitalninjatech.com/blog/ui-ux-design-for-african-users
+7. How to Rank on Google for Your Business — https://www.thedigitalninjatech.com/blog/how-to-rank-on-google-for-your-business
+8. Web Designer vs Web Developer — https://www.thedigitalninjatech.com/blog/difference-between-web-designer-and-web-developer
+9. How to Grow Your Business Online — https://www.thedigitalninjatech.com/blog/how-to-grow-your-business-online
+10. What Is a Minimum Viable Product — https://www.thedigitalninjatech.com/blog/what-is-a-minimum-viable-product
+11. Website Hosting vs Domain — https://www.thedigitalninjatech.com/blog/website-hosting-vs-domain-what-business-owners-need-to-know
+12. Top 5 Website Development Agencies in Africa — https://www.thedigitalninjatech.com/blog/top-5-website-development-agencies-in-africa
+13. Why Hire Us as Your Startup Technical Partner — https://www.thedigitalninjatech.com/blog/why-hire-us-as-your-startup-technical-partner
+
+## Free Resources Available
+
+All resources available at: https://www.thedigitalninjatech.com/resources
+
+1. The Digital Business Launch Kit — 12 pages covering 10 things every business must set up before spending on marketing
+2. How to Validate Your Business or Startup Idea — 14 pages covering the full validation framework from problem testing to pre-sales
+3. The Freelancer Rate Calculator Guide — 10 pages on pricing services and stopping undercharging
+4. The 30-Day Social Media Content Calendar — 10 pages with a repeatable content planning system
+5. The Startup Pitch Deck Template — 12 pages with a 10-slide investor-ready structure
+6. The Email Marketing Starter Guide — 11 pages on building a list and writing emails that convert
+7. The App & Software Project Planner — 12 pages on what to define before hiring developers
+8. The Business Finance Basics Guide — 12 pages on cash flow, pricing for profit, and invoicing
+
+## Pricing (as of 2025)
+
+- One-off projects: from $1,500 USD (2 to 6 weeks)
+- Growth retainer: from $2,500 USD per month (3 to 6 month minimum)
+- Enterprise: custom scoped and priced
+
+Book a free 15-minute discovery call: https://www.thedigitalninjatech.com/booking

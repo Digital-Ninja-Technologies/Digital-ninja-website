@@ -1,0 +1,50 @@
+# Digital Ninja Technologies — robots.txt
+
+# Allow all standard crawlers
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Explicitly allow major AI training and search crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap
+Sitemap: https://www.thedigitalninjatech.com/sitemap.xml
+
+# LLM context files
+# https://www.thedigitalninjatech.com/llms.txt
+# https://www.thedigitalninjatech.com/llms-full.txt

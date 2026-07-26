@@ -46,6 +46,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -135,18 +136,34 @@ const organizationSchema = {
   areaServed: [
     { "@type": "Country", name: "Nigeria" },
     { "@type": "Continent", name: "Africa" },
+    { "@type": "Country", name: "United Kingdom" },
+    { "@type": "Country", name: "Canada" },
+    { "@type": "Country", name: "United Arab Emirates" },
     { "@type": "AdministrativeArea", name: "Global" },
   ],
-  priceRange: "₦₦₦",
-  telephone: "+2348145865720",
+  priceRange: "$$$",
   email: "thedigitalninjatechnologies@gmail.com",
+  knowsAbout: [
+    "Web Design",
+    "Web Development",
+    "Mobile App Development",
+    "UI/UX Design",
+    "Brand Identity Design",
+    "Custom Software Development",
+    "MVP Development",
+    "Flutter Development",
+    "Next.js Development",
+    "React Development",
+    "SaaS Product Design",
+    "Fintech Product Design",
+    "Startup Technical Partner",
+  ],
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+2348145865720",
+      email: "thedigitalninjatechnologies@gmail.com",
       contactType: "customer service",
       availableLanguage: "English",
-      contactOption: "TollFree",
     },
     {
       "@type": "ContactPoint",
@@ -308,6 +325,11 @@ export default function RootLayout({
         
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* LLM context files for AI indexing */}
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Full Context" />
+        <meta name="ai-content-declaration" content="original" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       </head>
       <body
         className={`${montserrat.className} font-sans`}
