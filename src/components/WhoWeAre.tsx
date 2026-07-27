@@ -63,7 +63,7 @@ export default function WhoWeAre() {
         </motion.p>
 
         {/* ── CEO Statement + Stats ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start mb-16 md:mb-24">
 
           {/* Left: CEO voice */}
           <div>

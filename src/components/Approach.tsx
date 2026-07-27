@@ -95,10 +95,10 @@ export default function Approach() {
           initial={{ opacity: 0, y: 32 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="grid grid-cols-1 lg:grid-cols-5 gap-4"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4"
         >
           {/* Step tabs. Vertical on desktop, horizontal scroll on mobile */}
-          <div className="lg:col-span-2 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-3 lg:pb-0 scrollbar-hide -mx-4 px-4 lg:mx-0 lg:px-0">
+          <div className="md:col-span-1 lg:col-span-2 flex md:flex-col lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-3 lg:pb-0 scrollbar-hide -mx-4 px-4 lg:mx-0 lg:px-0">
             {steps.map((s, i) => (
               <button
                 key={s.number}
@@ -150,7 +150,7 @@ export default function Approach() {
           </div>
 
           {/* Content panel */}
-          <div className="lg:col-span-3">
+          <div className="md:col-span-1 lg:col-span-3">
             <AnimatePresence mode="wait">
               <motion.div
                 key={active}

@@ -118,7 +118,7 @@ export default function AboutSell() {
             </p>
           </FadeUp>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
             <FadeUp delay={0.1}>
               <h2 className="text-3xl md:text-[44px] font-semibold leading-[115%] tracking-[-0.03em] text-white">
                 Most digital agencies are{" "}
@@ -149,7 +149,7 @@ export default function AboutSell() {
           </div>
 
           {/* Stats row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12 lg:mt-16">
             {stats.map((s, i) => (
               <motion.div
                 key={i}
@@ -296,7 +296,7 @@ export default function AboutSell() {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <FadeUp>
-            <div className="relative rounded-[40px] overflow-hidden text-center px-8 py-20"
+            <div className="relative rounded-[40px] overflow-hidden text-center px-6 md:px-8 py-14 md:py-20"
               style={{ background: "linear-gradient(135deg, #FF6602 0%, #FD3600 50%, #CC2800 100%)" }}
             >
               {/* Decorative circles */}

@@ -60,7 +60,7 @@ export default function BlogClient() {
           {/* All posts */}
           <div className="mt-16">
             <h2 className="text-xl font-semibold text-[#2E2D2D] mb-8 tracking-[-0.02em]">All articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {posts.slice(1).map((post, i) => (
                 <PostCard key={post.slug} post={post} index={i} />
               ))}
@@ -106,7 +106,7 @@ function FeaturedPost({ post }: { post: typeof posts[0] }) {
       transition={{ duration: 0.7 }}
     >
       <Link href={`/blog/${post.slug}`}>
-        <div className="group grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-[#F2F2F2] hover:border-[#FFE0CC] hover:shadow-xl hover:shadow-orange-50 transition-all duration-400">
+        <div className="group grid grid-cols-1 md:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-[#F2F2F2] hover:border-[#FFE0CC] hover:shadow-xl hover:shadow-orange-50 transition-all duration-400">
           <div className="bg-gradient-to-br from-[#FF6602] to-[#FD3600] p-10 md:p-14 flex flex-col justify-between min-h-[280px]">
             <div>
               <span className="inline-block bg-white/20 text-white text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5">

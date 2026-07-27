@@ -164,12 +164,12 @@ function ProjectCard({
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay: 0.2 + index * 0.15 }}
-      className="group grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-[#F2F2F2] hover:border-[#FFE0CC] transition-all duration-500 hover:shadow-xl hover:shadow-orange-50"
+      className="group grid grid-cols-1 md:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-[#F2F2F2] hover:border-[#FFE0CC] transition-all duration-500 hover:shadow-xl hover:shadow-orange-50"
     >
       {/* Image side */}
       <div
         className={`relative overflow-hidden min-h-[300px] md:min-h-[420px] flex items-center justify-center p-8 ${
-          isEven ? "lg:order-1" : "lg:order-2"
+          isEven ? "md:order-1" : "md:order-2"
         }`}
         style={{ backgroundColor: project.bg }}
       >
@@ -222,7 +222,7 @@ function ProjectCard({
       {/* Content side */}
       <div
         className={`flex flex-col justify-center p-10 md:p-14 bg-white ${
-          isEven ? "lg:order-2" : "lg:order-1"
+          isEven ? "md:order-2" : "md:order-1"
         }`}
       >
         {/* Year + tags */}

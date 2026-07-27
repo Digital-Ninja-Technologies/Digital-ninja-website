@@ -164,7 +164,7 @@ export default function Hero() {
       </div>
 
       <div className="container relative mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
           {/* Left column - Enhanced with typewriter effect */}
           <motion.div
             className="space-y-6"
@@ -254,7 +254,7 @@ export default function Hero() {
             className="flex relative md:-top-28 justify-center items-center"
             style={{ y: y1 }}>
             <motion.div
-              className="relative w-64 h-64 md:w-80 md:h-80"
+              className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80"
               variants={imageVariants}
               initial="hidden"
               animate={["visible", "float"]}
@@ -289,7 +289,7 @@ export default function Hero() {
 
           {/* Right column - Enhanced with slide and fade */}
           <motion.div
-            className="text-center md:text-start md:flex flex-col justify-center"
+            className="text-center md:text-start flex flex-col justify-center"
             initial={{ opacity: 0, x: 50, filter: "blur(10px)" }}
             animate={{
               opacity: 1,

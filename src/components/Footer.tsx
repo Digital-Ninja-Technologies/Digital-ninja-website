@@ -14,7 +14,7 @@ export default function Footer() {
           className="absolute top-0 left-0 w-full h-[20rem] md:h-[55rem] pointer-events-none"
         />
 
-        <div className="relative container mx-auto px-2 py-[6rem] md:py-80 flex flex-col md:flex-row items-center space-x-10 max-w-6xl">
+        <div className="relative container mx-auto px-2 py-[4rem] md:py-32 lg:py-80 flex flex-col md:flex-row items-center space-x-10 max-w-6xl">
           <div className="flex mt-8  md:mt-0">
             <h2 className="text-[24px] text-center md:text-start mb-4 md:text-6xl lg:text-[64px] font-[700] text-white leading-tight">
               Let's create great <br className="hidden md:block" />

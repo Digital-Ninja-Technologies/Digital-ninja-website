@@ -207,7 +207,7 @@ function ResourceCard({ resource }: { resource: typeof resources[0] }) {
           <p className="text-xs font-semibold uppercase tracking-widest text-[#999797] mb-3">
             What is inside
           </p>
-          <div className="grid grid-cols-1 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {resource.includes.map((item, i) => (
               <div key={i} className="flex items-center gap-2.5">
                 <CheckCircle className="w-3.5 h-3.5 shrink-0" style={{ color: resource.color }} />
@@ -367,7 +367,7 @@ export default function ResourcesClient() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((v, i) => (
               <motion.div
                 key={i}
@@ -399,7 +399,7 @@ export default function ResourcesClient() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {resources.map((resource) => (
               <ResourceCard key={resource.id} resource={resource} />
             ))}

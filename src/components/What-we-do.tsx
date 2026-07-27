@@ -110,7 +110,7 @@ export default function WhatWeDo() {
         </div>
 
         {/* ── Interactive service list ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-start">
 
           {/* Left: service rows */}
           <div className="space-y-1">

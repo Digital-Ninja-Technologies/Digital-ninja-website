@@ -83,7 +83,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
     >
       {/* Image panel */}
       <div
-        className="lg:col-span-7 relative overflow-hidden min-h-[320px] md:min-h-[500px] flex items-center justify-center p-10"
+        className="md:col-span-6 lg:col-span-7 relative overflow-hidden min-h-[240px] md:min-h-[360px] lg:min-h-[500px] flex items-center justify-center p-10"
         style={{ backgroundColor: project.bg }}
       >
         <div
@@ -137,7 +137,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       </div>
 
       {/* Content panel */}
-      <div className="lg:col-span-5 flex flex-col justify-between p-10 md:p-14 bg-white">
+      <div className="md:col-span-6 lg:col-span-5 flex flex-col justify-between p-10 md:p-14 bg-white">
         <div>
           {/* Meta */}
           <div className="flex items-center gap-3 mb-8 flex-wrap">
@@ -213,7 +213,7 @@ export default function WorksPage() {
       {/* ── Hero ── */}
       <section ref={heroRef} className="pt-36 pb-20 px-4 bg-[#FAFAFA] border-b border-[#F2F2F2]">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-end">
             <div>
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
@@ -256,7 +256,7 @@ export default function WorksPage() {
           </div>
 
           {/* Stats strip */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-12 border-t border-[#F2F2F2]">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-16 pt-12 border-t border-[#F2F2F2]">
             {stats.map((s, i) => (
               <motion.div
                 key={i}

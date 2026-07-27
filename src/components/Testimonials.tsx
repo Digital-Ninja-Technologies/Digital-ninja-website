@@ -238,7 +238,7 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-12"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10"
         >
           {testimonials.map((item, i) => (
             <button

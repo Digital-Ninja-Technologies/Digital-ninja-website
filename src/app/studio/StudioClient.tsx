@@ -320,7 +320,7 @@ export default function StudioClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={heroReady ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 mt-12"
+            className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mt-10"
           >
             <p className="text-[#555] text-lg leading-[160%] max-w-md">
               Websites, apps, and brands built for founders and businesses who are done
@@ -400,7 +400,7 @@ export default function StudioClient() {
       {/* ── HOW WE WORK ── */}
       <section className="py-24 px-6 md:px-12 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="lg:col-span-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -467,7 +467,7 @@ export default function StudioClient() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {capabilities.map((cap, i) => (
               <motion.div
                 key={i}
@@ -511,7 +511,7 @@ export default function StudioClient() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {projects.map((p, i) => (
               <Link key={i} href={p.href}>
                 <motion.div
@@ -562,7 +562,7 @@ export default function StudioClient() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               {
                 label: "One-off Project",

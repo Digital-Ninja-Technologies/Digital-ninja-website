@@ -89,7 +89,7 @@ export default function BookingClient() {
         >
           <div
             id="my-cal-booking-page"
-            style={{ width: "100%", minHeight: "600px", height: "auto", overflow: "auto" }}
+            style={{ width: "100%", minHeight: "500px", height: "auto", overflow: "auto" }}
           />
         </div>
 

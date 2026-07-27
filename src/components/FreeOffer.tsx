@@ -55,7 +55,7 @@ export default function FreeOffer() {
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
 
           {/* Left */}
           <div>
