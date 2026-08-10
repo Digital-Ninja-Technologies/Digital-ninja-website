@@ -14,10 +14,10 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About us" },
-    { href: "/works", label: "Works" },
     { href: "/studio", label: "Studio" },
+    { href: "/works", label: "Works" },
     { href: "/blog", label: "Blog" },
-    { href: "/testimonials", label: "Video Testimonial" },
+    { href: "/testimonials", label: "Testimonial" },
     { href: "/resources", label: "Free Resources" },
     { href: "/refer", label: "Refer & Earn" },
   ];
