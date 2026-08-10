@@ -41,7 +41,7 @@ const projects = [
     tags: ["Consumer App", "Home Services", "Web Design", "Web Development"],
     year: "2026",
     description:
-      "Website design and development for Thazlo, a 24/7 gas refill and laundry delivery app serving households across Nigeria. Built to drive app downloads and communicate service quality clearly.",
+      "Website design and development for Thazlo, a 24/7 gas refill and laundry delivery app serving households across Nigeria. Includes full dark mode and light mode — both designed from the ground up.",
     image: "/thazlo-1.png",
     liveUrl: "https://www.thazloapp.com",
     bg: "#FFF7ED",

@@ -186,6 +186,7 @@ const projects = [
       responsibilities: [
         "UI/UX Design",
         "Website Development",
+        "Dark Mode & Light Mode Design",
         "Responsive Mobile Design",
         "Performance Optimisation",
         "SEO Foundation Setup",
@@ -217,25 +218,30 @@ const projects = [
         },
         {
           step: "02",
+          title: "Dark mode and light mode support",
+          desc: "We built the site with a full dark mode and light mode toggle. Both themes were designed from the ground up — not just inverted colours — ensuring the brand, typography, and visuals look polished in either mode.",
+        },
+        {
+          step: "03",
           title: "Service sections that earn trust",
           desc: "Each service (gas and laundry) has its own dedicated section with specific features, reassurances around safety and vendor certification, and a direct CTA to the app download.",
         },
         {
-          step: "03",
+          step: "04",
           title: "Social proof positioned strategically",
           desc: "Real customer testimonials from named residents across Lagos and other cities are placed immediately after the how-it-works section — addressing hesitation at exactly the moment visitors consider whether to download.",
         },
       ],
       challenges:
-        "The dual-service nature of the app meant the website had to clearly separate gas and laundry without making either feel secondary. Every design decision — hierarchy, colour, section order — was made with that balance in mind.",
+        "Building a dual-theme experience was the most technically demanding aspect of the project. Every component — hero, service cards, testimonials, FAQ, and footer — had to be designed and tested in both dark and light mode to ensure visual consistency and brand accuracy across both states. The dual-service layout also required careful hierarchy decisions so neither gas nor laundry felt secondary.",
       outcome: {
         summary: "Thazlo launched with a website that clearly positions the brand, communicates both services confidently, and consistently drives visitors toward the app download CTA.",
         points: [
+          "Full dark mode and light mode — both themes designed from the ground up, not just inverted",
           "Clean, conversion-focused design aligned with the Thazlo brand",
           "Dual-service layout that gives equal weight to gas and laundry",
           "Mobile-first build optimised for the primary user device",
           "App Store and Google Play CTAs integrated throughout every section",
-          "5.0 rating and 24/7 care prominently featured as trust signals",
           "SEO foundations in place for long-term organic discovery",
         ],
       },
