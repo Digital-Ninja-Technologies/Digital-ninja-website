@@ -2,21 +2,10 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Play, ArrowRight, Star, Quote, ExternalLink } from "lucide-react";
+import { Play, ArrowRight, Star, Quote } from "lucide-react";
 import Link from "next/link";
 
-// ── VIDEO CONFIG ─────────────────────────────────────────────────────────────
-// Option A: YouTube embed (paste your YouTube video ID after uploading)
-// e.g. https://youtu.be/abc123 → VIDEO_ID = "abc123"
-const YOUTUBE_ID = ""; // ← paste YouTube video ID here after uploading
-
-// Option B: Google Drive direct embed
-// Share the file → Get link → copy the file ID
-// e.g. https://drive.google.com/file/d/FILE_ID/view → paste FILE_ID below
-const GDRIVE_ID = ""; // ← paste Google Drive file ID here
-
-// Option C: Any direct MP4 URL (Cloudinary, Bunny, S3 etc.)
-const VIDEO_URL = ""; // ← paste direct video URL here
+const YOUTUBE_ID = "f-WVn0f_-1w";
 
 const textTestimonials = [
   {
@@ -42,30 +31,35 @@ const textTestimonials = [
 function VideoEmbed() {
   const [playing, setPlaying] = useState(false);
 
-  // YouTube embed
-  if (YOUTUBE_ID) {
-    return (
-      <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40 aspect-video">
+  return (
+    <div className="flex justify-center">
+      {/* Portrait container for YouTube Shorts */}
+      <div
+        className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 w-full max-w-xs"
+        style={{ aspectRatio: "9/16" }}
+      >
         {!playing ? (
-          // Thumbnail with play button
-          <div className="relative w-full h-full bg-[#0A0E1A] flex items-center justify-center">
+          <div className="relative w-full h-full bg-[#111827] flex items-center justify-center">
+            {/* YouTube thumbnail */}
             <img
-              src={`https://img.youtube.com/vi/${YOUTUBE_ID}/maxresdefault.jpg`}
-              alt="Testimonial video thumbnail"
+              src={`https://img.youtube.com/vi/${YOUTUBE_ID}/0.jpg`}
+              alt="Client testimonial video"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/30" />
-            <div className="absolute top-5 left-5">
-              <div className="flex items-center gap-2 bg-black/50 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1.5">
+            {/* Badge */}
+            <div className="absolute top-4 left-4 z-10">
+              <div className="flex items-center gap-2 bg-black/60 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1.5">
                 <span className="w-2 h-2 rounded-full bg-[#FF6602] animate-pulse" />
                 <span className="text-white text-xs font-semibold">Client Testimonial</span>
               </div>
             </div>
+            {/* Play button */}
             <motion.button
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setPlaying(true)}
-              className="relative z-10 w-20 h-20 rounded-full bg-[#FF6602] flex items-center justify-center shadow-2xl shadow-orange-500/40"
+              className="relative z-10 w-20 h-20 rounded-full bg-[#FF6602] flex items-center justify-center shadow-2xl shadow-orange-500/50"
             >
               <Play className="w-7 h-7 text-white ml-1" />
             </motion.button>
@@ -73,73 +67,12 @@ function VideoEmbed() {
         ) : (
           <iframe
             className="w-full h-full"
-            src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0`}
+            src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0&loop=1`}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
         )}
       </div>
-    );
-  }
-
-  // Google Drive embed
-  if (GDRIVE_ID) {
-    return (
-      <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40 aspect-video">
-        <iframe
-          src={`https://drive.google.com/file/d/${GDRIVE_ID}/preview`}
-          className="w-full h-full"
-          allow="autoplay"
-        />
-        <div className="absolute top-5 left-5">
-          <div className="flex items-center gap-2 bg-black/50 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1.5">
-            <span className="w-2 h-2 rounded-full bg-[#FF6602] animate-pulse" />
-            <span className="text-white text-xs font-semibold">Client Testimonial</span>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Direct video URL
-  if (VIDEO_URL) {
-    return (
-      <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40 aspect-video group">
-        <video
-          src={VIDEO_URL}
-          controls
-          playsInline
-          className="w-full h-full object-cover"
-          poster=""
-        />
-        <div className="absolute top-5 left-5 pointer-events-none">
-          <div className="flex items-center gap-2 bg-black/50 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1.5">
-            <span className="w-2 h-2 rounded-full bg-[#FF6602] animate-pulse" />
-            <span className="text-white text-xs font-semibold">Client Testimonial</span>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Placeholder while video URL is being configured
-  return (
-    <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40 aspect-video bg-[#111827] flex flex-col items-center justify-center gap-4 border border-white/10">
-      <div className="w-20 h-20 rounded-full bg-[#FF6602]/10 border border-[#FF6602]/30 flex items-center justify-center">
-        <Play className="w-8 h-8 text-[#FF7E29] ml-1" />
-      </div>
-      <div className="text-center">
-        <p className="text-white font-semibold mb-1">Video coming soon</p>
-        <p className="text-[#6B6A6A] text-sm">Upload the video to YouTube or Google Drive and add the ID to the page config</p>
-      </div>
-      <a
-        href="https://www.youtube.com/upload"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-2 text-[#FF7E29] text-sm hover:underline"
-      >
-        Upload to YouTube <ExternalLink className="w-3.5 h-3.5" />
-      </a>
     </div>
   );
 }
@@ -155,8 +88,10 @@ export default function TestimonialsClient() {
 
       {/* Hero */}
       <section ref={heroRef} className="bg-[#0A0E1A] pt-36 pb-20 px-4 relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[500px] pointer-events-none"
-          style={{ background: "radial-gradient(ellipse, rgba(255,102,2,0.08) 0%, transparent 70%)" }} />
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[500px] pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, rgba(255,102,2,0.08) 0%, transparent 70%)" }}
+        />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -186,7 +121,7 @@ export default function TestimonialsClient() {
         </div>
       </section>
 
-      {/* Video */}
+      {/* Video section */}
       <section className="py-20 px-4 bg-[#0A0E1A] border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -258,7 +193,13 @@ export default function TestimonialsClient() {
       <section className="py-16 px-4 border-t border-[#F2F2F2]">
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[["10+","Projects Delivered"],["100%","On-time Delivery"],["4+","Countries Served"],["5★","Average Rating"]].map(([v,l],i) => (
-            <motion.div key={i} initial={{ opacity:0,y:16 }} whileInView={{ opacity:1,y:0 }} viewport={{ once:true }} transition={{ duration:0.5,delay:i*0.08 }}>
+            <motion.div
+              key={i}
+              initial={{ opacity:0, y:16 }}
+              whileInView={{ opacity:1, y:0 }}
+              viewport={{ once:true }}
+              transition={{ duration:0.5, delay:i*0.08 }}
+            >
               <p className="text-[32px] md:text-[40px] font-bold text-[#FF6602] leading-none mb-2">{v}</p>
               <p className="text-[#6B6A6A] text-sm">{l}</p>
             </motion.div>
