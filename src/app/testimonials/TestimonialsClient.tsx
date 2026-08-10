@@ -17,7 +17,7 @@ const textTestimonials = [
   {
     name: "Brandface",
     role: "Legal Marketing Agency",
-    text: "Our landing page went from an idea to a live, converting site in under 4 weeks. The design quality was well above what we expected. Professional team that delivers what they promise.",
+    text: "Our landing page went from an idea to a live, converting site in under 1 week. The design quality was well above what we expected. Professional team that delivers what they promise.",
     rating: 5,
   },
   {
