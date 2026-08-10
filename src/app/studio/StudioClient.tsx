@@ -30,7 +30,7 @@ const process = [
 const capabilities = [
   { icon: Zap, title: "Web Design & Development", body: "From conversion-focused landing pages to full-scale web platforms. Every project is designed to perform, not just to look good.", skills: ["Next.js", "React", "Tailwind", "Framer Motion"] },
   { icon: Globe, title: "Mobile App Development", body: "Cross-platform apps that feel native on iOS and Android. Fast, polished, and built for the users who will live inside them.", skills: ["Flutter", "iOS", "Android", "Firebase"] },
-  { icon: Shield, title: "Brand Identity", body: "A visual identity that is unmistakably yours. We build the full system: mark, colour, typography, and the rules that keep it consistent.", skills: ["Logo Design", "Design Systems", "Brand Guidelines", "Visual Language"] },
+  { icon: Shield, title: "Brand, Graphic & Motion Design", body: "Logo, brand identity, marketing graphics, and motion design — the full visual language your business needs to stand out across every touchpoint, static or animated.", skills: ["Logo & Branding", "Graphic Design", "Motion Graphics", "LottieFiles"] },
   { icon: Clock, title: "Custom Software", body: "When off-the-shelf does not cut it. We architect and build custom platforms, dashboards, and tools that match exactly how your business works.", skills: ["Node.js", "PostgreSQL", "APIs", "Cloud"] },
 ];
 

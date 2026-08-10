@@ -64,6 +64,7 @@ const services = [
   { label: "AI Solutions & Automation", href: "/booking" },
   { label: "UI UX Design", href: "/booking" },
   { label: "MVP Development", href: "/booking" },
+  { label: "Brand, Graphic & Motion Design", href: "/booking" },
 ];
 
 const stats = [

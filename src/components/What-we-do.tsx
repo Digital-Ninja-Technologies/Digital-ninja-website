@@ -66,6 +66,18 @@ const services = [
     outcomes: ["Cross platform", "Immersive UI", "Smooth performance", "Engaging gameplay"],
     tools: ["Unity", "Godot", "WebGL", "Three.js"],
   },
+  {
+    number: "06",
+    title: "Brand, Graphic & Motion Design",
+    short: "Identity that commands attention",
+    emoji: "✦",
+    color: "#FF6602",
+    light: "#FFF0E5",
+    description:
+      "From logo and brand identity to marketing graphics and motion design — we create the visual language your business needs to stand out, stay consistent, and be remembered. Static or animated, print or digital.",
+    outcomes: ["Brand identity systems", "Marketing collateral", "Motion graphics", "Social media visuals"],
+    tools: ["Figma", "Illustrator", "After Effects", "LottieFiles"],
+  },
 ];
 
 export default function WhatWeDo() {
