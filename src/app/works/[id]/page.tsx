@@ -248,6 +248,9 @@ const projects = [
       gallery: [
         "/thazlo-1.png",
         "/thazlo-2.png",
+        "/thazlo-3.png",
+        "/thazlo-4.png",
+        "/thazlo-5.png",
       ],
     },
   },
