@@ -17,8 +17,8 @@ export default function Navbar() {
     { href: "/works", label: "Works" },
     { href: "/studio", label: "Studio" },
     { href: "/blog", label: "Blog" },
-    { href: "/testimonials", label: "⭐ Video Testimonial" },
-    { href: "/resources", label: "💰 Free Resources" },
+    { href: "/testimonials", label: "Video Testimonial" },
+    { href: "/resources", label: "Free Resources" },
     { href: "/refer", label: "Refer & Earn" },
   ];
 
