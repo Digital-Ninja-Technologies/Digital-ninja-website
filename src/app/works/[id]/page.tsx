@@ -168,6 +168,84 @@ const projects = [
     },
   },
   {
+    id: "thazlo",
+    title: "Thazlo",
+    description: "Web Design & Development · Consumer App · Home Services",
+    image: "/thazlo-1.png",
+    showcaseType: "standard",
+    overview: {
+      title: "A conversion-focused website for Thazlo — Nigeria's 24/7 gas refill and laundry delivery app.",
+      description:
+        "Thazlo is a consumer app that connects households across Nigeria with certified vendors for gas refills and laundry pickup. Digital Ninja Technologies designed and developed the full marketing website — built to communicate Thazlo's value clearly, build trust with first-time visitors, and drive app downloads on iOS and Android.",
+      features: {
+        mockupImage1: "/thazlo-1.png",
+        mockupImage2: "/thazlo-2.png",
+      },
+      liveUrl: "https://www.thazloapp.com",
+      role: "Website Designer & Developer",
+      responsibilities: [
+        "UI/UX Design",
+        "Website Development",
+        "Responsive Mobile Design",
+        "Performance Optimisation",
+        "SEO Foundation Setup",
+        "App Store Link Integration",
+      ],
+      problem: {
+        intro: "Thazlo needed a website that could do three things immediately:",
+        points: [
+          { label: "Communicate clearly", detail: "Explain two distinct services — gas delivery and laundry pickup — to users who may be discovering the brand for the first time." },
+          { label: "Build trust fast", detail: "As a home services app asking users to share their address and invite vendors to their home, the site needed to feel credible, safe, and professional from the first scroll." },
+          { label: "Drive app downloads", detail: "Every section of the site needed to point visitors toward downloading on iOS or Android — the primary conversion goal of the entire website." },
+          { label: "Work perfectly on mobile", detail: "The majority of Thazlo's target audience discovers services on their phone. A mobile-first experience was not optional — it was the primary design constraint." },
+        ],
+        summary: "The site needed to convert sceptical first-time visitors into app downloads within seconds — without overwhelming them with information.",
+      },
+      goals: [
+        "Drive app downloads on iOS and Android",
+        "Clearly explain gas refill and laundry delivery services",
+        "Build credibility and trust with new visitors",
+        "Deliver a fast, mobile-first experience",
+        "Rank in search for relevant home service queries",
+        "Support Thazlo's 24/7 availability positioning",
+      ],
+      uxStrategy: [
+        {
+          step: "01",
+          title: "Hero that answers the question immediately",
+          desc: "The headline — 'Get Gas and Laundry Service Anytime, Anywhere' — communicates both services and the 24/7 promise in a single line. Visitors know exactly what Thazlo does before they scroll.",
+        },
+        {
+          step: "02",
+          title: "Service sections that earn trust",
+          desc: "Each service (gas and laundry) has its own dedicated section with specific features, reassurances around safety and vendor certification, and a direct CTA to the app download.",
+        },
+        {
+          step: "03",
+          title: "Social proof positioned strategically",
+          desc: "Real customer testimonials from named residents across Lagos and other cities are placed immediately after the how-it-works section — addressing hesitation at exactly the moment visitors consider whether to download.",
+        },
+      ],
+      challenges:
+        "The dual-service nature of the app meant the website had to clearly separate gas and laundry without making either feel secondary. Every design decision — hierarchy, colour, section order — was made with that balance in mind.",
+      outcome: {
+        summary: "Thazlo launched with a website that clearly positions the brand, communicates both services confidently, and consistently drives visitors toward the app download CTA.",
+        points: [
+          "Clean, conversion-focused design aligned with the Thazlo brand",
+          "Dual-service layout that gives equal weight to gas and laundry",
+          "Mobile-first build optimised for the primary user device",
+          "App Store and Google Play CTAs integrated throughout every section",
+          "5.0 rating and 24/7 care prominently featured as trust signals",
+          "SEO foundations in place for long-term organic discovery",
+        ],
+      },
+      gallery: [
+        "/thazlo-1.png",
+        "/thazlo-2.png",
+      ],
+    },
+  },
+  {
     id: "brandface",
     title: "Brandface",
     description: "Web Design · Lead Conversion · Marketing Website",

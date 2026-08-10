@@ -30,6 +30,17 @@ const projects = [
     accent: "#3A4A7A",
   },
   {
+    id: "thazlo",
+    title: "Thazlo",
+    description: "Web Design & Development · Consumer App · Home Services",
+    image: "/thazlo-1.png",
+    liveUrl: "https://www.thazloapp.com",
+    tags: ["Web Design", "Web Development", "Consumer App"],
+    year: "2026",
+    bg: "#FFF7ED",
+    accent: "#FF6602",
+  },
+  {
     id: "brandface",
     title: "Brandface",
     description: "Web Design · Lead Conversion · Marketing Website",

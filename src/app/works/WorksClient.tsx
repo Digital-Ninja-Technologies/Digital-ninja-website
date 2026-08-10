@@ -35,8 +35,20 @@ const projects = [
     accent: "#3A4A7A",
   },
   {
+    id: "thazlo",
+    title: "Thazlo",
+    category: "Web Design & Development",
+    tags: ["Consumer App", "Home Services", "Web Design", "Web Development"],
+    year: "2026",
+    description:
+      "Website design and development for Thazlo, a 24/7 gas refill and laundry delivery app serving households across Nigeria. Built to drive app downloads and communicate service quality clearly.",
+    image: "/thazlo-1.png",
+    liveUrl: "https://www.thazloapp.com",
+    bg: "#FFF7ED",
+    accent: "#FF6602",
+  },
+  {
     id: "brandface",
-    title: "Brandface",
     category: "Web Design & Development",
     tags: ["Lead Conversion", "Landing Page", "Marketing Website"],
     year: "2026",
