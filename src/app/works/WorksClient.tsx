@@ -37,8 +37,8 @@ const projects = [
   {
     id: "thazlo",
     title: "Thazlo",
-    category: "Web Design & Development",
-    tags: ["Consumer App", "Home Services", "Web Design", "Web Development"],
+    category: "Web Development",
+    tags: ["Web Development", "Consumer App", "Home Services", "Design Support"],
     year: "2026",
     description:
       "Website design and development for Thazlo, a 24/7 gas refill and laundry delivery app serving households across Nigeria. Includes full dark mode and light mode — both designed from the ground up.",
