@@ -39,5 +39,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/blog/how-to-brief-a-design-agency`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blog/signs-your-website-is-hurting-your-business`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blog/how-to-build-a-saas-product-as-a-non-technical-founder`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/blog/what-is-brand-identity-and-why-your-business-needs-one`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/blog/graphic-design-for-business-what-you-actually-need`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/blog/what-is-motion-graphics-and-why-your-brand-needs-it`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
   ];
 }
