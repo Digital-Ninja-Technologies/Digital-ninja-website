@@ -34,6 +34,7 @@ const projects = [
     title: "Ọ̀nà",
     description: "Brand Identity · Graphic Design · Motion Design · Travel",
     image: "/ona-thumb.png",
+    video: "/ona-logo.mp4",
     liveUrl: "",
     tags: ["Brand Identity", "Graphic Design", "Motion Design"],
     year: "2026",
@@ -211,6 +212,16 @@ function ProjectCard({
           className="relative z-10 w-full max-w-[440px]"
           whileHover={{ scale: 1.03, rotate: 0.5 }}
         >
+          {(project as any).video ? (
+            <video
+              src={(project as any).video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto object-contain rounded-2xl shadow-2xl"
+            />
+          ) : (
           <Image
             src={project.image}
             alt={`${project.title} project mockup`}
@@ -222,6 +233,7 @@ function ProjectCard({
             quality={85}
             onLoad={() => setImgLoaded(true)}
           />
+          )}
         </motion.div>
 
         {/* Live badge */}
