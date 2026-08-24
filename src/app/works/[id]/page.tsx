@@ -182,6 +182,7 @@ const projects = [
         mockupImage2: "/ona-2.png",
       },
       liveUrl: "",
+      overviewVideo: "https://www.youtube.com/embed/YW-OGI4mznI?autoplay=1&loop=1&playlist=YW-OGI4mznI&controls=0&mute=1&modestbranding=1&rel=0",
       role: "Brand Identity & Motion Designer",
       responsibilities: [
         "Brand Strategy & Naming Context",
@@ -530,6 +531,23 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
           )}
         </div>
       </div>
+
+      {/* Overview video — shown below overview text if present */}
+      {(o as any).overviewVideo && (
+        <div className="flex justify-center">
+          <div
+            className="w-full max-w-xs rounded-3xl overflow-hidden shadow-2xl shadow-black/20"
+            style={{ aspectRatio: "9/16" }}
+          >
+            <iframe
+              src={(o as any).overviewVideo}
+              className="w-full h-full"
+              allow="autoplay; encrypted-media; loop"
+              style={{ border: "none" }}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Role + Responsibilities */}
       {o.role && o.responsibilities && (
