@@ -168,6 +168,90 @@ const projects = [
     },
   },
   {
+    id: "ona",
+    title: "Ọ̀nà",
+    description: "Brand Identity · Graphic Design · Motion Design · Travel",
+    image: "/ona-1.png",
+    showcaseType: "standard",
+    overview: {
+      title: "A complete brand identity system for Ọ̀nà — a travel brand built around the Yoruba concept of 'the way'.",
+      description:
+        "Ọ̀nà (pronounced 'oh-nah') is the Yoruba word for 'way' or 'path'. The brand was built for a travel company that believes finding your way — to a new city, a new culture, or a new experience — should be simpler. Digital Ninja Technologies designed the complete brand identity system: the mark, all lockup variants, colour palette, typography, motion assets, social media system, and brand guidelines.",
+      features: {
+        mockupImage1: "/ona-1.png",
+        mockupImage2: "/ona-2.png",
+      },
+      liveUrl: "",
+      role: "Brand Identity & Motion Designer",
+      responsibilities: [
+        "Brand Strategy & Naming Context",
+        "Logo Mark & Wordmark Design",
+        "Full Lockup System (4 colourways)",
+        "Colour Palette & Typography System",
+        "Motion Design (Logo & Icon Animation)",
+        "Social Media Asset System",
+        "App Icon & Platform Assets",
+        "Brand Guidelines Documentation",
+      ],
+      problem: {
+        intro: "Ọ̀nà needed a brand identity that could:",
+        points: [
+          { label: "Honour the name's meaning", detail: "The mark, colour, and typography needed to carry the weight of a Yoruba word — rooted in culture, elegant in execution, and legible to a global audience." },
+          { label: "Work across every touchpoint", detail: "From a 48px app icon to a LinkedIn banner to an animated splash screen — the identity needed to be fully system-ready from day one." },
+          { label: "Feel premium without feeling cold", detail: "Travel brands often default to either sterile minimalism or busy maximalism. Ọ̀nà needed warmth, depth, and confidence — earthy, not generic." },
+          { label: "Come alive in motion", detail: "The route line at the heart of the mark — the path through the O — was designed from the start to animate. Logo and icon animations were a core deliverable, not an afterthought." },
+        ],
+        summary: "The brief was to build a complete, ready-to-deploy brand system that could launch the company across digital and physical touchpoints simultaneously.",
+      },
+      goals: [
+        "Design a mark rooted in the brand name's cultural meaning",
+        "Build a full lockup system across four colourways",
+        "Define an earthy, premium colour palette (Deep Green, Sand, Way Gold)",
+        "Select and pair a typography system (Space Grotesk + Outfit)",
+        "Deliver animated logo and icon as production-ready motion assets",
+        "Create a complete social media asset suite (profile, headers, OG)",
+        "Document the brand system for consistent independent use",
+      ],
+      uxStrategy: [
+        {
+          step: "01",
+          title: "The mark — the O is the route",
+          desc: "A geometric circle, stroked at 1/5 of its diameter, is also the first letter of the wordmark. A single winding line crosses the ring from top to bottom — the route through the O. It always sits in front. Gold, always the only gold line in the mark. The Yoruba dot-below becomes the destination: the brand's signature, the smallest element, the one never removed.",
+        },
+        {
+          step: "02",
+          title: "Earth, ink, one gold",
+          desc: "Deep Green is the primary surface. Sand is for documents, light print, and warmth. Charcoal is the body text colour. Way Gold is the accent — used only, and never more than 15% of any surface. The palette signals premium travel without the coldness of grey-and-white minimalism.",
+        },
+        {
+          step: "03",
+          title: "Motion from the beginning",
+          desc: "The route line was always going to animate. The logo animation draws the route through the O before the wordmark appears. The icon animation pulses the dot-below — the destination point. Both were built in After Effects and exported as production-ready files for digital and app use.",
+        },
+      ],
+      challenges:
+        "The diacritic in Ọ̀nà — the dot below the O and the grave accent — presented a typographic challenge at small sizes. The solution was a 'small-size cut' where the route is dropped and the mark becomes a plain circle with the gold dot only, preserving legibility at favicon and notification badge sizes without sacrificing the system.",
+      outcome: {
+        summary: "Ọ̀nà launched with a fully production-ready brand system — mark, motion, social media assets, app icons, and brand guidelines — ready to deploy across every touchpoint from day one.",
+        points: [
+          "Complete mark system with four lockup colourways and six mark variants",
+          "Animated logo and icon in After Effects, exported for production use",
+          "Full social media suite: LinkedIn header, X header, profile avatar",
+          "App icon system at 1024px, 180px, 120px, and 48px",
+          "Colour palette and typography system fully documented",
+          "Brand guidelines covering clearance, don'ts, and usage rules",
+        ],
+      },
+      gallery: [
+        "/ona-1.png",
+        "/ona-2.png",
+        "/ona-3.png",
+        "/ona-4.png",
+        "/ona-5.png",
+      ],
+    },
+  },
+  {
     id: "thazlo",
     title: "Thazlo",
     description: "Web Development · Design Support · Consumer App · Home Services",

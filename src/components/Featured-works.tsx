@@ -30,6 +30,17 @@ const projects = [
     accent: "#3A4A7A",
   },
   {
+    id: "ona",
+    title: "Ọ̀nà",
+    description: "Brand Identity · Graphic Design · Motion Design · Travel",
+    image: "/ona-1.png",
+    liveUrl: "",
+    tags: ["Brand Identity", "Graphic Design", "Motion Design"],
+    year: "2026",
+    bg: "#1C3D2E",
+    accent: "#D4A847",
+  },
+  {
     id: "thazlo",
     title: "Thazlo",
     description: "Web Development · Design Support · Consumer App · Home Services",

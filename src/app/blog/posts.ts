@@ -2526,3 +2526,4 @@ We design and animate motion graphics for brands, startups, and digital products
 ];
 
 posts.push(...brandDesignPosts);
+// placeholder to keep file valid

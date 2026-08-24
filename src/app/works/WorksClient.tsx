@@ -35,6 +35,19 @@ const projects = [
     accent: "#3A4A7A",
   },
   {
+    id: "ona",
+    title: "Ọ̀nà",
+    category: "Brand Identity & Motion Design",
+    tags: ["Brand Identity", "Graphic Design", "Motion Design", "Travel Brand"],
+    year: "2026",
+    description:
+      "Complete brand identity system for Ọ̀nà, a travel brand whose name means 'way' or 'path' in Yoruba. We designed the full visual identity — mark, lockups, colour palette, typography, motion assets, and social media system.",
+    image: "/ona-1.png",
+    liveUrl: "",
+    bg: "#1C3D2E",
+    accent: "#D4A847",
+  },
+  {
     id: "thazlo",
     title: "Thazlo",
     category: "Web Development",
