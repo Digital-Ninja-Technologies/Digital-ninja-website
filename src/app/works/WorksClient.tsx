@@ -43,7 +43,7 @@ const projects = [
     description:
       "Complete brand identity system for Ọ̀nà, a travel brand whose name means 'way' or 'path' in Yoruba. We designed the full visual identity — mark, lockups, colour palette, typography, motion assets, and social media system.",
     image: "/ona-thumb.png",
-    video: "/ona-logo.gif",
+    video: "/ona-thumb.png",
     liveUrl: "",
     bg: "#1C3D2E",
     accent: "#D4A847",
@@ -131,7 +131,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
             <img
               src={(project as any).video}
               alt={`${project.title} animation`}
-              className="w-full h-auto object-contain rounded-2xl shadow-2xl"
+              className="w-full h-auto object-cover rounded-2xl shadow-2xl"
             />
           ) : (
           <Image

@@ -34,7 +34,7 @@ const projects = [
     title: "Ọ̀nà",
     description: "Brand Identity · Graphic Design · Motion Design · Travel",
     image: "/ona-thumb.png",
-    video: "/ona-logo.gif",
+    video: "/ona-thumb.png",
     liveUrl: "",
     tags: ["Brand Identity", "Graphic Design", "Motion Design"],
     year: "2026",
@@ -216,7 +216,7 @@ function ProjectCard({
             <img
               src={(project as any).video}
               alt={`${project.title} animation`}
-              className="w-full h-auto object-contain rounded-2xl shadow-2xl"
+              className="w-full h-auto object-cover rounded-2xl shadow-2xl"
             />
           ) : (
           <Image
