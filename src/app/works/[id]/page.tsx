@@ -182,7 +182,7 @@ const projects = [
         mockupImage2: "/ona-2.png",
       },
       liveUrl: "",
-      overviewVideo: "https://www.youtube.com/embed/YW-OGI4mznI?autoplay=1&loop=1&playlist=YW-OGI4mznI&controls=0&mute=1&modestbranding=1&rel=0",
+      overviewVideo: "https://www.youtube.com/embed/YW-OGI4mznI?autoplay=1&loop=1&playlist=YW-OGI4mznI&controls=0&mute=1&modestbranding=1&rel=0&showinfo=0",
       role: "Brand Identity & Motion Designer",
       responsibilities: [
         "Brand Strategy & Naming Context",
@@ -536,14 +536,22 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
       {(o as any).overviewVideo && (
         <div className="flex justify-center">
           <div
-            className="w-full max-w-xs rounded-3xl overflow-hidden shadow-2xl shadow-black/20"
-            style={{ aspectRatio: "9/16" }}
+            className="rounded-3xl overflow-hidden shadow-2xl shadow-black/20 relative"
+            style={{ width: "320px", height: "320px" }}
           >
             <iframe
               src={(o as any).overviewVideo}
-              className="w-full h-full"
               allow="autoplay; encrypted-media; loop"
-              style={{ border: "none" }}
+              style={{
+                border: "none",
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                width: "320px",
+                height: "568px",
+                transform: "translate(-50%, -42%)",
+                pointerEvents: "none",
+              }}
             />
           </div>
         </div>
