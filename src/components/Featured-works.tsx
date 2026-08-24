@@ -207,7 +207,7 @@ function ProjectCard({
 
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
-          animate={imgLoaded ? { scale: 1, opacity: 1 } : {}}
+          animate={{ scale: 1, opacity: (project as any).video ? 1 : (imgLoaded ? 1 : 0) }}
           transition={{ duration: 0.6 }}
           className="relative z-10 w-full max-w-[440px]"
           whileHover={{ scale: 1.03, rotate: 0.5 }}
@@ -217,6 +217,7 @@ function ProjectCard({
               src={(project as any).video}
               alt={`${project.title} animation`}
               className="w-full h-auto object-cover rounded-2xl shadow-2xl"
+              onLoad={() => setImgLoaded(true)}
             />
           ) : (
           <Image
