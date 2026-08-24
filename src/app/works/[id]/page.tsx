@@ -183,6 +183,7 @@ const projects = [
       },
       liveUrl: "",
       overviewVideo: "/ona-icon.gif",
+      overviewVideo2: "/ona-logo.gif",
       role: "Brand Identity & Motion Designer",
       responsibilities: [
         "Brand Strategy & Naming Context",
@@ -532,15 +533,23 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
         </div>
       </div>
 
-      {/* Overview video — shown below overview text if present */}
+      {/* Overview GIFs — side by side */}
       {(o as any).overviewVideo && (
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-6">
           <img
             src={(o as any).overviewVideo}
             alt="ONA icon animation"
             className="rounded-3xl shadow-2xl shadow-black/20"
-            style={{ width: "320px", height: "320px", objectFit: "cover" }}
+            style={{ width: "300px", height: "300px", objectFit: "cover" }}
           />
+          {(o as any).overviewVideo2 && (
+            <img
+              src={(o as any).overviewVideo2}
+              alt="ONA logo animation"
+              className="rounded-3xl shadow-2xl shadow-black/20"
+              style={{ width: "300px", height: "300px", objectFit: "cover" }}
+            />
+          )}
         </div>
       )}
 
