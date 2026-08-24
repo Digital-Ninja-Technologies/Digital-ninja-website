@@ -34,7 +34,7 @@ const projects = [
     title: "Ọ̀nà",
     description: "Brand Identity · Graphic Design · Motion Design · Travel",
     image: "/ona-thumb.png",
-    video: "/ona-logo.mp4",
+    video: "https://www.youtube.com/embed/YJH8cEaFO60?autoplay=1&loop=1&playlist=YJH8cEaFO60&controls=0&mute=1&modestbranding=1&rel=0",
     liveUrl: "",
     tags: ["Brand Identity", "Graphic Design", "Motion Design"],
     year: "2026",
@@ -213,14 +213,14 @@ function ProjectCard({
           whileHover={{ scale: 1.03, rotate: 0.5 }}
         >
           {(project as any).video ? (
-            <video
-              src={(project as any).video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto object-contain rounded-2xl shadow-2xl"
-            />
+            <div className="w-full rounded-2xl shadow-2xl overflow-hidden" style={{ aspectRatio: "16/9" }}>
+              <iframe
+                src={(project as any).video}
+                className="w-full h-full"
+                allow="autoplay; encrypted-media; loop"
+                style={{ border: "none" }}
+              />
+            </div>
           ) : (
           <Image
             src={project.image}
