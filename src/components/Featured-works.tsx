@@ -33,7 +33,7 @@ const projects = [
     id: "ona",
     title: "Ọ̀nà",
     description: "Brand Identity · Graphic Design · Motion Design · Travel",
-    image: "/ona-1.png",
+    image: "/ona-thumb.png",
     liveUrl: "",
     tags: ["Brand Identity", "Graphic Design", "Motion Design"],
     year: "2026",

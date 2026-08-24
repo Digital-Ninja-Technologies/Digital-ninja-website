@@ -171,7 +171,7 @@ const projects = [
     id: "ona",
     title: "Ọ̀nà",
     description: "Brand Identity · Graphic Design · Motion Design · Travel",
-    image: "/ona-1.png",
+    image: "/ona-thumb.png",
     showcaseType: "standard",
     overview: {
       title: "A complete brand identity system for Ọ̀nà — a travel brand built around the Yoruba concept of 'the way'.",

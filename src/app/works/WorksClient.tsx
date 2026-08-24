@@ -42,7 +42,7 @@ const projects = [
     year: "2026",
     description:
       "Complete brand identity system for Ọ̀nà, a travel brand whose name means 'way' or 'path' in Yoruba. We designed the full visual identity — mark, lockups, colour palette, typography, motion assets, and social media system.",
-    image: "/ona-1.png",
+    image: "/ona-thumb.png",
     liveUrl: "",
     bg: "#1C3D2E",
     accent: "#D4A847",
