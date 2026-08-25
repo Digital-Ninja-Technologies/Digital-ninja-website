@@ -17,7 +17,7 @@ const textTestimonials = [
   {
     name: "Brandface",
     role: "Legal Marketing Agency",
-    text: "Our landing page went from an idea to a live, converting site in under 1 week. The design quality was well above what we expected. Professional team that delivers what they promise.",
+    text: "From idea to a live, converting sales funnel in under a week. The design and development quality was well above what we expected — and the results proved it. We generated $30,000 in sales directly from the landing page DNT built for us. If you need a team that delivers and actually moves the needle, this is them.",
     rating: 5,
   },
   {
