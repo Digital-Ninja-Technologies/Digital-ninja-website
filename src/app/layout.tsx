@@ -10,6 +10,8 @@ const montserrat = Montserrat({
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-montserrat",
+  preload: false,
+  fallback: ["Helvetica Neue", "Arial", "sans-serif"],
 });
 
 export const BASE_URL = "https://www.thedigitalninjatech.com";
