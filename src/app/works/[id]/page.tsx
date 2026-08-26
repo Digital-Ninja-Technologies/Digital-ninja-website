@@ -507,10 +507,10 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
   const o = project.overview;
 
   return (
-    <div className="mt-16 px-4 space-y-20">
+    <div className="mt-10 md:mt-16 px-4 space-y-12 md:space-y-20">
 
       {/* Overview */}
-      <div className="flex flex-col md:flex-row gap-12 justify-between">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-between">
         <p className="text-[#ff7e29] font-[600] text-sm tracking-wider uppercase shrink-0">
           PROJECT OVERVIEW
         </p>
@@ -535,19 +535,17 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
 
       {/* Overview GIFs — side by side */}
       {(o as any).overviewVideo && (
-        <div className="flex justify-center gap-6">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
           <img
             src={(o as any).overviewVideo}
             alt="ONA icon animation"
-            className="rounded-3xl shadow-2xl shadow-black/20"
-            style={{ width: "300px", height: "300px", objectFit: "cover" }}
+            className="rounded-3xl shadow-2xl shadow-black/20 w-full sm:w-[300px] h-[260px] sm:h-[300px] object-cover"
           />
           {(o as any).overviewVideo2 && (
             <img
               src={(o as any).overviewVideo2}
               alt="ONA logo animation"
-              className="rounded-3xl shadow-2xl shadow-black/20"
-              style={{ width: "300px", height: "300px", objectFit: "cover" }}
+              className="rounded-3xl shadow-2xl shadow-black/20 w-full sm:w-[300px] h-[260px] sm:h-[300px] object-cover"
             />
           )}
         </div>
@@ -555,15 +553,15 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
 
       {/* Role + Responsibilities */}
       {o.role && o.responsibilities && (
-        <div className="flex flex-col md:flex-row gap-12 justify-between">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-between">
           <p className="text-[#ff7e29] font-[600] text-sm tracking-wider uppercase shrink-0">
             MY ROLE
           </p>
           <div className="max-w-3xl w-full">
             <p className="font-[600] text-xl text-gray-900 mb-4">{o.role}</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
               {o.responsibilities.map((r, i) => (
-                <li key={i} className="flex items-start gap-2 text-[#4D4C4C] text-[15px]">
+                <li key={i} className="flex items-start gap-2 text-[#4D4C4C] text-[14px] md:text-[15px]">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#FF7E29] shrink-0" />
                   {r}
                 </li>
@@ -575,7 +573,7 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
 
       {/* Hero screens */}
       {o.features && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
           <img
             src={o.features.mockupImage1}
             alt={`${project.title} landing page`}
@@ -591,7 +589,7 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
 
       {/* The Problem */}
       {o.problem && (
-        <div className="flex flex-col md:flex-row gap-12 justify-between">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-between">
           <p className="text-[#ff7e29] font-[600] text-sm tracking-wider uppercase shrink-0">
             THE PROBLEM
           </p>
@@ -599,7 +597,7 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
             <p className="text-[#4D4C4C] text-lg leading-relaxed mb-8">{o.problem.intro}</p>
             <div className="space-y-4">
               {o.problem.points.map((pt, i) => (
-                <div key={i} className="flex gap-4 p-5 rounded-2xl border border-[#F2F2F2] bg-[#FAFAFA]">
+                <div key={i} className="flex flex-col sm:flex-row gap-3 sm:gap-4 p-4 sm:p-5 rounded-2xl border border-[#F2F2F2] bg-[#FAFAFA]">
                   <span className="font-[700] text-[#FF7E29] text-sm shrink-0 mt-0.5">{pt.label}</span>
                   <p className="text-[#4D4C4C] text-[15px] leading-relaxed">{pt.detail}</p>
                 </div>
@@ -612,15 +610,15 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
 
       {/* Goals */}
       {o.goals && (
-        <div className="flex flex-col md:flex-row gap-12 justify-between">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-between">
           <p className="text-[#ff7e29] font-[600] text-sm tracking-wider uppercase shrink-0">
             GOALS
           </p>
           <div className="max-w-3xl w-full">
             <ul className="space-y-3">
               {o.goals.map((g, i) => (
-                <li key={i} className="flex items-start gap-3 text-[#4D4C4C] text-[16px]">
-                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#FFF0E5] text-[#FF7E29] text-xs font-bold shrink-0 mt-0.5">
+                <li key={i} className="flex items-start gap-3 text-[#4D4C4C] text-[14px] md:text-[16px]">
+                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#FFF0E5] text-[#FF7E29] text-xs font-bold shrink-0 mt-0.5 sm:mt-0">
                     {i + 1}
                   </span>
                   {g}
@@ -633,7 +631,7 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
 
       {/* UX Strategy */}
       {o.uxStrategy && (
-        <div className="flex flex-col md:flex-row gap-12 justify-between">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-between">
           <p className="text-[#ff7e29] font-[600] text-sm tracking-wider uppercase shrink-0">
             UX STRATEGY
           </p>
@@ -657,7 +655,7 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
           <p className="text-[#ff7e29] font-[600] text-sm tracking-wider uppercase mb-8">
             MORE SCREENS
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {o.gallery.map((img, i) => (
               <div
                 key={i}
@@ -677,7 +675,7 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
 
       {/* Challenges */}
       {o.challenges && (
-        <div className="flex flex-col md:flex-row gap-12 justify-between">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-between">
           <p className="text-[#ff7e29] font-[600] text-sm tracking-wider uppercase shrink-0">
             CHALLENGES
           </p>
@@ -689,14 +687,14 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
 
       {/* Outcome */}
       {o.outcome && (
-        <div className="flex flex-col md:flex-row gap-12 justify-between">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-between">
           <p className="text-[#ff7e29] font-[600] text-sm tracking-wider uppercase shrink-0">
             OUTCOME
           </p>
           <div className="max-w-3xl w-full">
             <ul className="space-y-3 mb-8">
               {o.outcome.points.map((pt, i) => (
-                <li key={i} className="flex items-start gap-3 text-[#4D4C4C] text-[16px]">
+                <li key={i} className="flex items-start gap-3 text-[#4D4C4C] text-[14px] md:text-[16px]">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#FF7E29] shrink-0" />
                   {pt}
                 </li>
@@ -717,11 +715,11 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
 function ProjectShowcase({ project }: { project: (typeof projects)[0] }) {
   if (project.showcaseType === "featured") {
     return (
-      <div className="flex mt-1 justify-center max-w-[75rem] mx-auto">
+      <div className="flex mt-1 justify-center max-w-[75rem] mx-auto px-4">
         <div className="relative">
           <div className="space-y-6">
             {/* Image Container */}
-            <div className="p-8 flex items-center justify-center">
+            <div className="p-4 md:p-8 flex items-center justify-center">
               <img
                 src={project.image || "/placeholder.svg"}
                 alt={`${project.title} project mockup`}
@@ -736,7 +734,7 @@ function ProjectShowcase({ project }: { project: (typeof projects)[0] }) {
 
   // Standard showcase layout
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto px-4">
       <div className="bg-white rounded-2xl p-8 shadow-lg">
         <img
           src={project.image || "/placeholder.svg"}
@@ -838,21 +836,21 @@ export default async function ProjectPage({
   };
 
   return (
-    <div className="min-h-screen max-w-[75rem] mx-auto mt-20 py-12">
+    <div className="min-h-screen max-w-[75rem] mx-auto mt-16 px-4 py-10 md:mt-20 md:py-12">
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Header */}
       <div className="mb-4">
         <Link
           href="/"
-          className="text-orange-500 hover:text-orange-600 flex items-center gap-2 text-sm font-medium mb-8">
-          <button className="bg-[#FFF9F5] p-3 px-8 rounded-[2rem]">
+          className="text-orange-500 hover:text-orange-600 flex items-center gap-2 text-sm font-medium mb-6 md:mb-8">
+          <button className="bg-[#FFF9F5] p-2 px-5 md:px-8 rounded-[2rem] text-sm">
             Go back
           </button>
         </Link>
 
-        <div className="max-w-4xl">
-          <h1 className="text-3xl sm:text-4xl md:text-[40px] font-[600] text-gray-900 mb-4">
+        <div className="max-w-4xl px-0">
+          <h1 className="text-2xl sm:text-3xl md:text-[40px] font-[600] text-gray-900 mb-4 leading-tight">
             {project.title}
           </h1>
           <p className="text-[#4D4C4C] font-[400] text-[14px]">
@@ -863,7 +861,7 @@ export default async function ProjectPage({
               href={project.overview.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-5 bg-[#FF7E29] hover:bg-[#FF6602] text-white font-medium text-sm py-3 px-7 rounded-full transition-colors duration-200">
+              className="inline-flex items-center gap-2 mt-5 bg-[#FF7E29] hover:bg-[#FF6602] text-white font-medium text-sm py-3 px-5 md:px-7 rounded-full transition-colors duration-200">
               View Live Site
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
