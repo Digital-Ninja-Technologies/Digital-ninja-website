@@ -168,6 +168,95 @@ const projects = [
     },
   },
   {
+    id: "ourchatapp",
+    title: "OurChatApp",
+    description: "Brand Identity · Motion Design · Product Branding",
+    image: "/ourchatapp-4.png",
+    showcaseType: "standard",
+    overview: {
+      title: "A complete brand identity and motion system for OurChatApp — where conversations become transactions.",
+      description:
+        "OurChatApp is a Lagos-built super-app that turns chat into commerce: discover, order, pay, and track — all inside the conversation. Digital Ninja Technologies designed the complete brand identity system: the three-bar mark, colour palette (Spectrum, Ink, Mist), typography (Outfit + Plus Jakarta Sans), iconography, voice and tone guidelines, and a full motion design sheet. The settled bar is always last.",
+      features: {
+        mockupImage1: "/ourchatapp-4.png",
+        mockupImage2: "/ourchatapp-5.png",
+      },
+      liveUrl: "",
+      motionUrl: "/ourchatapp-motion.html",
+      role: "Brand Identity & Motion Designer",
+      responsibilities: [
+        "Brand Positioning & Strategy",
+        "Logo Mark & Wordmark Design",
+        "Colour System (Spectrum, Ink, Mist + extended palette)",
+        "Typography System (Outfit Semibold + Plus Jakarta Sans)",
+        "Iconography System (24px grid, 2px stroke)",
+        "Motion Design Sheet",
+        "Voice & Tone Guidelines",
+        "Interface Brand Guidelines",
+        "Dark Mode Specifications",
+        "Brand Documentation",
+      ],
+      problem: {
+        intro: "OurChatApp needed a brand that solved three simultaneous challenges:",
+        points: [
+          { label: "African without being ethnic", detail: "The brand had to feel made here — Lagos-rooted, modern, and confident — without leaning on African motif patterns or clichés. Plain, direct, premium." },
+          { label: "Chat and payment in one mark", detail: "The three-bar logo doubles as both a hamburger menu metaphor and a payment status indicator. The settled bar — the short spectrum bar, always last — marks a completed transaction. The mark carries both identities." },
+          { label: "Spectrum as moment, not surface", detail: "The gradient is used for exactly one action per screen — Buy, Pay, or Create. Never as a background, never decorative. This rule makes the spectrum feel significant every time it appears." },
+          { label: "Premium on a ₦40,000 phone", detail: "The product runs on mid-range Android devices. Every decision — colour contrast, type scale, icon weight — had to feel premium without requiring high-end hardware to render correctly." },
+        ],
+        summary: "The brief demanded a brand system rigorous enough to govern a product team, with rules specific enough that no decision could be made by default.",
+      },
+      goals: [
+        "Design a mark that carries both chat and payment meaning",
+        "Build a colour system with strict usage rules (Spectrum = one action per screen)",
+        "Define a typography scale for chat, commerce, and status contexts",
+        "Create an iconography system on a 24px grid, 2px stroke",
+        "Produce a motion design sheet covering all animated states",
+        "Document voice and tone for Nigerian English — plain, amount-first, no jargon",
+        "Specify dark mode and interface brand rules for the product team",
+      ],
+      uxStrategy: [
+        {
+          step: "01",
+          title: "The bars carry state",
+          desc: "The three-bar mark is not just a logo — it is a live UI element. Bars pulse during typing and loading. The third bar extends to full width when payment is complete (Paid). It contracts to a dot when pending. Empty state shows all three bars at 12% ink. Nothing else in the interface may use this bar shape.",
+        },
+        {
+          step: "02",
+          title: "Spectrum is earned",
+          desc: "The gradient appears on exactly one element per screen: the primary action. Buy now. Pay. Create. It is never used as a background, never applied to more than one element, never on text. This restraint makes the spectrum feel like a signal — something happening, something worth doing.",
+        },
+        {
+          step: "03",
+          title: "Money has its own rules",
+          desc: "Currency amounts always use Outfit with Plus Jakarta Sans as the fallback for the Naira sign. Kobo appears at 60% size, dimmed. No colour on amounts — status carries the colour, not the number. This separation keeps financial information calm and scannable at a glance.",
+        },
+      ],
+      challenges:
+        "The hardest constraint was the Spectrum budget: capped at roughly 4% of any screen, one element per view. Every layout decision had to account for where the spectrum would land — because once it was placed, nothing else could compete with it.",
+      outcome: {
+        summary: "OurChatApp launched with a brand system rigorous enough to govern a full product team — with rules specific enough to eliminate guesswork at every design decision.",
+        points: [
+          "Three-bar mark functioning as both brand logo and live UI status element",
+          "Colour system with strict rules: Spectrum 4% max, one element per screen",
+          "Typography scale covering display, heading, subhead, body, caption, and overline",
+          "Iconography system on 24px grid, 2px stroke, active/inactive states defined",
+          "Full motion design sheet covering all animated brand states",
+          "Voice and tone guide in plain Nigerian English — amount first, no jargon",
+          "Dark mode specification with canvas, raised surface, and border colours",
+          "Interface brand guidelines ready for immediate product team handoff",
+        ],
+      },
+      gallery: [
+        "/ourchatapp-1.png",
+        "/ourchatapp-2.png",
+        "/ourchatapp-3.png",
+        "/ourchatapp-4.png",
+        "/ourchatapp-5.png",
+      ],
+    },
+  },
+  {
     id: "ona",
     title: "Ọ̀nà",
     description: "Brand Identity · Graphic Design · Motion Design · Travel",
@@ -530,6 +619,18 @@ function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
               Visit Live Project →
             </a>
           )}
+          {(o as any).motionUrl && (
+            <a
+              href={(o as any).motionUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-3 bg-[#12121A] hover:bg-[#1E1E2E] text-white font-medium text-sm py-2.5 px-5 rounded-full border border-white/10 transition-colors duration-200 w-fit">
+              View Motion
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </a>
+          )}
         </div>
       </div>
 
@@ -867,6 +968,18 @@ export default async function ProjectPage({
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                 <polyline points="15 3 21 3 21 9"/>
                 <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          )}
+          {(project.overview as any).motionUrl && (
+            <a
+              href={(project.overview as any).motionUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-5 ml-3 bg-[#12121A] hover:bg-[#1E1E2E] text-white font-medium text-sm py-3 px-5 md:px-7 rounded-full border border-white/10 transition-colors duration-200">
+              View Motion
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"/>
               </svg>
             </a>
           )}

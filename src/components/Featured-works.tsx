@@ -30,6 +30,17 @@ const projects = [
     accent: "#3A4A7A",
   },
   {
+    id: "ourchatapp",
+    title: "OurChatApp",
+    description: "Brand Identity · Motion Design · Product Branding",
+    image: "/ourchatapp-4.png",
+    liveUrl: "",
+    tags: ["Brand Identity", "Motion Design", "Product"],
+    year: "2026",
+    bg: "#12121A",
+    accent: "#F7B338",
+  },
+  {
     id: "ona",
     title: "Ọ̀nà",
     description: "Brand Identity · Graphic Design · Motion Design · Travel",

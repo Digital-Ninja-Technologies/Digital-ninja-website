@@ -35,6 +35,19 @@ const projects = [
     accent: "#3A4A7A",
   },
   {
+    id: "ourchatapp",
+    title: "OurChatApp",
+    category: "Brand Identity & Motion Design",
+    tags: ["Brand Identity", "Motion Design", "Product Branding", "App"],
+    year: "2026",
+    description:
+      "Complete brand identity and motion design system for OurChatApp — a Lagos-built chat and payment app where conversations become transactions. We designed the full brand system including mark, colour, typography, iconography, motion, and interface guidelines.",
+    image: "/ourchatapp-4.png",
+    liveUrl: "",
+    bg: "#12121A",
+    accent: "#F7B338",
+  },
+  {
     id: "ona",
     title: "Ọ̀nà",
     category: "Brand Identity & Motion Design",
