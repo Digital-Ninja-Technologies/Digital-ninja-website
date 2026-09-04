@@ -30,6 +30,17 @@ const projects = [
     accent: "#3A4A7A",
   },
   {
+    id: "prayerguide",
+    title: "Prayer Guide",
+    description: "UI/UX Design · Mobile App · iOS & Android",
+    image: "/prayerguide-thumb.png",
+    liveUrl: "https://prayerguide.thedigitalninjatech.com",
+    tags: ["UI/UX Design", "Mobile App", "iOS", "Android"],
+    year: "2026",
+    bg: "#070C0B",
+    accent: "#5BC2B3",
+  },
+  {
     id: "ourchatapp",
     title: "OurChatApp",
     description: "Brand Identity · Motion Design · Product Branding",

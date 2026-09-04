@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/works`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/works/moducode`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/works/korlodworks`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/works/prayerguide`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/works/ourchatapp`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/works/ona`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/works/thazlo`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },

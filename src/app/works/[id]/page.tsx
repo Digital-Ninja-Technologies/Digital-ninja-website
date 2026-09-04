@@ -168,6 +168,90 @@ const projects = [
     },
   },
   {
+    id: "prayerguide",
+    title: "Prayer Guide",
+    description: "UI/UX Design · Mobile App · iOS & Android",
+    image: "/prayerguide-thumb.png",
+    showcaseType: "standard",
+    overview: {
+      title: "A prayer app that measures presence, not streaks.",
+      description:
+        "Prayer Guide is a free daily-prayer companion for iOS and Android — scripture, guided prayers, a focus timer, an encrypted journal, and people to pray with. Digital Ninja Technologies designed the product end to end and shipped it to both stores. Every feature is free. Nothing sits behind a paywall at the moment someone needs it.",
+      features: {
+        mockupImage1: "/prayerguide-thumb.png",
+        mockupImage2: "/prayerguide-thumb.png",
+      },
+      liveUrl: "https://prayerguide.thedigitalninjatech.com",
+      role: "UI/UX Designer · Product Designer",
+      responsibilities: [
+        "Product Strategy & Information Architecture",
+        "UI/UX Design (iOS & Android)",
+        "Design System (Spectral + Manrope)",
+        "Daily Verse & Guided Prayer Screen",
+        "Focus Timer Interface",
+        "Encrypted Journal Design",
+        "Prayer Companion & Community Feature",
+        "App Icon & Splash Screen",
+        "Google Play & App Store Submission",
+      ],
+      problem: {
+        intro: "Existing prayer and devotional apps had two fundamental problems:",
+        points: [
+          { label: "Performance over presence", detail: "Habit apps borrow mechanics from fitness tracking — streaks, badges, escalating notifications when you slip. Applied to prayer, those mechanics turn a spiritual practice into a performance, and a missed day into guilt." },
+          { label: "Privacy where it matters most", detail: "People write their most vulnerable thoughts into a journal. Most apps store that text in plain sight, unencrypted, on servers they do not control. The most personal content in a person's life deserves better." },
+          { label: "Paywalls at the worst moments", detail: "Features that matter most to someone in a hard moment — guided prayers, journalling, a companion to pray with — were locked behind subscriptions in existing apps." },
+          { label: "Speed where slowness belongs", detail: "Most apps optimise for engagement and retention metrics. Prayer Guide needed to optimise for the opposite: a slower, quieter interface that did not compete for attention." },
+        ],
+        summary: "The design brief was to build a prayer companion that felt like the opposite of every productivity app — no red badges, no streaks, no guilt, and no paywall.",
+      },
+      goals: [
+        "Design an interface that slows the user down rather than speeding them up",
+        "One verse and one guided prayer per day — nothing to scroll past",
+        "A focus timer that counts breath rather than reps",
+        "No notification badge for a day missed",
+        "Journal encryption on-device before sync",
+        "Prayer companion feature for sharing requests with a chosen person",
+        "Every feature free — no paywall at any moment of need",
+        "Ship to both App Store and Google Play",
+      ],
+      uxStrategy: [
+        {
+          step: "01",
+          title: "One thing at a time",
+          desc: "Each screen in Prayer Guide does exactly one thing. The daily screen shows one verse and one guided prayer. There is no feed, no explore tab, no algorithm. The information architecture was designed to reduce decisions, not increase them.",
+        },
+        {
+          step: "02",
+          title: "Presence over performance",
+          desc: "The app has no streak counter. Missing a day produces no notification, no broken chain, no guilt prompt. The timer counts presence — time spent, not reps completed. The journal prompts reflection without grading it.",
+        },
+        {
+          step: "03",
+          title: "Privacy by design",
+          desc: "Journal entries are encrypted on the device before they sync. The encryption key never leaves the device. Prayer requests are readable only so they can be shared with a chosen companion — they are not stored in plaintext on a server.",
+        },
+      ],
+      challenges:
+        "The hardest design challenge was restraint. Every feature added to a prayer app risks making it feel like every other app. The recurring design question was: does this addition serve the person praying, or does it serve retention metrics? Most ideas were cut.",
+      outcome: {
+        summary: "Prayer Guide shipped to both stores as a complete, free product — with every intended feature included and no paywall at any point in the experience.",
+        points: [
+          "Shipped to iOS App Store and Google Play",
+          "Daily verse, guided prayer, and focus timer delivered in one quiet screen",
+          "On-device journal encryption with no plaintext server storage",
+          "Prayer companion feature for sharing requests with a chosen person",
+          "No streak mechanic, no guilt loop, no escalating notifications",
+          "Spectral serif type system creating a calm, unhurried reading experience",
+          "Deep forest palette (#070C0B) with teal (#5BC2B3) as the only accent",
+          "Every feature free at every moment of need",
+        ],
+      },
+      gallery: [
+        "/prayerguide-thumb.png",
+      ],
+    },
+  },
+  {
     id: "ourchatapp",
     title: "OurChatApp",
     description: "Brand Identity · Motion Design · Product Branding",
