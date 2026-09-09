@@ -37,8 +37,8 @@ const projects = [
   {
     id: "prayerguide",
     title: "Prayer Guide",
-    category: "UI/UX Design · Mobile App",
-    tags: ["UI/UX Design", "Mobile App", "iOS", "Android", "Product Design"],
+    category: "UI/UX Design · Flutter Development",
+    tags: ["UI/UX Design", "Flutter", "Mobile App", "iOS", "Android"],
     year: "2026",
     description:
       "End-to-end UI/UX design and product design for Prayer Guide — a free daily-prayer companion app for iOS and Android. Scripture, guided prayers, a focus timer, an encrypted journal, and a prayer companion feature. Designed to measure presence, not streaks.",

@@ -170,7 +170,7 @@ const projects = [
   {
     id: "prayerguide",
     title: "Prayer Guide",
-    description: "UI/UX Design · Mobile App · iOS & Android",
+    description: "UI/UX Design · Mobile Development · Flutter · iOS & Android",
     image: "/prayerguide-thumb.png",
     showcaseType: "standard",
     overview: {
@@ -182,10 +182,11 @@ const projects = [
         mockupImage2: "/prayerguide-2.png",
       },
       liveUrl: "https://prayerguide.thedigitalninjatech.com",
-      role: "UI/UX Designer · Product Designer",
+      role: "UI/UX Designer & Mobile Developer (Flutter)",
       responsibilities: [
         "Product Strategy & Information Architecture",
         "UI/UX Design (iOS & Android)",
+        "Mobile Development (Flutter)",
         "Design System (Spectral + Manrope)",
         "Daily Verse & Guided Prayer Screen",
         "Focus Timer Interface",

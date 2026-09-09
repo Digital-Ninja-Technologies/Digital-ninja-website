@@ -32,7 +32,7 @@ const projects = [
   {
     id: "prayerguide",
     title: "Prayer Guide",
-    description: "UI/UX Design · Mobile App · iOS & Android",
+    description: "UI/UX Design · Flutter · iOS & Android",
     image: "/prayerguide-thumb.png",
     liveUrl: "https://prayerguide.thedigitalninjatech.com",
     tags: ["UI/UX Design", "Mobile App", "iOS", "Android"],
