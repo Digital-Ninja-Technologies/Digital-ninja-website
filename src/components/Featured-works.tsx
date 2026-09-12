@@ -249,7 +249,7 @@ function ProjectCard({
             <img
               src={(project as any).video}
               alt={`${project.title} animation`}
-              className="w-full h-auto object-cover rounded-2xl shadow-2xl"
+              className="w-full h-auto object-contain rounded-2xl shadow-2xl"
               onLoad={() => setImgLoaded(true)}
             />
           ) : (
