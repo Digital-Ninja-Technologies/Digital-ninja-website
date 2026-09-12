@@ -61,6 +61,19 @@ const projects = [
     accent: "#F7B338",
   },
   {
+    id: "ona-web",
+    title: "Ọ̀nà — Website",
+    category: "Web Design & Development",
+    tags: ["Web Design", "Web Development", "Landing Page", "Waitlist", "Travel"],
+    year: "2026",
+    description:
+      "Website design and development for Ọ̀nà — an all-in-one travel companion app. The site captures early-access sign-ups, communicates the product's six core features, and drives downloads on iOS and Android. Built on the brand identity we designed.",
+    image: "/ona-web-1.png",
+    liveUrl: "https://ona.thedigitalninjatech.com",
+    bg: "#1C3D2E",
+    accent: "#D4A847",
+  },
+  {
     id: "ona",
     title: "Ọ̀nà",
     category: "Brand Identity & Motion Design",

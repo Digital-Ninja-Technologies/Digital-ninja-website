@@ -348,6 +348,92 @@ const projects = [
     },
   },
   {
+    id: "ona-web",
+    title: "Ọ̀nà — Website",
+    description: "Web Design & Development · Travel App · Waitlist",
+    image: "/ona-web-1.png",
+    showcaseType: "standard",
+    overview: {
+      title: "A waitlist and product website for Ọ̀nà — the all-in-one travel companion app.",
+      description:
+        "Ọ̀nà is a travel companion app that plans your trip, connects you with local experts, and keeps you company the whole way there. Digital Ninja Technologies designed and developed the full marketing and waitlist website — built on the brand identity we created for the product. The site communicates the product's six core features, captures early-access emails, and drives downloads on iOS and Android.",
+      features: {
+        mockupImage1: "/ona-web-1.png",
+        mockupImage2: "/ona-web-3.png",
+      },
+      liveUrl: "https://ona.thedigitalninjatech.com",
+      role: "Web Designer & Developer",
+      responsibilities: [
+        "Website Design (UI/UX)",
+        "Frontend Development",
+        "Waitlist & Early Access Flow",
+        "App Store & Google Play CTA Integration",
+        "QR Code Download Flow",
+        "Feature Showcase Sections",
+        "Responsive Mobile Design",
+        "SEO Foundation & Metadata",
+        "Deployment & Launch",
+      ],
+      problem: {
+        intro: "Before launch, Ọ̀nà needed a website that could do three things at once:",
+        points: [
+          { label: "Capture interest before the app was live", detail: "The app was still in development. The site needed a waitlist flow that converted curious visitors into early-access subscribers — building momentum before anything was available to download." },
+          { label: "Explain a multi-feature product simply", detail: "Ọ̀nà does six distinct things: AI itinerary planning, verified local agents, offline access, in-app chat support, clear pricing, and privacy-first location. Each needed its own moment on the page without the site becoming overwhelming." },
+          { label: "Feel like the brand", detail: "The brand identity — deep green, sand, way gold, Space Grotesk typography, the route-line motif — had to translate faithfully to a web environment that worked on every screen size from a phone to a wide monitor." },
+          { label: "Drive downloads when ready", detail: "The download CTA needed to exist at every scroll depth: hero, features section, and footer — with App Store, Google Play, and QR code options to accommodate every type of user." },
+        ],
+        summary: "The site had to work as both a pre-launch conversion tool and a permanent product homepage, without either function compromising the other.",
+      },
+      goals: [
+        "Design a hero that communicates the product value proposition in one sentence",
+        "Build a waitlist flow that captures emails before app launch",
+        "Showcase all six product features with clarity and without overwhelm",
+        "Translate the Ọ̀nà brand identity faithfully to the web",
+        "Place download CTAs at every scroll depth with QR code options",
+        "Deliver a fully responsive experience from mobile to wide desktop",
+        "Ship with SEO foundations and structured metadata in place",
+      ],
+      uxStrategy: [
+        {
+          step: "01",
+          title: "Hero that answers in one line",
+          desc: "'Find your way. Then get lost in it.' The headline communicates the product's dual promise — smart navigation and spontaneous discovery — in seven words. Below it: a single email field and a waitlist CTA. No friction before the value is clear.",
+        },
+        {
+          step: "02",
+          title: "Six features, each with room to breathe",
+          desc: "Each of the six features — AI planning, local agents, offline access, pricing clarity, local knowledge, and privacy — gets its own section with a heading, a one-line explanation, and a body that expands only when needed. No feature competes with another for space.",
+        },
+        {
+          step: "03",
+          title: "Download at every depth",
+          desc: "App Store and Google Play buttons appear in the hero, in the download modal triggered by the nav CTA, and in the footer section. The modal also includes QR codes for both stores so visitors on desktop can instantly scan and install on their phone.",
+        },
+      ],
+      challenges:
+        "The visual challenge was honouring the Ọ̀nà route-line motif — the brand's decorative element — at web scale. The thin, flowing curves that work beautifully in print and app needed to adapt to responsive breakpoints without becoming decorative clutter on smaller screens. The solution was to use it sparingly as a background texture in the hero and eliminate it below.",
+      outcome: {
+        summary: "Ọ̀nà launched with a website that works as a conversion tool before the app is widely available, and as a permanent product homepage as the user base grows.",
+        points: [
+          "Hero converts visitors to waitlist with a single email field above the fold",
+          "Six product features communicated clearly without scroll fatigue",
+          "Download flow covers App Store, Google Play, and QR code in one modal",
+          "Deep green and sand palette faithfully translated from brand identity to web",
+          "Fully responsive from 320px mobile to 1920px wide desktop",
+          "SEO metadata, Open Graph, and structured data configured at launch",
+          "Live at ona.thedigitalninjatech.com",
+        ],
+      },
+      gallery: [
+        "/ona-web-1.png",
+        "/ona-web-2.png",
+        "/ona-web-3.png",
+        "/ona-web-4.png",
+        "/ona-web-5.png",
+      ],
+    },
+  },
+  {
     id: "ona",
     title: "Ọ̀nà",
     description: "Brand Identity · Graphic Design · Motion Design · Travel",

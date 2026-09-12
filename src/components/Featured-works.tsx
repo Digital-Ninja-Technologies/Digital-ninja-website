@@ -52,6 +52,17 @@ const projects = [
     accent: "#F7B338",
   },
   {
+    id: "ona-web",
+    title: "Ọ̀nà — Website",
+    description: "Web Design & Development · Travel App · Waitlist",
+    image: "/ona-web-1.png",
+    liveUrl: "https://ona.thedigitalninjatech.com",
+    tags: ["Web Design", "Web Development", "Landing Page"],
+    year: "2026",
+    bg: "#1C3D2E",
+    accent: "#D4A847",
+  },
+  {
     id: "ona",
     title: "Ọ̀nà",
     description: "Brand Identity · Graphic Design · Motion Design · Travel",
