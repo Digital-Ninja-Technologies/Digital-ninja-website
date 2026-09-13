@@ -7,7 +7,9 @@ const metrics = [
   { value: 10, suffix: "+", label: "Websites" },
   { value: 6, suffix: "+", label: "Product Designs" },
   { value: 2, suffix: "+", label: "Logo & Branding" },
-  { value: 1, suffix: "+", label: "Animation Project" },
+  { value: 3, suffix: "+", label: "Animation Projects" },
+  { value: 2, suffix: "+", label: "Mobile Apps" },
+  { value: 2, suffix: "+", label: "Consultation Meetings" },
 ];
 
 function CountUp({ to, suffix }: { to: number; suffix: string }) {
