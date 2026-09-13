@@ -17,18 +17,18 @@ const projects = [
     year: "2026",
     bg: "#F0FDF4",
     accent: "#16A34A",
-  },
+  },,
   {
-    id: "korlodworks",
-    title: "Korlod Works",
-    description: "Web Design · Brand Identity · Agency Website",
-    image: "/korlod-1.jpg",
-    liveUrl: "https://korlodworks.com/",
-    tags: ["Web Design", "Branding", "Agency"],
-    year: "2025",
-    bg: "#E8ECF5",
-    accent: "#3A4A7A",
-  },
+    id: "thazlo",
+    title: "Thazlo",
+    description: "Web Development · Design Support · Consumer App · Home Services",
+    image: "/thazlo-1.png",
+    liveUrl: "https://www.thazloapp.com",
+    tags: ["Web Development", "Design Support", "Consumer App"],
+    year: "2026",
+    bg: "#FFF7ED",
+    accent: "#FF6602",
+  },,
   {
     id: "prayerguide",
     title: "Prayer Guide",
@@ -39,7 +39,18 @@ const projects = [
     year: "2026",
     bg: "#070C0B",
     accent: "#5BC2B3",
-  },
+  },,
+  {
+    id: "brandface",
+    title: "Brandface",
+    description: "Web Design · Lead Conversion · Marketing Website",
+    image: "/brandface-1.png",
+    liveUrl: "https://brandface-eta.vercel.app",
+    tags: ["Web Design", "Landing Page", "Conversion"],
+    year: "2026",
+    bg: "#111110",
+    accent: "#FAFAF0",
+  },,
   {
     id: "ourchatapp",
     title: "OurChatApp",
@@ -50,7 +61,7 @@ const projects = [
     year: "2026",
     bg: "#12121A",
     accent: "#F7B338",
-  },
+  },,
   {
     id: "ona-web",
     title: "Ọ̀nà — Website",
@@ -61,7 +72,7 @@ const projects = [
     year: "2026",
     bg: "#1C3D2E",
     accent: "#D4A847",
-  },
+  },,
   {
     id: "ona",
     title: "Ọ̀nà",
@@ -73,29 +84,7 @@ const projects = [
     year: "2026",
     bg: "#1C3D2E",
     accent: "#D4A847",
-  },
-  {
-    id: "thazlo",
-    title: "Thazlo",
-    description: "Web Development · Design Support · Consumer App · Home Services",
-    image: "/thazlo-1.png",
-    liveUrl: "https://www.thazloapp.com",
-    tags: ["Web Development", "Design Support", "Consumer App"],
-    year: "2026",
-    bg: "#FFF7ED",
-    accent: "#FF6602",
-  },
-  {
-    id: "brandface",
-    title: "Brandface",
-    description: "Web Design · Lead Conversion · Marketing Website",
-    image: "/brandface-1.png",
-    liveUrl: "https://brandface-eta.vercel.app",
-    tags: ["Web Design", "Landing Page", "Conversion"],
-    year: "2026",
-    bg: "#111110",
-    accent: "#FAFAF0",
-  },
+  },,
   {
     id: "veritas",
     title: "Veritas",
@@ -108,7 +97,6 @@ const projects = [
     accent: "#EAB308",
   },
 ];
-
 interface FeaturedWorksProps {
   title?: string;
   showSeeAllButton?: boolean;
@@ -182,8 +170,8 @@ export default function FeaturedWorks({
 
         {/* Project cards */}
         <div className="space-y-8">
-          {projects.slice(0, 3).map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} inView={inView} />
+          {projects.slice(0, 4).filter(Boolean).map((project, i) => (
+            <ProjectCard key={project!.id} project={project!} index={i} inView={inView} />
           ))}
         </div>
 
@@ -208,7 +196,7 @@ function ProjectCard({
   index,
   inView,
 }: {
-  project: (typeof projects)[0];
+  project: NonNullable<(typeof projects)[0]>;
   index: number;
   inView: boolean;
 }) {
