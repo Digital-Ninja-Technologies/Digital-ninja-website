@@ -17,7 +17,7 @@ const projects = [
     year: "2026",
     bg: "#F0FDF4",
     accent: "#16A34A",
-  },,
+  },
   {
     id: "thazlo",
     title: "Thazlo",
@@ -28,7 +28,7 @@ const projects = [
     year: "2026",
     bg: "#FFF7ED",
     accent: "#FF6602",
-  },,
+  },
   {
     id: "prayerguide",
     title: "Prayer Guide",
@@ -39,7 +39,7 @@ const projects = [
     year: "2026",
     bg: "#070C0B",
     accent: "#5BC2B3",
-  },,
+  },
   {
     id: "brandface",
     title: "Brandface",
@@ -50,18 +50,7 @@ const projects = [
     year: "2026",
     bg: "#111110",
     accent: "#FAFAF0",
-  },,
-  {
-    id: "ourchatapp",
-    title: "OurChatApp",
-    description: "Brand Identity · Motion Design · Product Branding",
-    image: "/ourchatapp-4.png",
-    liveUrl: "",
-    tags: ["Brand Identity", "Motion Design", "Product"],
-    year: "2026",
-    bg: "#12121A",
-    accent: "#F7B338",
-  },,
+  },
   {
     id: "ona-web",
     title: "Ọ̀nà — Website",
@@ -72,7 +61,18 @@ const projects = [
     year: "2026",
     bg: "#1C3D2E",
     accent: "#D4A847",
-  },,
+  },
+  {
+    id: "ourchatapp",
+    title: "OurChatApp",
+    description: "Brand Identity · Motion Design · Product Branding",
+    image: "/ourchatapp-4.png",
+    liveUrl: "",
+    tags: ["Brand Identity", "Motion Design", "Product"],
+    year: "2026",
+    bg: "#12121A",
+    accent: "#F7B338",
+  },
   {
     id: "ona",
     title: "Ọ̀nà",
@@ -84,7 +84,7 @@ const projects = [
     year: "2026",
     bg: "#1C3D2E",
     accent: "#D4A847",
-  },,
+  },
   {
     id: "veritas",
     title: "Veritas",
@@ -170,7 +170,7 @@ export default function FeaturedWorks({
 
         {/* Project cards */}
         <div className="space-y-8">
-          {projects.slice(0, 4).filter(Boolean).map((project, i) => (
+          {projects.slice(0, 6).filter(Boolean).map((project, i) => (
             <ProjectCard key={project!.id} project={project!} index={i} inView={inView} />
           ))}
         </div>
