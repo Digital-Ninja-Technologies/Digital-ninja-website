@@ -9,7 +9,7 @@ const metrics = [
   { value: 2, suffix: "+", label: "Logo & Branding" },
   { value: 3, suffix: "+", label: "Animation Projects" },
   { value: 2, suffix: "+", label: "Mobile Apps" },
-  { value: 2, suffix: "+", label: "Consultation Meetings" },
+  { value: 20, suffix: "+", label: "Consultation Meetings" },
 ];
 
 function CountUp({ to, suffix }: { to: number; suffix: string }) {
@@ -64,7 +64,7 @@ export default function MetricsBanner() {
         </motion.p>
 
         {/* Metrics row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-[#F2F2F2]">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-0 md:divide-x md:divide-[#F2F2F2]">
           {metrics.map((m, i) => (
             <motion.div
               key={i}
@@ -73,7 +73,7 @@ export default function MetricsBanner() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="flex flex-col items-center text-center py-2 md:px-8"
             >
-              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2E2D2D] mb-1 tabular-nums">
+              <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2E2D2D] mb-1 tabular-nums">
                 <CountUp to={m.value} suffix={m.suffix} />
               </p>
               <p className="text-[#999797] text-sm font-medium">{m.label}</p>
