@@ -84,7 +84,7 @@ function ApproachDesktop() {
   return (
     <div ref={containerRef} style={{ height: totalHeight }} className="relative hidden md:block">
       {/* Sticky inner */}
-      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden bg-[#FFF0EB] px-4">
+      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden bg-[#FFF0EB] px-4 pt-[60px]">
         <div className="max-w-6xl mx-auto w-full">
 
           {/* Header */}
