@@ -130,7 +130,9 @@ const stats = [
   { value: "10+", label: "Websites Built" },
   { value: "6+", label: "Product Designs" },
   { value: "2+", label: "Logo & Branding" },
-  { value: "1+", label: "Animation Projects" },
+  { value: "3+", label: "Animation Projects" },
+  { value: "2+", label: "Mobile Apps" },
+  { value: "20+", label: "Consultations" },
 ];
 
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
@@ -330,7 +332,7 @@ export default function WorksPage() {
           </div>
 
           {/* Stats strip */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-16 pt-12 border-t border-[#F2F2F2]">
+          <div className="grid grid-cols-3 lg:grid-cols-6 gap-4 mt-16 pt-12 border-t border-[#F2F2F2]">
             {stats.map((s, i) => (
               <motion.div
                 key={i}

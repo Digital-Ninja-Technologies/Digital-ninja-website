@@ -192,7 +192,7 @@ export default function TestimonialsClient() {
       {/* Stats */}
       <section className="py-16 px-4 border-t border-[#F2F2F2]">
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[["10+","Projects Delivered"],["100%","On-time Delivery"],["4+","Countries Served"],["5★","Average Rating"]].map(([v,l],i) => (
+          {[["10+","Projects Delivered"],["100%","On-time Delivery"],["20+","Consultations"],["5★","Average Rating"]].map(([v,l],i) => (
             <motion.div
               key={i}
               initial={{ opacity:0, y:16 }}
