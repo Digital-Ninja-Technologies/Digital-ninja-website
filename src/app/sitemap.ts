@@ -46,5 +46,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/blog/what-is-brand-identity-and-why-your-business-needs-one`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blog/graphic-design-for-business-what-you-actually-need`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blog/what-is-motion-graphics-and-why-your-brand-needs-it`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/blog/why-every-landing-page-needs-seo-optimization`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
   ];
 }
