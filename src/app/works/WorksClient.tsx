@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import FreeOffer from "@/components/FreeOffer";
 import { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
@@ -279,11 +279,104 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
   );
 }
 
+const FILTERS = [
+  { label: "All Work", value: "all" },
+  { label: "Web Design", value: "web-design" },
+  { label: "Web Development", value: "web-dev" },
+  { label: "Mobile App", value: "mobile" },
+  { label: "Brand Identity", value: "branding" },
+  { label: "Motion Design", value: "motion" },
+  { label: "UI/UX Design", value: "ux" },
+];
+
+const FILTER_MAP: Record<string, string[]> = {
+  "web-design":  ["Web Design", "Web Design & Development", "Web Design & Mobile App Development", "Landing Page", "Marketing Website"],
+  "web-dev":     ["Web Development", "Web Design & Development", "Web Design & Mobile App Development"],
+  "mobile":      ["Mobile App", "Flutter", "iOS", "Android", "UI/UX Design · Flutter Development", "Web Design & Mobile App Development"],
+  "branding":    ["Brand Identity", "Brand Identity & Motion Design", "Logo & Branding"],
+  "motion":      ["Motion Design", "Brand Identity & Motion Design", "Animation"],
+  "ux":          ["UX UI Design", "UI/UX Design", "UI/UX Design · Flutter Development", "Product Design"],
+};
+
+function matchesFilter(project: typeof projects[0], filter: string): boolean {
+  if (filter === "all") return true;
+  const keywords = FILTER_MAP[filter] || [];
+  const haystack = [project.category, ...project.tags].join(" ");
+  return keywords.some((kw) => haystack.toLowerCase().includes(kw.toLowerCase()));
+}
+
+function FilterBar() {
+  const [active, setActive] = useFilter();
+  return (
+    <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide pb-0.5">
+      {FILTERS.map((f) => (
+        <motion.button
+          key={f.value}
+          onClick={() => setActive(f.value)}
+          whileTap={{ scale: 0.95 }}
+          className={`shrink-0 text-sm font-medium px-4 py-2 rounded-full transition-all duration-200 ${
+            active === f.value
+              ? "bg-[#FF6602] text-white shadow-md shadow-orange-200/60"
+              : "bg-[#F5F5F3] text-[#6B6A6A] hover:bg-[#FFE0CC] hover:text-[#FF6602]"
+          }`}
+        >
+          {f.label}
+          {active === f.value && f.value !== "all" && (
+            <span className="ml-1.5 opacity-80">
+              ({projects.filter((p) => matchesFilter(p, f.value)).length})
+            </span>
+          )}
+        </motion.button>
+      ))}
+    </div>
+  );
+}
+
+// Shared filter state via context
+import { createContext, useContext } from "react";
+const FilterContext = createContext<[string, (v: string) => void]>(["all", () => {}]);
+function useFilter() { return useContext(FilterContext); }
+
+function FilteredProjects() {
+  const [active] = useFilter();
+  const filtered = projects.filter((p) => matchesFilter(p, active));
+
+  return (
+    <div>
+      {filtered.length === 0 ? (
+        <div className="text-center py-24">
+          <p className="text-[#999797] text-lg">No projects in this category yet.</p>
+          <p className="text-[#C4C2C0] text-sm mt-2">Check back soon — we are always shipping.</p>
+        </div>
+      ) : (
+        <motion.div layout className="space-y-10">
+          <AnimatePresence mode="popLayout">
+            {filtered.map((project, i) => (
+              <motion.div
+                key={project.id}
+                layout
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+              >
+                <ProjectCard project={project} index={i} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      )}
+    </div>
+  );
+}
+
 export default function WorksPage() {
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
+  const [activeFilter, setActiveFilter] = useState("all");
 
   return (
+    <FilterContext.Provider value={[activeFilter, setActiveFilter]}>
     <div className="min-h-screen bg-white">
 
       {/* ── Hero ── */}
@@ -349,12 +442,17 @@ export default function WorksPage() {
         </div>
       </section>
 
+      {/* ── Filter bar ── */}
+      <section className="sticky top-[72px] z-30 bg-white/90 backdrop-blur-md border-b border-[#F2F2F2] px-4 py-3">
+        <div className="max-w-6xl mx-auto">
+          <FilterBar />
+        </div>
+      </section>
+
       {/* ── Projects ── */}
       <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto space-y-10">
-          {projects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
-          ))}
+        <div className="max-w-6xl mx-auto">
+          <FilteredProjects />
         </div>
       </section>
 
@@ -397,5 +495,6 @@ export default function WorksPage() {
       </section>
       <FreeOffer />
     </div>
+    </FilterContext.Provider>
   );
 }
