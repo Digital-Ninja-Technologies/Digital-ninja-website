@@ -96,7 +96,7 @@ const projects = [
     description:
       "Website design and development for Thazlo, a 24/7 gas refill and laundry delivery app serving households across Nigeria. Includes full dark mode and light mode — both designed from the ground up.",
     image: "/thazlo-1.png",
-    liveUrl: "https://www.thazloapp.com",
+    liveUrl: "https://thazlo-ashy.vercel.app/",
     bg: "#FFF7ED",
     accent: "#FF6602",
   },

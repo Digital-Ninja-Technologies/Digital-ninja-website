@@ -23,7 +23,7 @@ const projects = [
     title: "Thazlo",
     description: "Web Development · Design Support · Consumer App · Home Services",
     image: "/thazlo-1.png",
-    liveUrl: "https://www.thazloapp.com",
+    liveUrl: "https://thazlo-ashy.vercel.app/",
     tags: ["Web Development", "Design Support", "Consumer App"],
     year: "2026",
     bg: "#FFF7ED",

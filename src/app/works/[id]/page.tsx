@@ -533,7 +533,7 @@ const projects = [
         mockupImage1: "/thazlo-1.png",
         mockupImage2: "/thazlo-2.png",
       },
-      liveUrl: "https://www.thazloapp.com",
+      liveUrl: "https://thazlo-ashy.vercel.app/",
       role: "Website Developer",
       responsibilities: [
         "Frontend Website Development",
