@@ -96,6 +96,17 @@ const projects = [
     bg: "#FEFCE8",
     accent: "#EAB308",
   },
+  {
+    id: "zerodepression",
+    title: "ZeroDepression",
+    description: "UX/UI Design · Full-Stack Development · Mental Health · Web App",
+    image: "/zerodepression-4.png",
+    liveUrl: "https://www.zerodepression.org",
+    tags: ["UX/UI Design", "Full-Stack", "Web App"],
+    year: "2026",
+    bg: "#F0F7FF",
+    accent: "#2563EB",
+  },
 ];
 interface FeaturedWorksProps {
   title?: string;

@@ -113,6 +113,19 @@ const projects = [
     accent: "#FAFAF0",
   },
   {
+    id: "zerodepression",
+    title: "ZeroDepression",
+    category: "UX/UI Design & Full-Stack Development",
+    tags: ["UX/UI Design", "Full-Stack Development", "Mental Health", "Web App"],
+    year: "2026",
+    description:
+      "End-to-end UX/UI design and full-stack development for ZeroDepression — a platform connecting people in emotional distress with volunteer counsellors through anonymous, real-time chat and voice calls.",
+    image: "/zerodepression-4.png",
+    liveUrl: "https://www.zerodepression.org",
+    bg: "#F0F7FF",
+    accent: "#2563EB",
+  },
+  {
     id: "veritas",
     category: "Web Design & Mobile App Development",
     tags: ["Fintech", "Escrow", "Mobile App", "Waitlist"],

@@ -766,6 +766,90 @@ const projects = [
       ],
     },
   },
+  {
+    id: "zerodepression",
+    title: "ZeroDepression",
+    description: "UX/UI Design · Full-Stack Development · Mental Health · Web App",
+    image: "/zerodepression-4.png",
+    showcaseType: "standard",
+    overview: {
+      title: "A platform that makes mental health support anonymous, accessible, and human.",
+      description:
+        "ZeroDepression connects people experiencing emotional distress with trained volunteer counsellors through anonymous real-time chat and voice calls — no sign-up required, no stigma, no barrier. Digital Ninja Technologies designed the full product end to end and built the frontend and backend: the visitor-facing chat interface, the counsellor inbox and session management dashboard, and the real-time communication layer that makes every conversation possible.",
+      features: {
+        mockupImage1: "/zerodepression-3.png",
+        mockupImage2: "/zerodepression-1.png",
+      },
+      liveUrl: "https://www.zerodepression.org",
+      role: "UX/UI Designer · Frontend & Backend Developer",
+      responsibilities: [
+        "Product Strategy & Information Architecture",
+        "UX/UI Design (Visitor & Counsellor experiences)",
+        "Frontend Development (React)",
+        "Backend Development & API Design",
+        "Real-Time Chat & Voice Infrastructure",
+        "Anonymous Session Management",
+        "Counsellor Inbox & Queue System",
+        "Design System & Component Library",
+        "Performance Optimisation & Deployment",
+      ],
+      problem: {
+        intro: "Mental health support in most markets faces three structural problems that prevent people from getting help:",
+        points: [
+          { label: "Stigma blocks access", detail: "In many communities, seeking mental health help carries real social risk. Most platforms require sign-up, which means leaving a trace. People in crisis won't create an account — they need to talk to someone right now, without consequences." },
+          { label: "Cost creates a hard barrier", detail: "Professional therapy is expensive and inaccessible for the majority of people in emerging markets. The people who need help most are the least likely to afford it." },
+          { label: "Friction at the worst moment", detail: "Standard support platforms add steps — forms, accounts, waiting lists — at exactly the moment someone has the least capacity to navigate them. Every extra step costs people who are already struggling." },
+        ],
+        summary: "The design brief was to remove every barrier between a person in distress and a human voice: no sign-up, no identity, no cost, and no waiting room.",
+      },
+      goals: [
+        "Allow anyone to start a counselling session without creating an account",
+        "Connect visitors with available counsellors in under 60 seconds",
+        "Support both text chat and voice calls within the same session",
+        "Give counsellors a clean, organised inbox for managing multiple active sessions",
+        "Maintain full anonymity for visitors throughout the session",
+        "Build a system that scales as volunteer counsellor count grows",
+        "Design an experience that communicates safety, calm, and trustworthiness from the first screen",
+      ],
+      uxStrategy: [
+        {
+          step: "01",
+          title: "Zero-friction entry",
+          desc: "The visitor experience starts with one button: 'Talk to a counsellor.' No account, no email, no waiting list. The session begins immediately, and the visitor's identity is never captured. The design communicates safety before the conversation even starts.",
+        },
+        {
+          step: "02",
+          title: "Calm, trustworthy interface",
+          desc: "Every visual decision — the colour palette, the type scale, the spacing — was designed to feel steady and human rather than clinical or corporate. Someone in distress should feel safe, not processed.",
+        },
+        {
+          step: "03",
+          title: "Counsellor-first inbox design",
+          desc: "The counsellor dashboard prioritises clarity and speed: incoming sessions are surfaced immediately, active chats are easy to manage in parallel, and session history is accessible without complexity. The goal was to reduce cognitive load so counsellors can focus entirely on the person they're supporting.",
+        },
+      ],
+      challenges:
+        "Real-time anonymous communication at scale is technically hard. Sessions have no persistent user identity to anchor them to, which means the session state, queue management, and counsellor routing all had to be engineered without the typical account-based architecture. The design challenge was making a system that felt simple and immediate to the visitor while giving counsellors the structure they need to manage their work effectively.",
+      outcome: {
+        summary: "ZeroDepression launched as a fully functional platform with anonymous real-time chat, voice calling, and a counsellor management system — removing every barrier between someone in distress and a human being who can help.",
+        points: [
+          "Anonymous real-time chat live and accessible at www.zerodepression.org",
+          "Voice call functionality built into the same session flow",
+          "Counsellor inbox and session management dashboard shipped and in use",
+          "Zero account creation required for visitors — complete anonymity maintained",
+          "Sub-60-second connection time between visitor and available counsellor",
+          "Frontend and backend built and deployed from a single design system",
+          "Platform designed to scale as volunteer counsellor community grows",
+        ],
+      },
+      gallery: [
+        "/zerodepression-4.png",
+        "/zerodepression-2.png",
+        "/zerodepression-3.png",
+        "/zerodepression-1.png",
+      ],
+    },
+  },
 ];
 
 function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
