@@ -22,6 +22,8 @@ interface Section {
   emoji: string;
   tagline: string;
   questions: Question[];
+  // Which product types show this section. Undefined = always shown.
+  showFor?: ("website" | "mobile" | "saas" | "ecommerce" | "ai" | "internal")[];
 }
 
 // ── Questionnaire Data ───────────────────────────────────────────────────────
@@ -156,6 +158,7 @@ const SECTIONS: Section[] = [
     title: "User Journey & Workflow",
     emoji: "🗺️",
     tagline: "Walk us through the experience.",
+    showFor: ["website", "mobile", "saas", "ecommerce", "ai", "internal"],
     questions: [
       { id: "q39", question: "Walk us through how you imagine a typical user interacting with your product, from start to finish.", type: "textarea", placeholder: "Step by step, paint the picture..." },
       { id: "q40", question: "What is the most important action you want users to take?", type: "textarea", placeholder: "e.g. Complete a booking, make a purchase, invite a friend..." },
@@ -169,6 +172,7 @@ const SECTIONS: Section[] = [
     title: "Design & Branding",
     emoji: "🎨",
     tagline: "How should it look and feel?",
+    showFor: ["website", "mobile", "saas", "ecommerce", "ai", "internal"],
     questions: [
       { id: "q44", question: "Do you have an existing brand identity, including a logo, colours, fonts, or brand guidelines?", type: "textarea", placeholder: "Describe what you have or share links..." },
       {
@@ -200,6 +204,7 @@ const SECTIONS: Section[] = [
     title: "Technical Requirements",
     emoji: "🔧",
     tagline: "What's under the hood?",
+    showFor: ["mobile", "saas", "ai", "internal"],
     questions: [
       { id: "q50", question: "Do you have a preferred technology or platform? If yes, specify it.", type: "textarea", placeholder: "e.g. React, Flutter, Node.js, Wordpress... or no preference" },
       { id: "q51", question: "Do you already own a domain name, hosting account, server, or developer accounts?", type: "textarea", placeholder: "List what you already have..." },
@@ -221,6 +226,7 @@ const SECTIONS: Section[] = [
     title: "Content & Data",
     emoji: "📝",
     tagline: "What content and data does this need?",
+    showFor: ["website", "ecommerce", "saas", "ai"],
     questions: [
       {
         id: "q58",
@@ -286,6 +292,7 @@ const SECTIONS: Section[] = [
     title: "Competitors & References",
     emoji: "🔍",
     tagline: "What's the competitive landscape?",
+    showFor: ["website", "mobile", "saas", "ecommerce", "ai", "internal"],
     questions: [
       { id: "q70", question: "Who are your main competitors or alternatives?", type: "textarea", placeholder: "List the key players in your space..." },
       { id: "q71", question: "What do you like or dislike about their products?", type: "textarea", placeholder: "Be honest — what are they doing right and wrong?" },
@@ -298,6 +305,7 @@ const SECTIONS: Section[] = [
     title: "Launch & Ongoing Support",
     emoji: "🌍",
     tagline: "How do we get this into the world?",
+    showFor: ["website", "mobile", "saas", "ecommerce", "ai", "internal"],
     questions: [
       { id: "q74", question: "Do you need assistance with deployment, app store submission, or domain setup?", type: "textarea", placeholder: "Tell us what launch help you need..." },
       {
@@ -337,6 +345,37 @@ const SECTIONS: Section[] = [
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 type Answers = Record<string, string | string[]>;
+
+type ProductType = "website" | "mobile" | "saas" | "ecommerce" | "ai" | "internal";
+
+const Q10_MAP: Record<string, ProductType> = {
+  "Website or web application": "website",
+  "Mobile application": "mobile",
+  "SaaS platform": "saas",
+  "E-commerce platform": "ecommerce",
+  "AI-powered product or automation": "ai",
+  "Internal business tool or dashboard": "internal",
+};
+
+function getSelectedProductTypes(answers: Answers): ProductType[] {
+  const q10 = answers["q10"];
+  if (!q10) return [];
+  const selections = Array.isArray(q10) ? q10 : [q10];
+  return selections
+    .map((s) => Q10_MAP[s])
+    .filter((t): t is ProductType => Boolean(t));
+}
+
+function computeVisibleSections(answers: Answers): Section[] {
+  const types = getSelectedProductTypes(answers);
+  // Before Section 2 is answered, show all sections so user can navigate freely.
+  // After it's answered, filter based on product types.
+  if (types.length === 0) return SECTIONS;
+  return SECTIONS.filter((s) => {
+    if (!s.showFor) return true; // always visible (s1–s5, s10, s13)
+    return s.showFor.some((t) => types.includes(t));
+  });
+}
 
 function getAnswer(answers: Answers, id: string): string | string[] {
   return answers[id] ?? "";
@@ -496,17 +535,26 @@ export default function ClientOnboardingClient() {
   const [error, setError] = useState("");
   const [direction, setDirection] = useState(1);
 
-  const currentSection = SECTIONS[sectionIndex];
-  const isLast = sectionIndex === SECTIONS.length - 1;
+  const visibleSections = computeVisibleSections(answers);
+  const currentSection = visibleSections[sectionIndex] ?? visibleSections[0];
+  const isLast = sectionIndex === visibleSections.length - 1;
 
   const setAnswer = useCallback((id: string, val: string | string[]) => {
-    setAnswers((prev) => ({ ...prev, [id]: val }));
+    setAnswers((prev) => {
+      const next = { ...prev, [id]: val };
+      // If Q10 changes, clamp sectionIndex to new visibleSections length
+      if (id === "q10") {
+        const newVisible = computeVisibleSections(next);
+        setSectionIndex((i) => Math.min(i, newVisible.length - 1));
+      }
+      return next;
+    });
   }, []);
 
   const goToNext = () => {
     if (isLast) return handleSubmit();
     setDirection(1);
-    setSectionIndex((i) => i + 1);
+    setSectionIndex((i) => Math.min(i + 1, visibleSections.length - 1));
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -522,7 +570,7 @@ export default function ClientOnboardingClient() {
     setError("");
     try {
       const payload = {
-        sections: SECTIONS.map((section) => ({
+        sections: visibleSections.map((section) => ({
           title: section.title,
           questions: section.questions.map((q) => ({
             question: q.question,
@@ -557,6 +605,9 @@ export default function ClientOnboardingClient() {
         const a = answers[q.id];
         return !a || (typeof a === "string" && !a.trim());
       });
+
+  const productTypes = getSelectedProductTypes(answers);
+  const hasProductType = productTypes.length > 0;
 
   // ── Intro Screen ─────────────────────────────────────────────────────────
   if (step === "intro") {
@@ -609,17 +660,17 @@ export default function ClientOnboardingClient() {
                 before we build it.
               </h1>
               <p className="text-lg text-gray-600 mb-10 max-w-xl mx-auto leading-relaxed">
-                This questionnaire helps us understand your business, product idea, and goals so we can
-                propose the right solution, scope, and plan. Answer as many questions as you can — it
-                should take about 15–20 minutes.
+                This questionnaire adapts to your project type — website, mobile app, SaaS, or AI product —
+                so you only see the questions relevant to what you&apos;re building. Most clients finish in
+                about 15 minutes.
               </p>
 
               {/* Stats row */}
               <div className="flex flex-wrap justify-center gap-6 mb-10">
                 {[
-                  { n: "82", label: "Questions" },
-                  { n: "13", label: "Sections" },
-                  { n: "~20", label: "Min to complete" },
+                  { n: "8–13", label: "Sections" },
+                  { n: "~15", label: "Min to complete" },
+                  { n: "100%", label: "Tailored to you" },
                 ].map((s) => (
                   <div key={s.label} className="flex flex-col items-center">
                     <span className="text-3xl font-black text-gray-900">{s.n}</span>
@@ -653,22 +704,32 @@ export default function ClientOnboardingClient() {
             What we&apos;ll cover
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {SECTIONS.map((s, i) => (
-              <div
-                key={s.id}
-                className="flex items-center gap-3 p-3 rounded-xl border border-gray-100 bg-gray-50 hover:border-orange-200 hover:bg-orange-50/50 transition-all duration-200"
-              >
-                <span className="text-xl flex-shrink-0">{s.emoji}</span>
-                <div className="min-w-0">
-                  <p className="text-[11px] font-bold text-[#FF6602] tabular-nums">
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p className="text-[13px] font-semibold text-gray-700 leading-tight truncate">
-                    {s.title}
-                  </p>
+            {SECTIONS.map((s, i) => {
+              const isConditional = Boolean(s.showFor);
+              return (
+                <div
+                  key={s.id}
+                  className={`flex items-center gap-3 p-3 rounded-xl border transition-all duration-200 ${
+                    isConditional
+                      ? "border-gray-100 bg-gray-50/50 hover:border-orange-100"
+                      : "border-gray-100 bg-gray-50 hover:border-orange-200 hover:bg-orange-50/50"
+                  }`}
+                >
+                  <span className="text-xl flex-shrink-0">{s.emoji}</span>
+                  <div className="min-w-0">
+                    <p className="text-[11px] font-bold text-[#FF6602] tabular-nums">
+                      {String(i + 1).padStart(2, "0")}
+                      {isConditional && (
+                        <span className="ml-1 text-gray-300 font-normal">if relevant</span>
+                      )}
+                    </p>
+                    <p className="text-[13px] font-semibold text-gray-700 leading-tight truncate">
+                      {s.title}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
       </main>
@@ -757,7 +818,7 @@ export default function ClientOnboardingClient() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/Digital-Ninja-Logo.png" alt="DNT" className="h-8 w-auto" />
           </Link>
-          <ProgressBar current={sectionIndex + 1} total={SECTIONS.length} />
+          <ProgressBar current={sectionIndex + 1} total={visibleSections.length} />
           <button
             onClick={() => setStep("intro")}
             className="ml-4 text-xs font-medium text-gray-400 hover:text-gray-600 transition-colors flex-shrink-0"
@@ -768,9 +829,36 @@ export default function ClientOnboardingClient() {
       </nav>
 
       <div className="max-w-2xl mx-auto px-4 sm:px-6 py-10">
+        {/* Product type badge — shown once Q10 is answered */}
+        {hasProductType && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {productTypes.map((t) => {
+              const labels: Record<ProductType, string> = {
+                website: "🌐 Website",
+                mobile: "📱 Mobile App",
+                saas: "☁️ SaaS",
+                ecommerce: "🛒 E-commerce",
+                ai: "🤖 AI Product",
+                internal: "🔧 Internal Tool",
+              };
+              return (
+                <span
+                  key={t}
+                  className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-[12px] font-semibold text-[#FF6602]"
+                >
+                  {labels[t]}
+                </span>
+              );
+            })}
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-[12px] font-medium text-gray-500">
+              {visibleSections.length} sections for your project
+            </span>
+          </div>
+        )}
+
         {/* Mini section nav strip */}
         <div className="flex gap-1 mb-8 overflow-x-auto pb-1 scrollbar-hide">
-          {SECTIONS.map((s, i) => {
+          {visibleSections.map((s, i) => {
             const filled = countFilled(s, answers);
             const done = filled > 0;
             const active = i === sectionIndex;
@@ -816,7 +904,7 @@ export default function ClientOnboardingClient() {
                 <span className="text-4xl">{currentSection.emoji}</span>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-widest text-white/70 mb-1">
-                    Section {sectionIndex + 1} · {currentSection.questions.length} questions
+                    Section {sectionIndex + 1} of {visibleSections.length} · {currentSection.questions.length} questions
                   </p>
                   <h2 className="text-xl font-black leading-tight">{currentSection.title}</h2>
                   <p className="text-sm text-white/80 mt-1">{currentSection.tagline}</p>
@@ -836,7 +924,7 @@ export default function ClientOnboardingClient() {
                 >
                   <label className="block mb-3">
                     <span className="text-[11px] font-bold text-[#FF6602] uppercase tracking-wider">
-                      Q{SECTIONS.slice(0, sectionIndex).reduce((acc, s) => acc + s.questions.length, 0) + qi + 1}
+                      Q{visibleSections.slice(0, sectionIndex).reduce((acc, s) => acc + s.questions.length, 0) + qi + 1}
                       {q.required && <span className="text-red-500 ml-1">*</span>}
                     </span>
                     <p className="text-[15px] font-semibold text-gray-900 mt-1 leading-snug">
