@@ -616,10 +616,6 @@ export default function ClientOnboardingClient() {
         {/* Nav */}
         <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
           <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/Digital-Ninja-Logo.png" alt="DNT" className="h-8 w-auto" />
-            </Link>
             <Link
               href="/booking"
               className="text-sm font-semibold text-[#FF6602] hover:text-[#FD3600] transition-colors"
@@ -742,10 +738,6 @@ export default function ClientOnboardingClient() {
       <main className="min-h-screen bg-white flex flex-col">
         <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
           <div className="max-w-5xl mx-auto px-6 h-16 flex items-center">
-            <Link href="/" className="flex items-center gap-2">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/Digital-Ninja-Logo.png" alt="DNT" className="h-8 w-auto" />
-            </Link>
           </div>
         </nav>
         <div className="flex-1 flex items-center justify-center px-6 py-20">
@@ -814,10 +806,6 @@ export default function ClientOnboardingClient() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-2xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/Digital-Ninja-Logo.png" alt="DNT" className="h-8 w-auto" />
-          </Link>
           <ProgressBar current={sectionIndex + 1} total={visibleSections.length} />
           <button
             onClick={() => setStep("intro")}
