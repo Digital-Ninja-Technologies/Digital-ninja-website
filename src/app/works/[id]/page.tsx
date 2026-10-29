@@ -925,6 +925,7 @@ const projects = [
         "/efm2026-2.png",
         "/efm2026-3.png",
         "/efm2026-4.png",
+        "/efm2026-5.png",
       ],
     },
   },
