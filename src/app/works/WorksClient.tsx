@@ -137,6 +137,19 @@ const projects = [
     bg: "#FEFCE8",
     accent: "#EAB308",
   },
+  {
+    id: "efm2026",
+    title: "EFM 2026 National Convention",
+    category: "Web Design & Development",
+    tags: ["Web Design", "Event", "Church", "Landing Page"],
+    year: "2026",
+    description:
+      "Convention website for the 2026 National Convention of The Evangel Faith Mission — themed 'New Things by His Spirit.' Features a live countdown, event schedule, speaker profiles, venue map with 360° view, and an embedded registration form.",
+    image: "/efm2026-1.png",
+    liveUrl: "https://efm2026convention.vercel.app/",
+    bg: "#0A0E1A",
+    accent: "#C9A84C",
+  },
 ];
 
 const stats = [

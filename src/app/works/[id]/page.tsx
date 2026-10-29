@@ -850,6 +850,81 @@ const projects = [
       ],
     },
   },
+  {
+    id: "efm2026",
+    title: "EFM 2026 National Convention",
+    description: "Web Design · Development · Event · Church",
+    image: "/efm2026-1.png",
+    showcaseType: "standard",
+    overview: {
+      title: "A convention website that builds anticipation and drives registrations for a landmark church event.",
+      description:
+        "The Evangel Faith Mission's 2026 National Convention — themed 'New Things by His Spirit' — needed a digital home that matched the weight of the event. Digital Ninja Technologies designed and built a full event website featuring a live countdown, speaker profiles, a detailed three-day schedule, an interactive venue section with Google Maps and a 360° view of Faith Plaza, and an embedded registration flow. The site was built to convert visitors into registered attendees and give the convention a credible, memorable online presence.",
+      features: {
+        mockupImage1: "/efm2026-1.png",
+        mockupImage2: "/efm2026-1.png",
+      },
+      liveUrl: "https://efm2026convention.vercel.app/",
+      role: "Web Designer & Developer",
+      responsibilities: [
+        "Event website design and development",
+        "Live countdown timer implementation",
+        "Speaker and schedule section design",
+        "Interactive venue map and 360° photosphere integration",
+        "Registration form embedding and flow",
+        "Social sharing and invite features",
+        "SEO and Open Graph setup for link previews",
+      ],
+      problem: {
+        intro: "Church events of this scale typically rely on fliers and word of mouth. Three challenges shaped the digital approach:",
+        points: [
+          { label: "Anticipation", detail: "The site needed to build excitement months before the event — a live countdown and strong visual identity helped make the convention feel unmissable." },
+          { label: "Information", detail: "Attendees needed clear answers about dates, speakers, venue, and schedule without having to dig or ask around." },
+          { label: "Registration", detail: "Getting people registered early required a frictionless, in-page form that didn't send users away to a third-party site." },
+        ],
+        summary: "The challenge was to make a church event feel as compelling online as it would in person — and make registration as easy as possible.",
+      },
+      goals: [
+        "Drive early registrations before the November 2026 event",
+        "Communicate the event theme, speakers, and schedule clearly",
+        "Give the congregation and general public a credible online presence for the convention",
+        "Enable easy sharing and invite flows to grow attendance",
+        "Provide a venue preview with maps and 360° imagery",
+      ],
+      uxStrategy: [
+        {
+          step: "01",
+          title: "Lead with the theme and countdown",
+          desc: "The hero opens with the convention theme — 'New Things by His Spirit' — and a ticking live countdown to 20 November. This immediately sets the tone and creates urgency.",
+        },
+        {
+          step: "02",
+          title: "Make the speakers and schedule front and centre",
+          desc: "Attendees want to know who is speaking and when. Speaker profiles and a day-by-day schedule are prominent, giving visitors the confidence to commit.",
+        },
+        {
+          step: "03",
+          title: "Remove venue friction with interactive maps",
+          desc: "A Google Maps directions link alongside a 360° Street View-style photosphere of Faith Plaza lets potential attendees visualise exactly where they're going before they arrive.",
+        },
+      ],
+      challenges:
+        "Balancing a dark, reverent aesthetic with warmth and approachability was the core design challenge. The near-black navy palette reflects the gravitas of the occasion while gold accents and expressive typography keep the energy celebratory and inviting.",
+      outcome: {
+        summary: "The convention website launched ahead of the event with a full registration flow, giving the EFM a professional digital presence that matches the scale of the gathering.",
+        points: [
+          "Live site with countdown, registration, and speaker info live ahead of the November event",
+          "Embedded registration form reducing drop-off vs. external form links",
+          "360° venue preview reducing first-timer anxiety about attending",
+          "Social sharing features enabling attendee-driven invite growth",
+          "Strong Open Graph setup for rich link previews across WhatsApp and social media",
+        ],
+      },
+      gallery: [
+        "/efm2026-1.png",
+      ],
+    },
+  },
 ];
 
 function ProjectOverview({ project }: { project: (typeof projects)[0] }) {
