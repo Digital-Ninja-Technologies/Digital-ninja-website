@@ -862,7 +862,7 @@ const projects = [
         "The Evangel Faith Mission's 2026 National Convention — themed 'New Things by His Spirit' — needed a digital home that matched the weight of the event. Digital Ninja Technologies designed and built a full event website featuring a live countdown, speaker profiles, a detailed three-day schedule, an interactive venue section with Google Maps and a 360° view of Faith Plaza, and an embedded registration flow. The site was built to convert visitors into registered attendees and give the convention a credible, memorable online presence.",
       features: {
         mockupImage1: "/efm2026-1.png",
-        mockupImage2: "/efm2026-1.png",
+        mockupImage2: "/efm2026-2.png",
       },
       liveUrl: "https://efm2026convention.vercel.app/",
       role: "Web Designer & Developer",
@@ -922,6 +922,9 @@ const projects = [
       },
       gallery: [
         "/efm2026-1.png",
+        "/efm2026-2.png",
+        "/efm2026-3.png",
+        "/efm2026-4.png",
       ],
     },
   },
